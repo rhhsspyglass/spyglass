@@ -458,7 +458,7 @@ html, body {
 
 .swiper-slide h1 {
   width: 35%;
-  margin-top: 0;
+  margin-top: 0;  
   position: absolute;
   color: #fff;
   top: 38%;
@@ -517,7 +517,7 @@ html, body {
 /* galler slide */
 .swiper-slide.work {
   width: 60%;
-  background: #ededed;
+  background: #e0e0e0;
   transition-property: background-color;
   transition-duration: 700ms;
   transition-timing-function: ease; }
