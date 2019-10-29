@@ -517,7 +517,7 @@ html, body {
 /* galler slide */
 .swiper-slide.work {
   width: 60%;
-  background: #eee;
+  background: #ededed;
   transition-property: background-color;
   transition-duration: 700ms;
   transition-timing-function: ease; }
