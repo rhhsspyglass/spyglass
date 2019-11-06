@@ -755,7 +755,8 @@ html, body {
   width: 40%;
   min-width: 500px;
   padding: 0 95px;
-  border-left: 1px solid #ddd; }
+  border-left: 1px solid #ddd; 
+  background: #444}
   @media screen and (max-width: 768px) {
     .swiper-slide.service {
       padding: 0 55px;
@@ -790,6 +791,14 @@ html, body {
 .swiper-slide.service.last {
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd; }
+
+.swiper-slide.service h2 {
+  color: #eee;
+}
+
+.swiper-slide.service p {
+  color: #ccc;
+}
 
 .swiper-slide.clients {
   width: 1024px;
