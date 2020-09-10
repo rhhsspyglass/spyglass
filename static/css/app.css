@@ -1331,3 +1331,11 @@ section.blog-post {
 @media screen and (max-height: 500px) {
   p.intro-text {
     display: none; } }
+
+
+
+
+/* custom css */
+.webmaster-name:hover {
+  color: white;
+}
