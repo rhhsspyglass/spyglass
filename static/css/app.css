@@ -35,12 +35,12 @@ html, body.vertical {
   overflow: auto; }
 
 @font-face {font-family: "Erato W01 Regular";
-  src: url("228020e139edf7f5f815229696fc6b84.eot"); /* IE9*/
-  src: url("228020e139edf7f5f815229696fc6b84.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("228020e139edf7f5f815229696fc6b84.woff2") format("woff2"), /* chrome、firefox */
-  url("228020e139edf7f5f815229696fc6b84.woff") format("woff"), /* chrome、firefox */
-  url("228020e139edf7f5f815229696fc6b84.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("228020e139edf7f5f815229696fc6b84.svg#Erato W01 Regular") format("svg"); /* iOS 4.1- */
+  src: url("/fonts/erato/228020e139edf7f5f815229696fc6b84.eot"); /* IE9*/
+  src: url("/fonts/erato/228020e139edf7f5f815229696fc6b84.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/erato/228020e139edf7f5f815229696fc6b84.woff2") format("woff2"), /* chrome、firefox */
+  url("/fonts/erato/228020e139edf7f5f815229696fc6b84.woff") format("woff"), /* chrome、firefox */
+  url("/fonts/erato/228020e139edf7f5f815229696fc6b84.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("/fonts/erato/228020e139edf7f5f815229696fc6b84.svg#Erato W01 Regular") format("svg"); /* iOS 4.1- */
 }
 
 body {

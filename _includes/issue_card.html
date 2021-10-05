@@ -1,0 +1,24 @@
+<div
+class="swiper-slide work"
+data-hash="work-{{ data_hash }}"
+data-color="{{ slide.color }}"
+>
+<div class="inner">
+    <p class="meta">
+    {{ slide.meta }}
+    </p>
+    {% if slide.issue %}
+        {% if issue < 10 %}
+            <p class="order">0{{ issue }}</p>
+        {% else %}
+            <p class="order">{{ issue }}</p>
+        {% endif %}
+        {% assign issue = issue | plus:1 %}
+    {% endif %}
+    <a href="{{ slide.link }}" target="_blank" rel="noreferrer">
+    <img src="{{ slide.img }}" alt="{{ slide.alt }}"
+    /></a>
+    <h2>{{ slide.title }}</h2>
+</div>
+</div>
+{% assign data_hash = data_hash | plus:1 %}
