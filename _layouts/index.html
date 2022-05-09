@@ -123,7 +123,9 @@
           {% assign data_hash = 1 | to_integer %}
           {% assign issue = 1 | to_integer %}
           {% for slide in site.posts %}
-            {% include issue_card.html %}
+            {% unless slide.archive %}
+              {% include issue_card.html %}
+            {% endunless %}
           {% endfor %}
           
 <!-- 

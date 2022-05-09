@@ -8,14 +8,14 @@
       href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="static/css/bulma.css" />
-    <link rel="stylesheet" href="static/css/font-awesome.css" />
-    <link rel="stylesheet" href="static/css/linea-arrows-styles.css" />
-    <link rel="stylesheet" href="static/css/swiper.css" />
-    <link rel="stylesheet" href="static/css/app.css" />
+    <link rel="stylesheet" href="/static/css/bulma.css" />
+    <link rel="stylesheet" href="/static/css/font-awesome.css" />
+    <link rel="stylesheet" href="/static/css/linea-arrows-styles.css" />
+    <link rel="stylesheet" href="/static/css/swiper.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
 
     <!-- favicon -->
-    <link id="favicon" rel="icon" type="image/png" href="images/icon.ico" />
+    <link id="favicon" rel="icon" type="image/png" href="/images/icon.ico" />
   </head>
   <body>
     <div id="menu-bar">
@@ -71,88 +71,17 @@
       </div>
     </nav>
 
+
     <div id="wrapper">
       <div class="swiper-container is-invisible" id="gallery">
         <div class="swiper-wrapper">
-          <div
-            class="swiper-slide work"
-            data-hash="work-6"
-            data-color="#f0b68e"
-          >
-            <div class="inner">
-              <p class="meta">
-                summer 2020
-              </p>
-              <p class="order">01</p>
-              <a href="issues/summer_2020.pdf"
-                ><img src="images/2020-summer/1.jpg" alt="work 6"
-              /></a>
-              <h2>summer issue twenty twenty</h2>
-            </div>
-          </div>
+            {% assign issue = 1 | to_integer %}
+            {% for slide in site.posts %}
+              {% if slide.archive %}
+                {% include issue_card.html %}
+              {% endif %}
+            {% endfor %}
 
-          <div
-            class="swiper-slide work"
-            data-hash="work-5"
-            data-color="#deebff"
-          >
-            <div class="inner">
-              <p class="meta">
-                spring 2020
-              </p>
-              <p class="order">02</p>
-              <a href="issues/spring_2020.pdf" target="_blank"
-                ><img src="images/2020-spring/2.jpg" alt="spring 2020"
-              /></a>
-              <h2>spring issue twenty twenty</h2>
-            </div>
-          </div>
-
-          <div
-            class="swiper-slide work"
-            data-hash="work-4"
-            data-color="#ccf0f0"
-          >
-            <div class="inner">
-              <p class="meta">
-                winter 2020
-              </p>
-              <p class="order">03</p>
-              <a href="issues/winter_2020.pdf" target="_blank"
-                ><img src="images/2020-winter/01.jpg" alt="work 4"
-              /></a>
-              <h2>winter issue twenty twenty</h2>
-            </div>
-          </div>
-
-          <div class="swiper-slide work" data-color="#f3c98d">
-            <div class="inner">
-              <p class="meta">
-                fall 2019
-              </p>
-              <p class="order">04</p>
-              <a href="issues/fall_2019.pdf" target="_blank"
-                ><img src="images/2019-fall/01.jpg" alt="fall 2019 issue"
-              /></a>
-              <h2>fall issue twenty nineteen</h2>
-            </div>
-          </div>
-
-          <div
-            class="swiper-slide work"
-            data-hash="work-1"
-            data-color="#bed1e0"
-          >
-            <div class="inner">
-              <p class="meta">
-                summer 2019
-              </p>
-              <p class="order">05</p>
-              <a href="issues/summer_2019.pdf" target="_blank"
-                ><img src="images/2019-summer/01.jpg" alt="summer 2019 issue"
-              /></a>
-              <h2>summer issue twenty nineteen</h2>
-            </div>
           </div>
           <!--div class="swiper-slide work" data-color="#f3c98d">
           <div class="inner">
@@ -163,7 +92,7 @@
             <p class="order">03</p>
             <a href="portfolio-item-2.html">
               <video autoplay loop muted playsinline>
-                <source src='images/%40stock/work-3.mp4' type='video/mp4'>
+                <source src='/images/%40stock/work-3.mp4' type='video/mp4'>
               </video>
             </a>
             <h2>1973 - luxury urban resort</h2>
@@ -176,7 +105,7 @@
               Brand website
             </p>
             <p class="order">04</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-4.jpg" alt="work 4"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-4.jpg" alt="work 4"></a>
             <h2>Avenu look book</h2>
           </div>
         </div>
@@ -187,7 +116,7 @@
               Brand website
             </p>
             <p class="order">05</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-5.jpg" alt="work 5"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-5.jpg" alt="work 5"></a>
             <h2>Luxury lifestyle website</h2>
           </div>
         </div>
@@ -198,7 +127,7 @@
               Brand website
             </p>
             <p class="order">06</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-6.jpg" alt="work 6"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-6.jpg" alt="work 6"></a>
             <h2>Revolutionary brand</h2>
           </div>
         </div>
@@ -209,7 +138,7 @@
               Brand website
             </p>
             <p class="order">07</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-7.jpg" alt="work 7"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-7.jpg" alt="work 7"></a>
             <h2>They're not shoes, they're shoots</h2>
           </div>
         </div>
@@ -220,7 +149,7 @@
               Brand website
             </p>
             <p class="order">08</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-8.jpg" alt="work 8"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-8.jpg" alt="work 8"></a>
             <h2>The leader barnd of fashion</h2>
           </div>
         </div>
@@ -231,7 +160,7 @@
               Brand website
             </p>
             <p class="order">09</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-9.jpg" alt="work 9"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-9.jpg" alt="work 9"></a>
             <h2>5 Plus, luxury lifestyle</h2>
           </div>
         </div>
@@ -242,7 +171,7 @@
               Brand website
             </p>
             <p class="order">10</p>
-            <a href="portfolio-item.html"><img src="images/%40stock/work-10.jpg" alt="work 10"></a>
+            <a href="portfolio-item.html"><img src="/images/%40stock/work-10.jpg" alt="work 10"></a>
             <h2>Aisha digital design </h2>
           </div>
         </div>
@@ -268,9 +197,9 @@
       <!-- /.swiper-container -->
     </div>
 
-    <script src="js/modernizr-custom.js"></script>
-    <script src="js/swiper.patched.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="/js/modernizr-custom.js"></script>
+    <script src="/js/swiper.patched.js"></script>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/app.js"></script>
   </body>
 </html>
