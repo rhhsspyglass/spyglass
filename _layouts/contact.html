@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Spyglass | Contact</title>
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/bulma.css">
-  <link rel="stylesheet" href="static/css/font-awesome.css">
-  <link rel="stylesheet" href="static/css/linea-arrows-styles.css" />
-  <link rel="stylesheet" href="static/css/swiper.css">
-  <link rel="stylesheet" href="static/css/app.css">
+  <link rel="stylesheet" href="/static/css/bulma.css">
+  <link rel="stylesheet" href="/static/css/font-awesome.css">
+  <link rel="stylesheet" href="/static/css/linea-arrows-styles.css" />
+  <link rel="stylesheet" href="/static/css/swiper.css">
+  <link rel="stylesheet" href="/static/css/app.css">
 
   <!-- favicon -->
-  <link id="favicon" rel="icon" type="image/png" href="images/icon.ico">
+  <link id="favicon" rel="icon" type="image/png" href="/images/icon.ico">
 </head>
 <body>
   <div id="menu-bar">
@@ -24,34 +24,7 @@
     </div>
     <a href="index.html" id="logo"><i>the</i> spyglass</a>
   </div>
-  <nav id="menu">
-    <ul class="socials">
-      <li><a href="https://www.facebook.com/rhhspyglass/" target="_blank">Facebook</a></li>
-      <li><a href="https://twitter.com/rhhspyglass" target="_blank">Twitter</a></li>
-      <li><a href="https://www.instagram.com/rhhspyglass/" target="_blank">Instagram</a></li>
-    </ul>
-    <div class="columns contact-infos is-hidden-mobile">
-      <div class="column">
-        <p class="small-text">
-          201 Yorkland St.<br> Richmond Hill<br> ON L4S 1A2
-        </p>
-      </div>
-      <div class="column">
-        <ul class="small-text">
-          <li><a href="mailto:rhhspyglass@gmail.com">rhhspyglass@gmail.com</a></li>
-        </ul>
-      </div>
-
-    </div>
-    <ul id="menu-items">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div id="copyright">
-      <p>&copy; 2021 Spyglass.</p>
-    </div>
-  </nav>
+  {% include nav.html %}
   <div id="wrapper">
     <div class="swiper-container is-invisible" id="contact-slider">
 
@@ -60,7 +33,7 @@
 
         <div class="swiper-slide wide-image">
           <div class="inner">
-            <img src="images/2019-summer/16.jpg" alt="#">
+            <img src="/images/2019-summer/16.jpg" alt="#">
           </div>
         </div>
 
@@ -99,10 +72,10 @@
   </div>
 
 
-  <script src="js/modernizr-custom.js"></script>
-  <script src="js/swiper.patched.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="/js/modernizr-custom.js"></script>
+  <script src="/js/swiper.patched.js"></script>
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/app.js"></script>
 </body>
 
 </html>
