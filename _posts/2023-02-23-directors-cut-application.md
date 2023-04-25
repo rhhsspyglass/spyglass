@@ -6,5 +6,5 @@ img: /images/2023-directorscut/directors-cut.jpg
 alt: director's cut application
 color: "#898482"
 issue: false
-archive: false
+archive: true
 ---
