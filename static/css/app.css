@@ -482,6 +482,12 @@ html, body {
       line-height: 35px;
       letter-spacing: -1px; } }
 
+.swiper-slide h2 {
+  margin-top: 36%;
+  position: absolute;
+  color: #fff;
+  top: 90%; }
+
 .swiper-slide h3 {
   width: 60%;
   margin-top: 0;
