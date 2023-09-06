@@ -486,7 +486,12 @@ html, body {
   margin-top: 36%;
   position: absolute;
   color: #fff;
-  top: 90%; }
+  top: 50%; }
+  @media screen and (max-width: 768px) {
+    .swiper-slide h2 {
+      margin-top: 0;
+    }
+  }
 
 .swiper-slide h3 {
   width: 60%;
