@@ -482,6 +482,18 @@ html, body {
       line-height: 35px;
       letter-spacing: -1px; } }
 
+
+.swiper-slide h2 {
+  margin-top: 36%;
+  position: absolute;
+  color: #fff;
+  top: 50%; }
+  @media screen and (max-width: 768px) {
+    .swiper-slide h2 {
+      margin-top: 0;
+    }
+  }
+
 #apply {
   position: absolute;
   top: 50%;
