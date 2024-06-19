@@ -1,4 +1,4 @@
-import type Article from "$lib/model/article.model";
+import type Article from "$lib/models/article.model";
 
 const ARTICLES: Article[] = [
     {
@@ -62,6 +62,13 @@ const ARTICLES: Article[] = [
         articleUrl: "https://issuu.com/rhhsspyglass/docs/spring_2021_compressed_modified",
         imgUrl: "/images/2021-spring/01.jpg",
         date: "2021-04-30",
+    },
+    {
+        title: "summer issue twenty twenty-one",
+        altText: "summer 2021",
+        articleUrl: "https://issuu.com/rhhspyglass2021/docs/summer_issue_2021_2",
+        imgUrl: "/images/2021-summer/01.jpg",
+        date: "2021-06-10",
     },
     {
         title: "summer issue twenty twenty-four",
