@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{svelte,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      serif: ["erato", "Times New Roman"],
+    }
   },
   plugins: [],
 }

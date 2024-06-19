@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'erato';
+  src: url('/fonts/erato/228020e139edf7f5f815229696fc6b84.woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
