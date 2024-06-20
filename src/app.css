@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'erato';
-  src: url('/fonts/erato/228020e139edf7f5f815229696fc6b84.woff2');
+	font-family: 'erato';
+	src: url('/fonts/erato/228020e139edf7f5f815229696fc6b84.woff2');
 }
 
 @tailwind base;
@@ -9,20 +9,31 @@
 
 /* width */
 ::-webkit-scrollbar {
-  width: 7px;
+	width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-200 dark:bg-neutral-900;
+	@apply bg-neutral-200 dark:bg-neutral-900;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-400 rounded-lg dark:bg-neutral-700;
+	@apply bg-neutral-300 rounded-lg dark:bg-neutral-700;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-500 dark:bg-neutral-600;
+	@apply bg-neutral-400 dark:bg-neutral-600;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+	.light-theme {
+		@apply text-neutral-800 bg-neutral-100 fill-neutral-800;
+	}
+	.dark-theme {
+		@apply text-neutral-200 bg-neutral-900 fill-neutral-200;
+	}
 }
