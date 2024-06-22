@@ -2,7 +2,7 @@ import type Article from "$lib/models/article.model";
 
 const ARTICLES: Article[] = [
     {
-        title: "summer issue 2019",
+        title: "summer issue twenty nineteen",
         altText: "summer 2019",
         articleUrl: "/issues/summer_2019.pdf",
         imgUrl: "/images/2019-summer/01.jpg",
@@ -10,7 +10,7 @@ const ARTICLES: Article[] = [
         visible: false
     },
     {
-        title: "fall issue 2019",
+        title: "fall issue twenty nineteen",
         altText: "fall 2019",
         articleUrl: "/issues/fall_2019.pdf",
         imgUrl: "/images/2019-fall/01.jpg",
@@ -18,7 +18,7 @@ const ARTICLES: Article[] = [
         visible: false
     },
     {
-        title: "winter issue 2020",
+        title: "winter issue twenty twenty",
         altText: "winter 2020",
         articleUrl: "/issues/winter_2020.pdf",
         imgUrl: "/images/2020-winter/01.jpg",
@@ -26,7 +26,7 @@ const ARTICLES: Article[] = [
         visible: false
     },
     {
-        title: "spring issue 2020",
+        title: "spring issue twenty twenty",
         altText: "spring 2020",
         articleUrl: "/issues/spring_2020.pdf",
         imgUrl: "/images/2020-spring/2.jpg",
@@ -34,7 +34,7 @@ const ARTICLES: Article[] = [
         visible: false
     },
     {
-        title: "summer issue 2020",
+        title: "summer issue twenty twenty",
         altText: "summer 2020",
         articleUrl: "/issues/summer_2020.pdf",
         imgUrl: "/images/2020-summer/1.jpg",
