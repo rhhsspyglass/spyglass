@@ -44,7 +44,7 @@ const ARTICLES: Article[] = [
     {
         title: "fall issue twenty twenty",
         shortTitle: "fall 2020",
-        articleUrl: "/issues/fall_2020.pdf",
+        articleUrl: "https://issuu.com/rhhsspyglass/docs/fall2020_compressed",
         imgUrl: "/images/2020-fall.jpg",
         date: "2020-11-29",
         archived: true
@@ -76,7 +76,7 @@ const ARTICLES: Article[] = [
     {
         title: "fall issue twenty twenty-one",
         shortTitle: "fall 2021",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/fall_issue_2021_compressed",
         imgUrl: "/images/2021-fall.jpg",
         date: "2021-11-22",
         archived: true
@@ -84,7 +84,7 @@ const ARTICLES: Article[] = [
     {
         title: "winter issue twenty twenty-two",
         shortTitle: "winter 2022",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass2022/docs/winter_issue_final-compressed",
         imgUrl: "/images/2022-winter.jpg",
         date: "2022-01-24",
         archived: true
@@ -92,7 +92,7 @@ const ARTICLES: Article[] = [
     {
         title: "spring issue twenty twenty-two",
         shortTitle: "spring 2022",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhsspyglass2022/docs/spring_issue_2022_final",
         imgUrl: "/images/2022-spring.jpg",
         date: "2022-03-28",
         archived: true
@@ -100,7 +100,7 @@ const ARTICLES: Article[] = [
     {
         title: "summer issue twenty twenty-two",
         shortTitle: "summer 2022",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhs_spyglass/docs/summer_issue_2022_final",
         imgUrl: "/images/2022-summer.jpg",
         date: "2022-06-13",
         archived: true
@@ -108,7 +108,7 @@ const ARTICLES: Article[] = [
     {
         title: "fall issue twenty twenty-two",
         shortTitle: "fall 2022",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/the_spyglass_fall_2022_issue",
         imgUrl: "/images/2022-fall.jpg",
         date: "2022-11-10",
         archived: true
@@ -116,7 +116,7 @@ const ARTICLES: Article[] = [
     {
         title: "winter issue twenty twenty-three",
         shortTitle: "winter 2023",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/spyglass_winter_issue_2023-compressed",
         imgUrl: "/images/2023-winter.jpg",
         date: "2023-02-15",
         archived: true
@@ -124,7 +124,7 @@ const ARTICLES: Article[] = [
     {
         title: "spring issue twenty twenty-three",
         shortTitle: "spring 2023",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/spyglass_spring_2023_issue-",
         imgUrl: "/images/2023-spring.jpg",
         date: "2023-04-17",
         archived: true
@@ -132,7 +132,7 @@ const ARTICLES: Article[] = [
     {
         title: "summer issue twenty twenty-three",
         shortTitle: "summer 2023",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/spyglass_summer_2023_issue",
         imgUrl: "/images/2023-summer.jpg",
         date: "2023-06-11",
         archived: true
@@ -140,7 +140,7 @@ const ARTICLES: Article[] = [
     {
         title: "director's cut twenty twenty-three",
         shortTitle: "director's cut 2023",
-        articleUrl: "",
+        articleUrl: "https://issuu.com/rhhspyglass/docs/director_s_cut",
         imgUrl: "/images/2023-directors-cut.jpg",
         date: "2023-06-15",
         archived: true
@@ -148,7 +148,7 @@ const ARTICLES: Article[] = [
     {
         title: "fall issue twenty twenty-three",
         shortTitle: "fall 2023",
-        articleUrl: "",
+        articleUrl: "/issues/fall_2023.pdf",
         imgUrl: "/images/2023-fall.jpg",
         date: "2023-11-15",
         archived: false
@@ -156,7 +156,7 @@ const ARTICLES: Article[] = [
     {
         title: "winter issue twenty twenty-four",
         shortTitle: "winter 2024",
-        articleUrl: "",
+        articleUrl: "/issues/winter_2024.pdf",
         imgUrl: "/images/2024-winter.jpg",
         date: "2024-02-05",
         archived: false
@@ -164,7 +164,7 @@ const ARTICLES: Article[] = [
     {
         title: "spring issue twenty twenty-four",
         shortTitle: "spring 2024",
-        articleUrl: "",
+        articleUrl: "/issues/spring_2024.pdf",
         imgUrl: "/images/2024-spring.jpg",
         date: "2024-04-10",
         archived: false
