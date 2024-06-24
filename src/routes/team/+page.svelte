@@ -1,18 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
 </script>
 
 <div class="h-screen w-screen flex flex-col items-center justify-center">
 	<div>
-		{#if $page.status === 404}
-			<h1 class="font-serif text-4xl text-center">page not found.</h1>
-		{:else}
-			<h1 class="font-serif text-4xl text-center">
-				error {$page.status}
-			</h1>
-			<h2 class="font-serif text-lg text-center">{$page.error.message}</h2>
-		{/if}
+		<h1 class="font-serif text-4xl text-center">coming soon.</h1>
 		<div class="hover:boop">
 			<SpyglassLogo class="my-4 mx-auto w-2/3" />
 		</div>
