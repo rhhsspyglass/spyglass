@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Article from '$lib/Article.svelte';
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
@@ -22,7 +23,7 @@
 	<nav
 		class="absolute right-0 bottom-0 p-10 flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
 	>
-		<Header href="/about" title="about" />
+		<Header href="{base}/about" title="about" />
 		<FoldingHeader title="recent issues">
 			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
@@ -30,7 +31,7 @@
 						<Article {article} />
 					{/if}
 				{/each}
-				<a href="/issues" class="hover:font-bold article-header">view all</a>
+				<a href="{base}/issues" class="hover:font-bold article-header">view all</a>
 			</div>
 		</FoldingHeader>
 		<FoldingHeader title="past issues">
@@ -42,7 +43,7 @@
 				{/each}
 			</div>
 		</FoldingHeader>
-		<Header href="/team" title="team"/>
+		<Header href="{base}/team" title="team"/>
 		<FoldingHeader title="contact">
 			<div class="flex flex-col items-end gap-1">
 				<a target="_blank" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>

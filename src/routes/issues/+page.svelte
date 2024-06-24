@@ -1,5 +1,6 @@
 <script lang="ts">
 	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
+	import { base } from "$app/paths";
 </script>
 
 <div class="h-screen w-screen flex flex-col items-center justify-center">
@@ -8,6 +9,6 @@
 		<div class="hover:boop">
 			<SpyglassLogo class="my-4 mx-auto w-2/3" />
 		</div>
-		<a href="/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
+		<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
 	</div>
 </div>
