@@ -38,15 +38,21 @@
 	>
 		<!-- about, contact, past issues, current issues -->
 		<Header href="/about" title="about" />
-		<Header href="/contact" title="contact" />
+		<FoldingHeader title="contact">
+			<div class="flex flex-col items-end gap-1">
+				<a target="_blank" class="article-header" href="mailto:rhhsspyglass@gamil.com">email</a>
+				<a target="_blank" class="article-header" href="https://www.instagram.com/rhhspyglass" referrerpolicy="no-referrer">instagram</a>
+				<p>DM for inquires.</p>
+			</div>
+		</FoldingHeader>
 		<FoldingHeader title="issues">
 			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === false}
 						<Article {article} />
-						<Article {article} />
 					{/if}
 				{/each}
+				<a href="/issues" class="hover:font-bold article-header">view all</a>
 			</div>
 		</FoldingHeader>
 		<FoldingHeader title="archive">

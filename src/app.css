@@ -11,6 +11,10 @@
 	.header {
 		@apply hover:font-bold text-lg;	
 	}
+
+	.article-header {
+		@apply hover:font-bold;
+	}
 }
 @layer utilities {
 	.light-theme {

@@ -3,4 +3,4 @@
     export let article: Article;
 </script>
 
-<a href={article.articleUrl} target="_blank" class="hover:font-bold text-md">{article.shortTitle}</a>
+<a href={article.articleUrl} target="_blank" class="article-header">{article.shortTitle}</a>
