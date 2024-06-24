@@ -1,30 +1,16 @@
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
+	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
 	import Header from '$lib/Header.svelte';
 	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
-	import { isDarkMode } from '$lib/stores/themeStore';
 	import type { PageServerData } from './$types';
-	import Icon from '@iconify/svelte';
 
 	export let data: PageServerData;
-	let isHoveringDarkModeToggle = false;
 </script>
 
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none">
-	<button
-		class="absolute top-10 left-10 w-9 aspect-square rounded-full p-1"
-		on:click={isDarkMode.toggle}
-		on:mouseenter={() => (isHoveringDarkModeToggle = true)}
-		on:mouseleave={() => (isHoveringDarkModeToggle = false)}
-		aria-label="Toggle Dark Mode"
-	>
-		{#if $isDarkMode}
-			<Icon icon={isHoveringDarkModeToggle ? 'ph:sun-fill' : 'ph:sun'} class="w-full h-full" />
-		{:else}
-			<Icon icon={isHoveringDarkModeToggle ? 'ph:moon-fill' : 'ph:moon'} class="w-full h-full" />
-		{/if}
-	</button>
+	<DarkModeToggle />
 
 	<div class="cursor-pointer content-center place-center justify-self-center">
 		<h2 class="font-serif italic text-2xl" style="line-height: 0.6">the</h2>
@@ -45,7 +31,7 @@
 				<p>DM for inquires.</p>
 			</div>
 		</FoldingHeader>
-		<FoldingHeader title="issues">
+		<FoldingHeader title="recent issues">
 			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === false}
