@@ -11,9 +11,9 @@
 	let isHoveringDarkModeToggle = false;
 </script>
 
-<div class="grid grid-cols-3 w-screen h-screen overflow-clip select-none">
+<div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none">
 	<button
-		class="relative top-10 left-10 w-9 aspect-square rounded-full p-1"
+		class="absolute top-10 left-10 w-9 aspect-square rounded-full p-1"
 		on:click={isDarkMode.toggle}
 		on:mouseenter={() => (isHoveringDarkModeToggle = true)}
 		on:mouseleave={() => (isHoveringDarkModeToggle = false)}
@@ -34,13 +34,13 @@
 		</div>
 	</div>
 	<nav
-		class="py-10 pr-10 place-content-end font-serif flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
+		class="absolute right-0 bottom-0 py-10 pr-10 font-serif flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
 	>
 		<!-- about, contact, past issues, current issues -->
 		<Header href="/about" title="about" />
 		<Header href="/contact" title="contact" />
 		<FoldingHeader title="issues">
-			<div class="flex flex-col items-end">
+			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === false}
 						<Article {article} />
@@ -50,7 +50,7 @@
 			</div>
 		</FoldingHeader>
 		<FoldingHeader title="archive">
-			<div class="flex flex-col items-end">
+			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === true || article.archived === undefined}
 						<Article {article} />
@@ -58,6 +58,5 @@
 				{/each}
 			</div>
 		</FoldingHeader>
-
 	</nav>
 </div>

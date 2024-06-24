@@ -1,11 +1,20 @@
 <script lang="ts">
-    export let title: string;
+	import { slide } from 'svelte/transition';
 
-    let expanded = false;
+	export let title: string;
+
+	let expanded = false;
 </script>
-<div>
-    <button on:click={() => expanded = !expanded} class="header inline-block text-end" class:font-bold={expanded}>{title}</button>
-    {#if expanded}
-    <slot />
-    {/if}
+
+<div class="w-full">
+	<button
+		on:click={() => (expanded = !expanded)}
+		class="header block text-end w-full"
+		class:font-bold={expanded}>{title}</button
+	>
+	{#if expanded}
+		<div transition:slide class="mt-1">
+			<slot />
+		</div>
+	{/if}
 </div>
