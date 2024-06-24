@@ -22,7 +22,6 @@
 	<nav
 		class="absolute right-0 bottom-0 p-10 flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
 	>
-		<!-- about, contact, past issues, current issues -->
 		<Header href="/about" title="about" />
 		<FoldingHeader title="recent issues">
 			<div class="flex flex-col items-end gap-1">
