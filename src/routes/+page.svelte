@@ -41,7 +41,6 @@
 						<Article {article} />
 					{/if}
 				{/each}
-				<a href="{base}/past-issues" class="hover:font-bold article-header">view all</a>
 			</div>
 		</FoldingHeader>
 		<Header href="{base}/team" title="team"/>

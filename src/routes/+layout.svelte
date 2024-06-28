@@ -6,6 +6,6 @@
 	<title>The Spyglass</title>
 </svelte:head>
 
-<div class="dark:dark-theme light-theme transition-colors duration-300 show" class:dark={$isDarkMode}>
+<div class={"dark:dark-theme light-theme transition-colors duration-300 show"} class:dark={$isDarkMode}>
     <slot />
 </div>
