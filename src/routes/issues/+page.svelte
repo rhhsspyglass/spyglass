@@ -1,14 +1,14 @@
 <script lang="ts">
 	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
-	import { base } from "$app/paths";
+	import { base } from '$app/paths';
+	import ArticleView from '$lib/ArticleView.svelte';
+	import type { PageServerData } from './$types';
+	export let data: PageServerData;
 </script>
 
-<div class="h-screen w-screen flex flex-col items-center justify-center">
-	<div>
-		<h1 class="font-serif text-4xl text-center">coming soon.</h1>
-		<div class="hover:boop">
-			<SpyglassLogo class="my-4 mx-auto w-2/3" />
-		</div>
-		<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
-	</div>
-</div>
+<h1>Issues</h1>
+{#each data.articles as article}
+	{#if article.archived !== true}
+		<ArticleView {article} />
+	{/if}
+{/each}
