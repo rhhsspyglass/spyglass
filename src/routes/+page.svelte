@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import Article from '$lib/Article.svelte';
+	import ArticleLink from '$lib/ArticleLink.svelte';
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
 	import Header from '$lib/Header.svelte';
@@ -28,7 +28,7 @@
 			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === false}
-						<Article {article} />
+						<ArticleLink {article} />
 					{/if}
 				{/each}
 				<a href="{base}/issues" class="hover:font-bold article-header">view all</a>
@@ -38,7 +38,7 @@
 			<div class="flex flex-col items-end gap-1">
 				{#each data.articles as article}
 					{#if article.archived === true || article.archived === undefined}
-						<Article {article} />
+						<ArticleLink {article} />
 					{/if}
 				{/each}
 				<a href="{base}/past-issues" class="hover:font-bold article-header">view all</a>
