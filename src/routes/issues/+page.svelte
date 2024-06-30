@@ -6,9 +6,10 @@
 	export let data: PageServerData;
 </script>
 
-<h1>Issues</h1>
-{#each data.articles as article}
-	{#if article.archived !== true}
-		<ArticleView {article} />
-	{/if}
-{/each}
+<div class="w-screen flex flex-col items-center overflow-x-clip">
+	{#each data.articles as article}
+		{#if article.archived !== true}
+			<ArticleView {article} id={article.shortTitle.replaceAll(" ", "-")} />
+		{/if}
+	{/each}
+</div>

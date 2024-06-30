@@ -13,7 +13,7 @@
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
 	<DarkModeToggle />
 
-	<div class="cursor-pointer content-center place-center justify-self-center">
+	<div class="cursor-pointer">
 		<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
 		<h1 class="text-5xl">spyglass</h1>
 		<div class="hover:boop">
