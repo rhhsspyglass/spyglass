@@ -1,0 +1,1 @@
+import{w as n}from"./index.q38ca6ZW.js";function a(r,t){const o=localStorage.getItem(r);return o?JSON.parse(o):t}function s(r,t){localStorage.setItem(r,JSON.stringify(t))}function c(){const{subscribe:r,set:t,update:o}=n(a("theme",!1));return{subscribe:r,toggle:()=>{o(e=>(t(!e),s("theme",!e),!e))},set:e=>{t(e),s("theme",e)}}}const m=c();export{m as i};
