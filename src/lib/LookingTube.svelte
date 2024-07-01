@@ -14,12 +14,11 @@
 	viewBox="0 0 40.056744 7.1439743"
 	version="1.1"
 	id="svg8"
-	class="{className} tube-aspect"
+	class="{className} tube-aspect fill-neutral-800 dark:fill-neutral-200"
 >
 	<defs id="defs2" />
 	<sodipodi:namedview
 		id="base"
-		pagecolor="#ffffff"
 		bordercolor="#666666"
 		borderopacity="1.0"
 		showgrid="false"
