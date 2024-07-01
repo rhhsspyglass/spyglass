@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
+	import SpyglassLogo from '$lib/LookingTube.svelte';
 </script>
 
 <div class="h-screen w-screen flex flex-col items-center justify-center">

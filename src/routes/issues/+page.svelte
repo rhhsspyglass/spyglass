@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
+	import SpyglassLogo from '$lib/LookingTube.svelte';
 	import { base } from '$app/paths';
 	import ArticleView from '$lib/ArticleView.svelte';
 	import type { PageServerData } from './$types';

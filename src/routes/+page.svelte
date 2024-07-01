@@ -4,7 +4,7 @@
 	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
 	import Header from '$lib/Header.svelte';
-	import SpyglassLogo from '$lib/SpyglassLogo.svelte';
+	import SpyglassLogo from '$lib/LookingTube.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
