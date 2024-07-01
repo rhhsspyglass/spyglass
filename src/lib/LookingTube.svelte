@@ -11,12 +11,10 @@
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
 	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-	width="40.056744mm"
-	height="7.1439743mm"
 	viewBox="0 0 40.056744 7.1439743"
 	version="1.1"
 	id="svg8"
-	class={className}
+	class="{className} tube-aspect"
 >
 	<defs id="defs2" />
 	<sodipodi:namedview
@@ -79,3 +77,9 @@
 		</g>
 	</g>
 </svg>
+
+<style>
+	.tube-aspect {
+		aspect-ratio: 40.056744 / 7.1439743;
+	}
+</style>

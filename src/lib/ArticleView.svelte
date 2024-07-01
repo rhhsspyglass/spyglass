@@ -20,7 +20,7 @@
 		<h2 class="italic">the</h2>
 		<h1 class="">spyglass</h1>
 		<div class="hover:boop">
-			<LookingTube class="mt-3 mx-auto w-3/5" />
+			<LookingTube class="mt-3 mx-auto w-1/2 " />
 		</div>
 	</div>
     <!-- Article title -->

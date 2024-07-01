@@ -13,11 +13,13 @@
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
 	<DarkModeToggle />
 
-	<div class="cursor-pointer">
-		<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
-		<h1 class="text-5xl">spyglass</h1>
+	<div class="cursor-pointer flex flex-col items-center">
+		<div>
+			<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
+			<h1 class="text-5xl">spyglass</h1>
+		</div>
 		<div class="hover:boop">
-			<SpyglassLogo class="mt-3 mx-auto w-3/5" />
+			<SpyglassLogo class="mt-3 mx-auto w-2/5" />
 		</div>
 	</div>
 	<nav

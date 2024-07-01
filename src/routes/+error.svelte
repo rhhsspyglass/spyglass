@@ -15,7 +15,7 @@
 			<h2 class="font-serif text-lg text-center">{$page.error.message}</h2>
 		{/if}
 		<div class="hover:boop">
-			<SpyglassLogo class="my-4 mx-auto w-2/3" />
+			<SpyglassLogo class="my-4 mx-auto w-1/2" />
 		</div>
 		<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
 	</div>

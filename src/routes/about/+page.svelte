@@ -7,7 +7,7 @@
 	<div>
 		<h1 class="font-serif text-4xl text-center">coming soon.</h1>
 		<div class="hover:boop">
-			<SpyglassLogo class="my-4 mx-auto w-2/3" />
+			<SpyglassLogo class="my-4 mx-auto w-1/2" />
 		</div>
 		<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
 	</div>
