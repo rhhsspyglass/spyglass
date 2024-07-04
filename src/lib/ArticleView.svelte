@@ -10,7 +10,9 @@
 
 	const dispatch = createEventDispatcher();
 
-	const articleTitle = article.title;
+	const articleTitleParts = article.title.split(' ');
+	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' ');
+	const articleTitleLine2 = articleTitleParts.slice(2).join(' ');
 
 	let articleUrl = article.articleUrl;
 
@@ -22,7 +24,7 @@
 </script>
 
 <a
-	class="h-screen article-aspect bg-neutral-200 border-neutral-700 border-[1px] overflow-hidden font-serif article-layout article-text"
+	class="h-screen article-aspect dark:bg-neutral-800 bg-neutral-200 border-neutral-700 border-[1px] overflow-hidden font-serif article-layout article-text"
 	{id}
 	href={articleUrl}
 	target="_blank"
@@ -33,14 +35,14 @@
 			<h2 class="italic">the</h2>
 			<h1 class="">spyglass</h1>
 		</div>
-		<div class="hover:boop">
-			<LookingTube class="mt-3 mx-auto w-1/2 " />
-		</div>
+		<LookingTube class="mt-4 mx-auto w-1/2" />
 	</div>
 	<!-- Article title -->
-	<div class="title">
-		<h1>{articleTitle}</h1>
-	</div>
+		<a href={articleUrl} target="_blank" class="title hover:font-bold text-center block">
+			{articleTitleLine1}
+			<br />
+			{articleTitleLine2}
+		</a>
 	<!-- Article navigation -->
 	<!-- <div class="">
         
@@ -83,8 +85,10 @@
 	}
 
 	.title {
-		@apply justify-self-center;
+		@apply justify-self-center self-center;
 		grid-column: 2;
 		grid-row: 3;
+		font-size: 1.5em;
+		line-height: 1.2;
 	}
 </style>

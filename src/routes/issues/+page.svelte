@@ -6,7 +6,7 @@
 	export let data: PageServerData;
 </script>
 
-<div class="w-screen flex flex-col items-center overflow-x-clip">
+<div class="w-full flex flex-col items-center overflow-x-clip">
 	{#each data.articles as article}
 		{#if article.archived !== true}
 			<ArticleView {article} id={article.shortTitle.replaceAll(" ", "-")} />
