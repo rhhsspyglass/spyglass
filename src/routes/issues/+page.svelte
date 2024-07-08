@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import ArticleView from '$lib/ArticleView.svelte';
+	import type Article from '$lib/models/article.model';
+	import SiteNavigation from '$lib/SiteNavigation.svelte';
 	import type { PageServerData } from './$types';
 	export let data: PageServerData;
 
@@ -30,10 +31,9 @@
 <svelte:head>
 	<title>The Spyglass | issues</title>
 </svelte:head>
-<div class="w-full flex flex-col items-center">
-	<nav class="fixed top-10 right-10">
-		<a class="font-serif hover:font-bold text-lg" href="{base}/">home</a>
-	</nav>
+
+<SiteNavigation showHome={true} />
+<main class="w-fit overflow-auto m-auto">
 	{#each data.articles as article, i}
 		<ArticleView
 			{article}
@@ -42,4 +42,4 @@
 			clickDown={clickDown(i)}
 		/>
 	{/each}
-</div>
+</main>

@@ -5,7 +5,7 @@
 </script>
 
 <button
-	class="fixed top-10 left-10 w-9 aspect-square rounded-full p-1"
+	class="w-9 aspect-square rounded-full p-1"
 	on:click={isDarkMode.toggle}
 	on:mouseenter={() => (isHovering = true)}
 	on:mouseleave={() => (isHovering = false)}

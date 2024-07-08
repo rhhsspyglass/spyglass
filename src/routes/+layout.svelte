@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.css';
 	import { isDarkMode } from '$lib/stores/themeStore';
-	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 </script>
 
 <svelte:head>
@@ -12,8 +11,6 @@
 	class="dark:dark-theme light-theme transition-colors duration-300 show"
 	class:dark={$isDarkMode}
 >
-	<DarkModeToggle />
-
 	<slot />
 </div>
 

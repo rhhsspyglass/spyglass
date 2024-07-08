@@ -4,13 +4,14 @@
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
 	import Header from '$lib/Header.svelte';
 	import SpyglassLogo from '$lib/LookingTube.svelte';
+	import SiteNavigation from '$lib/SiteNavigation.svelte';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
 </script>
 
+<SiteNavigation />
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
-
 	<div class="cursor-pointer flex flex-col items-center">
 		<div>
 			<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>

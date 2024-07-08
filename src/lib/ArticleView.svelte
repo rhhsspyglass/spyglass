@@ -24,7 +24,7 @@
 </script>
 
 <a
-	class="h-screen article-aspect dark:bg-neutral-800 bg-neutral-200 border-neutral-700 border-[1px] overflow-hidden font-serif article-layout article-text"
+	class="h-screen min-h-fit max-w-screen article-aspect dark:bg-neutral-800 bg-neutral-200 border-neutral-700 border-[1px] overflow-hidden font-serif article-layout article-text"
 	{id}
 	href={articleUrl}
 	target="_blank"
