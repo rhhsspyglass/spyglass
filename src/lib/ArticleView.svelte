@@ -3,12 +3,11 @@
 	import type Article from './models/article.model';
 	import LookingTube from './LookingTube.svelte';
 	import { base } from '$app/paths';
+	import FallbackIcon from './FallbackIcon.svelte';
 	export let article: Article;
 	export let id: string;
-	export let onUp: VoidFunction = undefined;
-	export let onDown: VoidFunction = undefined;
-
-	const dispatch = createEventDispatcher();
+	export let clickUp: string = '#';
+	export let clickDown: string = '#';
 
 	const articleTitleParts = article.title.split(' ');
 	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' ');
@@ -20,7 +19,10 @@
 		articleUrl = base + articleUrl;
 	}
 
-	// Key dispatch
+	let upHovered = false;
+	let downHovered = false;
+
+	$: console.log(upHovered);
 </script>
 
 <a
@@ -38,19 +40,41 @@
 		<LookingTube class="mt-4 mx-auto w-1/2" />
 	</div>
 	<!-- Article title -->
-		<a href={articleUrl} target="_blank" class="title hover:font-bold text-center block">
-			{articleTitleLine1}
-			<br />
-			{articleTitleLine2}
-		</a>
+	<a href={articleUrl} target="_blank" class="title hover:font-bold text-center block">
+		{articleTitleLine1}
+		<br />
+		{articleTitleLine2}
+	</a>
 	<!-- Article navigation -->
-	<!-- <div class="">
-        
-        {#if onUp !== undefined}
-        {/if}
-        {#if onDown !== undefined}
-        {/if}
-    </div> -->
+	<nav class="grid grid-rows-2 grid-cols-1 relative z-10 m-[35%] gap-2">
+		{#if clickUp !== '#'}
+			<a
+				href={clickUp}
+				class="block w-full h-full up-button"
+				on:mouseenter={() => (upHovered = true)}
+				on:mouseleave={() => (upHovered = false)}
+			>
+				<FallbackIcon icon={upHovered ? 'ph:arrow-up-bold' : 'ph:arrow-up'} class="w-full h-full">
+					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">up</div>
+				</FallbackIcon>
+			</a>
+		{/if}
+		{#if clickDown !== '#'}
+			<a
+				href={clickDown}
+				class="block w-full h-full down-button"
+				on:mouseenter={() => (downHovered = true)}
+				on:mouseleave={() => (downHovered = false)}
+			>
+				<FallbackIcon
+					icon={downHovered ? 'ph:arrow-down-bold' : 'ph:arrow-down'}
+					class="w-full h-full"
+				>
+					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">down</div>
+				</FallbackIcon>
+			</a>
+		{/if}
+	</nav>
 </a>
 
 <style>
@@ -89,6 +113,21 @@
 		grid-column: 2;
 		grid-row: 3;
 		font-size: 1.5em;
-		line-height: 1.2;
+		line-height: 1.3;
+	}
+
+	nav {
+		grid-column: 3;
+		grid-row: 3;
+	}
+
+	.up-button {
+		grid-column: 1;
+		grid-row: 1;
+	}
+
+	.down-button {
+		grid-column: 1;
+		grid-row: 2;
 	}
 </style>

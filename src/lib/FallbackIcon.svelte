@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Icon, { iconExists, loadIcon } from '@iconify/svelte';
     
-    
 	export let icon: string;
 	export let loaded = false;
 	

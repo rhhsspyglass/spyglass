@@ -10,7 +10,7 @@
 </script>
 
 <svelte:head>
-	<title>The Spyglass | issues</title>
+	<title>The Spyglass | past issues</title>
 </svelte:head>
 <div class="w-full flex flex-col items-center">
 	<nav class="fixed bottom-10 right-10">

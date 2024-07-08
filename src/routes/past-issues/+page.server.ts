@@ -4,6 +4,6 @@ import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = ({ params }) => {
     return {
-        articles: ARTICLES.filter((article) => !article.archived)
+        articles: ARTICLES.filter((article) => article.archived)
     }
 }

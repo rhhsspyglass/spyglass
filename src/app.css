@@ -68,12 +68,7 @@
 	}
 }
 
-/* VERY important to hide the ui while localstorage is loading */
-.show {
-	animation: 200ms show;
-}
-
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
 	width: 7px;
 	height: 7px;
