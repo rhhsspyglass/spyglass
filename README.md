@@ -7,3 +7,6 @@ Richmond Hill High School's Spyglass website.
 npm run build
 npm run deploy
 ```
+
+## bugs
+- spyglass icon doesn't transition color

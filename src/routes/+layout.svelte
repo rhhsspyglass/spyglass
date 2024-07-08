@@ -1,15 +1,17 @@
 <script lang="ts">
 	import '../app.css';
 	import { isDarkMode } from '$lib/stores/themeStore';
+
+	isDarkMode.subscribe((value) => {
+		document.documentElement.classList[value ? 'add' : 'remove']('dark');
+	})
 </script>
 
 <svelte:head>
 	<title>The Spyglass</title>
 </svelte:head>
-
 <div
 	class="dark:dark-theme light-theme transition-colors duration-300 show"
-	class:dark={$isDarkMode}
 >
 	<slot />
 </div>

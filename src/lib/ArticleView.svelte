@@ -30,13 +30,13 @@
 	target="_blank"
 >
 	<!-- Spyglass Logo -->
-	<div class="cursor-pointer logo flex flex-col items-center">
+	<header class="cursor-pointer logo flex flex-col items-center">
 		<div>
 			<h2 class="italic">the</h2>
 			<h1 class="">spyglass</h1>
 		</div>
 		<LookingTube class="mt-4 mx-auto w-1/2" />
-	</div>
+	</header>
 	<!-- Article title -->
 	<a href={articleUrl} target="_blank" class="title hover:font-bold text-center block">
 		{articleTitleLine1}
