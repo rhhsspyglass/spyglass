@@ -11,8 +11,8 @@
 </script>
 
 <SiteNavigation />
-<div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
-	<div class="cursor-pointer flex flex-col items-center">
+<main class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
+	<header class="cursor-pointer flex flex-col items-center">
 		<div>
 			<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
 			<h1 class="text-5xl">spyglass</h1>
@@ -20,7 +20,7 @@
 		<div class="hover:boop">
 			<SpyglassLogo class="mt-3 mx-auto w-2/5" />
 		</div>
-	</div>
+	</header>
 	<nav
 		class="absolute right-0 bottom-0 p-10 flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
 	>
@@ -60,4 +60,4 @@
 			</div>
 		</FoldingHeader>
 	</nav>
-</div>
+</main>

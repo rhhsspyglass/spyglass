@@ -3,12 +3,9 @@
 	import SpyglassLogo from '$lib/LookingTube.svelte';
 </script>
 
-<div class="h-screen w-screen flex flex-col items-center justify-center">
-	<div>
-		<h1 class="font-serif text-4xl text-center">coming soon.</h1>
-		<div class="hover:boop">
-			<SpyglassLogo class="my-4 mx-auto w-1/2" />
-		</div>
-		<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a>
-	</div>
-</div>
+<header class="h-screen w-screen flex flex-col items-center justify-center">
+	<h1 class="font-serif text-4xl text-center">coming soon.</h1>
+	<SpyglassLogo class="my-4 mx-auto h-8 hover:boop" />
+	<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a
+	>
+</header>
