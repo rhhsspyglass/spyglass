@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import ArticleLink from '$lib/ArticleLink.svelte';
-	import DarkModeToggle from '$lib/DarkModeToggle.svelte';
 	import FoldingHeader from '$lib/FoldingHeader.svelte';
 	import Header from '$lib/Header.svelte';
 	import SpyglassLogo from '$lib/LookingTube.svelte';
@@ -11,7 +10,6 @@
 </script>
 
 <div class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
-	<DarkModeToggle />
 
 	<div class="cursor-pointer flex flex-col items-center">
 		<div>

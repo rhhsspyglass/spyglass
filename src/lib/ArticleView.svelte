@@ -6,8 +6,8 @@
 	import FallbackIcon from './FallbackIcon.svelte';
 	export let article: Article;
 	export let id: string;
-	export let clickUp: string = '#';
-	export let clickDown: string = '#';
+	export let clickUp: VoidFunction | undefined;
+	export let clickDown: VoidFunction | undefined;
 
 	const articleTitleParts = article.title.split(' ');
 	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' ');
@@ -21,8 +21,6 @@
 
 	let upHovered = false;
 	let downHovered = false;
-
-	$: console.log(upHovered);
 </script>
 
 <a
@@ -47,22 +45,22 @@
 	</a>
 	<!-- Article navigation -->
 	<nav class="grid grid-rows-2 grid-cols-1 relative z-10 m-[35%] gap-2">
-		{#if clickUp !== '#'}
-			<a
-				href={clickUp}
-				class="block w-full h-full up-button"
+		{#if clickUp !== undefined}
+			<button
+				on:click={clickUp}
+				class="w-full h-full up-button"
 				on:mouseenter={() => (upHovered = true)}
 				on:mouseleave={() => (upHovered = false)}
 			>
 				<FallbackIcon icon={upHovered ? 'ph:arrow-up-bold' : 'ph:arrow-up'} class="w-full h-full">
 					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">up</div>
 				</FallbackIcon>
-			</a>
+			</button>
 		{/if}
-		{#if clickDown !== '#'}
-			<a
-				href={clickDown}
-				class="block w-full h-full down-button"
+		{#if clickDown !== undefined}
+			<button
+				on:click={clickDown}
+				class="w-full h-full down-button"
 				on:mouseenter={() => (downHovered = true)}
 				on:mouseleave={() => (downHovered = false)}
 			>
@@ -72,7 +70,7 @@
 				>
 					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">down</div>
 				</FallbackIcon>
-			</a>
+			</button>
 		{/if}
 	</nav>
 </a>
