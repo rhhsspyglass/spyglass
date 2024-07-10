@@ -10,6 +10,9 @@
 	export let data: PageServerData;
 </script>
 
+<svelte:head>
+	<title>The Spyglass</title>
+</svelte:head>
 <SiteNavigation />
 <main class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
 	<header class="cursor-pointer flex flex-col items-center">

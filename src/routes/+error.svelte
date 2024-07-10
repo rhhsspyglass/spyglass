@@ -4,6 +4,9 @@
 	import SpyglassLogo from '$lib/LookingTube.svelte';
 </script>
 
+<svelte:head>
+	<title>The Spyglass | {$page.status === 404 ? 'page not found' : 'error'}</title>
+</svelte:head>
 <main class="h-screen w-screen flex flex-col items-center justify-center">
 	{#if $page.status === 404}
 		<h1 class="font-serif text-4xl text-center">page not found.</h1>
