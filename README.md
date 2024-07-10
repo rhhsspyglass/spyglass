@@ -12,7 +12,10 @@ npm run deploy
 - spyglass icon doesn't transition color
 
 ## todo
-- about page
 - team page
 - featured articles on main page
 - finish article view
+
+## tailwind class order
+
+size > display > everything else
