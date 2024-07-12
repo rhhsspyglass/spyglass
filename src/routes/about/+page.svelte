@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import SpyglassLogo from '$lib/LookingTube.svelte';
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
 </script>
 
 <SiteNavigation showHome={true} />
-<main class="h-screen w-screen flex flex-col items-center justify-center font-serif">
-	<div class="w-2/5 max-w-[480px]">
+<div class="h-screen w-screen flex flex-col items-center justify-center font-serif">
+	<main class="w-2/5 max-w-[480px]">
 		<h1 class="text-3xl text-center mb-3">about</h1>
 		<p class="mb-1 text-justify">
 			The Spyglass is Richmond Hill High School's official school magazine.
@@ -18,5 +17,5 @@
 		</p>
 
 		<SpyglassLogo class="mx-auto h-4 hover:boop" />
-	</div>
-</main>
+	</main>
+</div>

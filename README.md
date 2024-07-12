@@ -12,10 +12,10 @@ npm run deploy
 - spyglass icon doesn't transition color
 
 ## todo
-- team page
 - featured articles on main page
 - finish article view
 
 ## tailwind class order
 
+styling for a given screen size is grouped together (desktop > tablet > mobile)
 size > display > everything else
