@@ -1,8 +1,10 @@
 <script lang="ts">
-	import SpyglassLogo from '$lib/LookingTube.svelte';
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
 </script>
 
+<svelte:head>
+	<title>The Spyglass | team</title>
+</svelte:head>
 <SiteNavigation showHome={true} />
 <div class="min-h-[100vh] w-screen flex flex-col items-center justify-center">
 	<main class="grid grid-cols-2 font-serif gap-x-20">
