@@ -1,5 +1,7 @@
 <script lang="ts">
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
+	import type { PageServerData } from './$types';
+	export let data: PageServerData;
 </script>
 
 <svelte:head>
@@ -9,69 +11,55 @@
 <div class="min-h-[100vh] w-screen flex flex-col items-center justify-center">
 	<main class="grid grid-cols-2 font-serif gap-x-20">
 		<div class="top-row text-center mb-4">
-			<h1 class="text-3xl">team</h1>
 			<hgroup class="text-xl">
 				<h2 class="underline">Editors in Chief</h2>
-				<p>Max Skidelsky and Rianna Zhu</p>
+				<p>{data.team.editorsInChiefNames[0]} and {data.team.editorsInChiefNames[1]}</p>
 			</hgroup>
 		</div>
 		<div class="left-col flex flex-col gap-4 items-center justify-center text-center text-xl">
 			<hgroup>
-				<h2 class="underline">Copy Editor</h2>
-				<p>Kate Shahidi</p>
+				<h2 class="underline">Copy Editor{data.team.copyEditorNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.copyEditorNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 			<hgroup>
-				<h2 class="underline">Photography Editor</h2>
-				<p>Jolly Yan</p>
+				<h2 class="underline">Photography Editor{data.team.photographyEditorNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.photographyEditorNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 			<hgroup>
-				<h2 class="underline">Design Editor</h2>
-				<p>Katrina Lam</p>
-				<p>Lynn He</p>
+				<h2 class="underline">Design Editor{data.team.designEditorNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.designEditorNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 			<hgroup>
-				<h2 class="underline">Associate Editor</h2>
-				<p>Erin Chen</p>
+				<h2 class="underline">Associate Editor{data.team.associateEditorNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.associateEditorNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 			<hgroup>
-				<h2 class="underline">Copywriters</h2>
-				<p>Amanda Xi</p>
-				<p>Amrita Dudaka</p>
-				<p>Anna Pan</p>
-				<p>Eowyn Wong-Au</p>
-				<p>Elaine Wang</p>
-				<p>Jilian Ouyang</p>
-				<p>Kate Shahidi</p>
-				<p>Max Skidelsky</p>
-				<p>Rianna Zhu</p>
-				<p>Yasmin Hadizad</p>
+				<h2 class="underline">Copywriter{data.team.copywriterNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.copywriterNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 		</div>
 		<div class="right-col flex flex-col gap-4 items-center justify-center text-center text-xl">
 			<hgroup>
-				<h2 class="underline">Photographers</h2>
-				<p>Audrey lai</p>
-				<p>Daniel Yang</p>
-				<p>Emma Fodor</p>
-				<p>Emily Meng</p>
-				<p>Iris You</p>
-				<p>Jack Kang</p>
-				<p>Jolly Yan</p>
-				<p>Marina Huang</p>
-				<p>Sam Abdi</p>
+				<h2 class="underline">Photographer{data.team.photographerNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.photographerNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 			<hgroup>
-				<h2 class="underline">Designers</h2>
-				<p>Allyson Mack</p>
-				<p>Andrew Chu</p>
-				<p>Elina Lai</p>
-				<p>Erin Chen</p>
-				<p>Katrina Lam</p>
-				<p>Lynn He</p>
-				<p>Maggie Li</p>
-				<p>Melinda Li</p>
-				<p>Phoebe Su</p>
-				<p>Vivian Wu</p>
+				<h2 class="underline">Designer{data.team.designerNames.length > 1 ? 's' : ''}</h2>
+				{#each data.team.designerNames as name}
+					<p>{name}</p>
+				{/each}
 			</hgroup>
 		</div>
 	</main>
