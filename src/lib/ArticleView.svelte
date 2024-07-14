@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
 	import type Article from './models/article.model';
 	import LookingTube from './LookingTube.svelte';
 	import { base } from '$app/paths';
@@ -9,9 +8,9 @@
 	export let clickUp: VoidFunction | undefined;
 	export let clickDown: VoidFunction | undefined;
 
-	const articleTitleParts = article.title.split(' ');
-	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' ');
-	const articleTitleLine2 = articleTitleParts.slice(2).join(' ');
+	const articleTitleParts = article.title.split(' '); // summer issue twenty twenty-three
+	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' '); // summer issue
+	const articleTitleLine2 = articleTitleParts.slice(2).join(' '); // twenty twenty-three
 
 	let articleUrl = article.articleUrl;
 
@@ -23,28 +22,29 @@
 	let downHovered = false;
 </script>
 
-<a
-	class="h-screen min-h-fit max-w-screen article-aspect dark:bg-neutral-800 bg-neutral-200 border-neutral-700 border-[1px] overflow-hidden font-serif article-layout article-text"
+<div
+	class="h-screen min-h-fit max-w-screen article-aspect overflow-hidden article-layout bg-neutral-200 dark:bg-neutral-800 border-neutral-600 dark:border-neutral-700 border-[1px] font-serif article-text"
 	{id}
-	href={articleUrl}
-	target="_blank"
 >
+	<!-- svelte-ignore a11y-missing-content -->
+	<a href={articleUrl} target="_blank" class="absolute w-full h-full"></a>
+
 	<!-- Spyglass Logo -->
-	<header class="cursor-pointer logo flex flex-col items-center">
+	<header class="flex flex-col items-center logo cursor-pointer">
 		<div>
 			<h2 class="italic">the</h2>
-			<h1 class="">spyglass</h1>
+			<h1>spyglass</h1>
 		</div>
-		<LookingTube class="mt-4 mx-auto w-1/2" />
+		<LookingTube class="w-1/2 mt-4 mx-auto" />
 	</header>
 	<!-- Article title -->
-	<a href={articleUrl} target="_blank" class="title hover:font-bold text-center block">
+	<a href={articleUrl} target="_blank" class="title hover:font-bold text-center">
 		{articleTitleLine1}
 		<br />
 		{articleTitleLine2}
 	</a>
 	<!-- Article navigation -->
-	<nav class="grid grid-rows-2 grid-cols-1 relative z-10 m-[35%] gap-2">
+	<nav class="m-[35%] grid grid-rows-2 grid-cols-1 relative z-10 gap-2">
 		{#if clickUp !== undefined}
 			<button
 				on:click={clickUp}
@@ -73,7 +73,7 @@
 			</button>
 		{/if}
 	</nav>
-</a>
+</div>
 
 <style>
 	.article-text {
