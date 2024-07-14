@@ -1,10 +1,9 @@
+export interface TeamUnit {
+    positionName: string;
+    memberNames: string[];
+}
+
 export default interface Team {
-    editorsInChiefNames: string[];
-    copyEditorNames: string[];
-    photographyEditorNames: string[];
-    designEditorNames: string[];
-    associateEditorNames: string[];
-    copywriterNames: string[];
-    photographerNames: string[];
-    designerNames: string[];
+    editorsInChiefNames: string;
+    units: TeamUnit[];
 }
