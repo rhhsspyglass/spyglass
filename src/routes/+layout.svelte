@@ -17,9 +17,9 @@
 		property="og:description"
 		content="The Spyglass is Richmond Hill High School's official magazine."
 	/>
-	<meta property="og:image" content="https://rhhspyglass.com/images/2020-summer.jpg">
+	<meta property="og:image" content="https://rhhspyglass.com/images/2020-summer.jpg" />
 </svelte:head>
-<div class="dark:dark-theme light-theme transition-colors duration-300 show">
+<div class="light-theme transition-colors duration-300 show dark:dark-theme">
 	<slot />
 </div>
 

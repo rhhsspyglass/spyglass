@@ -18,7 +18,9 @@
 	<div class="max-h-[70vh] flex flex-wrap flex-col justify-center items-center gap-x-20 gap-y-4">
 		{#each data.team.units as teamUnit}
 			<hgroup>
-				<h2 class="underline">{teamUnit.positionName}{teamUnit.memberNames.length > 1 ? 's' : ''}</h2>
+				<h2 class="underline">
+					{teamUnit.positionName}{teamUnit.memberNames.length > 1 ? 's' : ''}
+				</h2>
 				{#each teamUnit.memberNames as name}
 					<p>{name}</p>
 				{/each}

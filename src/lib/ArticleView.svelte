@@ -23,14 +23,14 @@
 </script>
 
 <div
-	class="h-screen min-h-fit max-w-screen article-aspect overflow-hidden article-layout bg-neutral-200 dark:bg-neutral-800 border-neutral-600 dark:border-neutral-700 border-[1px] font-serif article-text"
+	class="h-screen min-h-fit max-w-screen article-aspect overflow-hidden grid article-layout bg-neutral-200 dark:bg-neutral-800 border-neutral-600 dark:border-neutral-700 border-[1px] font-serif article-text"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
 	<a href={articleUrl} target="_blank" class="absolute w-full h-full"></a>
 
 	<!-- Spyglass Logo -->
-	<header class="flex flex-col items-center logo cursor-pointer">
+	<header class="flex flex-col items-center justify-self-center self-center logo cursor-pointer">
 		<div>
 			<h2 class="italic">the</h2>
 			<h1>spyglass</h1>
@@ -38,7 +38,11 @@
 		<LookingTube class="w-1/2 mt-4 mx-auto" />
 	</header>
 	<!-- Article title -->
-	<a href={articleUrl} target="_blank" class="title hover:font-bold text-center">
+	<a
+		href={articleUrl}
+		target="_blank"
+		class="justify-self-center self-center title hover:font-bold text-center"
+	>
 		{articleTitleLine1}
 		<br />
 		{articleTitleLine2}
@@ -85,13 +89,11 @@
 	}
 
 	.article-layout {
-		display: grid;
 		grid-template-rows: 1fr 2fr 1fr;
 		grid-template-columns: 1fr 2fr 1fr;
 	}
 
 	.logo {
-		@apply justify-self-center self-center;
 		grid-column: 2;
 		grid-row: 2;
 	}
@@ -107,7 +109,6 @@
 	}
 
 	.title {
-		@apply justify-self-center self-center;
 		grid-column: 2;
 		grid-row: 3;
 		font-size: 1.5em;

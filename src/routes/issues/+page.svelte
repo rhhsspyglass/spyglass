@@ -33,7 +33,7 @@
 </svelte:head>
 
 <SiteNavigation showHome={true} />
-<main class="w-fit overflow-auto m-auto">
+<main class="w-fit m-auto overflow-auto">
 	{#each data.articles as article, i}
 		<ArticleView
 			{article}

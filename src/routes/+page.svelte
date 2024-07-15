@@ -14,8 +14,10 @@
 	<title>The Spyglass</title>
 </svelte:head>
 <SiteNavigation />
-<main class="flex justify-center items-center w-screen h-screen overflow-hidden select-none font-serif">
-	<header class="cursor-pointer flex flex-col items-center">
+<main
+	class="w-screen h-screen flex justify-center items-center overflow-hidden select-none font-serif"
+>
+	<header class="flex flex-col items-center cursor-pointer">
 		<div>
 			<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
 			<h1 class="text-5xl">spyglass</h1>
@@ -25,7 +27,7 @@
 		</div>
 	</header>
 	<nav
-		class="absolute right-0 bottom-0 p-10 flex flex-col gap-4 items-end max-h-screen overflow-y-auto"
+		class="p-10 max-h-screen absolute right-0 bottom-0 flex flex-col gap-4 items-end overflow-y-auto"
 	>
 		<Header href="{base}/about" title="about" />
 		<FoldingHeader title="recent issues">
@@ -46,10 +48,9 @@
 					{/if}
 				{/each}
 				<a href="{base}/past-issues" class="hover:font-bold article-header">view all</a>
-
 			</div>
 		</FoldingHeader>
-		<Header href="{base}/team" title="team"/>
+		<Header href="{base}/team" title="team" />
 		<FoldingHeader title="contact">
 			<div class="flex flex-col items-end gap-1">
 				<a target="_blank" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>

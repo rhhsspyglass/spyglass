@@ -19,6 +19,6 @@
 	<div class="hover:boop">
 		<SpyglassLogo class="my-4 mx-auto h-8" />
 	</div>
-	<a href="{base}/" class="text-center block hover:font-bold hover:underline font-serif">go home.</a
+	<a href="{base}/" class="block text-center font-serif hover:font-bold hover:underline">go home.</a
 	>
 </main>

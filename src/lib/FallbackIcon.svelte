@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Icon, { iconExists, loadIcon } from '@iconify/svelte';
-    
+
 	export let icon: string;
 	export let loaded = false;
-	
+
 	let className: string = '';
 	export { className as class };
-    
-    let update = 0;
+
+	let update = 0;
 
 	$: {
 		update;
