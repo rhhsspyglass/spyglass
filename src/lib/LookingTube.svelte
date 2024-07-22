@@ -9,10 +9,13 @@
 	id="svg8"
 	class="{className} tube-aspect fill-neutral-800 dark:fill-neutral-200"
 >
-<defs id="defs2" />
+	<defs id="defs2" />
 	<sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" showgrid="false" />
 	<g id="layer1" transform="translate(-54.458646,-74.167097)">
-		<g id="g943" style="fill-opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;">
+		<g
+			id="g943"
+			style="fill-opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;"
+		>
 			<g transform="translate(4.4433559,12.093986)" id="g930">
 				<path
 					style="stroke-width:3.67649126;"

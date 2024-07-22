@@ -15,19 +15,19 @@
 </svelte:head>
 <SiteNavigation />
 <main
-	class="w-screen h-screen flex justify-center items-center overflow-hidden select-none font-serif"
+	class="large:h-screen flex h-svh w-screen select-none items-center justify-center overflow-hidden font-serif"
 >
-	<header class="flex flex-col items-center cursor-pointer">
+	<header class="flex cursor-pointer flex-col items-center">
 		<div>
-			<h2 class="italic text-2xl" style="line-height: 0.6">the</h2>
+			<h2 class="text-2xl italic" style="line-height: 0.6">the</h2>
 			<h1 class="text-5xl">spyglass</h1>
 		</div>
 		<div class="hover:boop">
-			<SpyglassLogo class="mt-3 mx-auto w-2/5" />
+			<SpyglassLogo class="mx-auto mt-3 w-2/5" />
 		</div>
 	</header>
 	<nav
-		class="p-10 max-h-screen absolute right-0 bottom-0 flex flex-col gap-4 items-end overflow-y-auto"
+		class="absolute bottom-0 right-0 flex max-h-screen flex-col items-end gap-4 overflow-y-auto p-10"
 	>
 		<Header href="{base}/about" title="about" />
 		<FoldingHeader title="recent issues">
@@ -37,7 +37,7 @@
 						<ArticleLink {article} />
 					{/if}
 				{/each}
-				<a href="{base}/issues" class="hover:font-bold article-header">view all</a>
+				<a href="{base}/issues" class="article-header hover:font-bold">view all</a>
 			</div>
 		</FoldingHeader>
 		<FoldingHeader title="past issues">
@@ -47,7 +47,7 @@
 						<ArticleLink {article} />
 					{/if}
 				{/each}
-				<a href="{base}/past-issues" class="hover:font-bold article-header">view all</a>
+				<a href="{base}/past-issues" class="article-header hover:font-bold">view all</a>
 			</div>
 		</FoldingHeader>
 		<Header href="{base}/team" title="team" />

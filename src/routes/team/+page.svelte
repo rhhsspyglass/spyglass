@@ -9,13 +9,13 @@
 </svelte:head>
 <SiteNavigation showHome={true} />
 <main
-	class="min-h-[100vh] w-screen flex flex-col items-center justify-center font-serif text-center text-xl"
+	class="flex min-h-[100vh] w-screen flex-col items-center justify-center text-center font-serif text-xl"
 >
 	<hgroup class="mb-4">
 		<h2 class="underline">Editors in Chief</h2>
 		<p>{data.team.editorsInChiefNames}</p>
 	</hgroup>
-	<div class="max-h-[70vh] flex flex-wrap flex-col justify-center items-center gap-x-20 gap-y-4">
+	<div class="flex max-h-[70vh] flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4">
 		{#each data.team.units as teamUnit}
 			<hgroup>
 				<h2 class="underline">

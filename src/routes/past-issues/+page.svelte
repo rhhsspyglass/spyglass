@@ -32,7 +32,7 @@
 	<title>The Spyglass | past issues</title>
 </svelte:head>
 <SiteNavigation showHome={true} />
-<main class="w-fit m-auto overflow-auto">
+<main class="m-auto w-fit overflow-auto">
 	{#each data.articles as article, i}
 		<ArticleView
 			{article}

@@ -19,7 +19,7 @@
 	/>
 	<meta property="og:image" content="https://rhhspyglass.com/images/2020-summer.jpg" />
 </svelte:head>
-<div class="light-theme transition-colors duration-300 show dark:dark-theme">
+<div class="light-theme show dark:dark-theme transition-colors duration-300">
 	<slot />
 </div>
 

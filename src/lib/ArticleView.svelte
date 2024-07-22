@@ -23,56 +23,56 @@
 </script>
 
 <div
-	class="h-screen min-h-fit max-w-screen article-aspect overflow-hidden grid article-layout bg-neutral-200 dark:bg-neutral-800 border-neutral-600 dark:border-neutral-700 border-[1px] font-serif article-text"
+	class="max-w-screen article-aspect article-layout article-text grid h-screen min-h-fit overflow-hidden border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
-	<a href={articleUrl} target="_blank" class="absolute w-full h-full"></a>
+	<a href={articleUrl} target="_blank" class="absolute h-full w-full"></a>
 
 	<!-- Spyglass Logo -->
-	<header class="flex flex-col items-center justify-self-center self-center logo cursor-pointer">
+	<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
 		<div>
 			<h2 class="italic">the</h2>
 			<h1>spyglass</h1>
 		</div>
-		<LookingTube class="w-1/2 mt-4 mx-auto" />
+		<LookingTube class="mx-auto mt-4 w-1/2" />
 	</header>
 	<!-- Article title -->
 	<a
 		href={articleUrl}
 		target="_blank"
-		class="justify-self-center self-center title hover:font-bold text-center"
+		class="title self-center justify-self-center text-center hover:font-bold"
 	>
 		{articleTitleLine1}
 		<br />
 		{articleTitleLine2}
 	</a>
 	<!-- Article navigation -->
-	<nav class="m-[35%] grid grid-rows-2 grid-cols-1 relative z-10 gap-2">
+	<nav class="relative z-10 m-[35%] grid grid-cols-1 grid-rows-2 gap-2">
 		{#if clickUp !== undefined}
 			<button
 				on:click={clickUp}
-				class="w-full h-full up-button"
+				class="up-button h-full w-full"
 				on:mouseenter={() => (upHovered = true)}
 				on:mouseleave={() => (upHovered = false)}
 			>
-				<FallbackIcon icon={upHovered ? 'ph:arrow-up-bold' : 'ph:arrow-up'} class="w-full h-full">
-					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">up</div>
+				<FallbackIcon icon={upHovered ? 'ph:arrow-up-bold' : 'ph:arrow-up'} class="h-full w-full">
+					<div slot="fallback" class="h-full w-full text-xl hover:font-bold">up</div>
 				</FallbackIcon>
 			</button>
 		{/if}
 		{#if clickDown !== undefined}
 			<button
 				on:click={clickDown}
-				class="w-full h-full down-button"
+				class="down-button h-full w-full"
 				on:mouseenter={() => (downHovered = true)}
 				on:mouseleave={() => (downHovered = false)}
 			>
 				<FallbackIcon
 					icon={downHovered ? 'ph:arrow-down-bold' : 'ph:arrow-down'}
-					class="w-full h-full"
+					class="h-full w-full"
 				>
-					<div slot="fallback" class="w-full h-full hover:font-bold text-xl">down</div>
+					<div slot="fallback" class="h-full w-full text-xl hover:font-bold">down</div>
 				</FallbackIcon>
 			</button>
 		{/if}

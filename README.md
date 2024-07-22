@@ -16,8 +16,4 @@ npm run deploy
 - finish article view
 
 ## tailwind class order
-
-styling for a given screen size is grouped together (all desktop styles > all mobile)
-size/padding/margin > display/layout > position > colour > everything else
-
-light > dark 
+Just autoformat with prettier-plugin-tailwindcss

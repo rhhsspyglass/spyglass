@@ -5,7 +5,7 @@
 </script>
 
 <button
-	class="w-9 p-1 aspect-square rounded-full"
+	class="aspect-square w-9 rounded-full p-1"
 	on:click={isDarkMode.toggle}
 	on:mouseenter={() => (isHovering = true)}
 	on:mouseleave={() => (isHovering = false)}
@@ -13,11 +13,11 @@
 >
 	<FallbackIcon
 		icon="{$isDarkMode ? 'ph:sun' : 'ph:moon'}{isHovering ? '-fill' : ''}"
-		class="w-full h-full"
+		class="h-full w-full"
 	>
 		<div
 			slot="fallback"
-			class="w-full h-full border-neutral-800 dark:border-neutral-200 hover:bg-neutral-800 dark:hover:bg-neutral-200 rounded-full border-2"
+			class="h-full w-full rounded-full border-2 border-neutral-800 hover:bg-neutral-800 dark:border-neutral-200 dark:hover:bg-neutral-200"
 		/>
 	</FallbackIcon>
 </button>
