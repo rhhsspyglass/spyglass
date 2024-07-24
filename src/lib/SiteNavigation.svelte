@@ -5,9 +5,11 @@
 	export let showHome: boolean = false;
 </script>
 
-<nav class="fixed z-10 flex w-full items-center justify-between p-10">
-	<DarkModeToggle />
+<nav class="fixed flex w-full items-center justify-between p-10">
+	<span class="relative z-50">
+		<DarkModeToggle />
+	</span>
 	{#if showHome}
-		<a class="font-serif text-lg hover:font-bold" href="{base}/">home</a>
+		<a class="relative font-serif text-lg hover:font-bold z-50" href="{base}/">home</a>
 	{/if}
 </nav>
