@@ -23,7 +23,7 @@
 </script>
 
 <div
-	class="max-w-screen article-aspect article-layout article-text grid h-screen min-h-fit overflow-hidden border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
+	class="max-w-screen md:article-aspect article-layout article-text grid h-screen min-h-fit overflow-hidden border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
@@ -48,7 +48,7 @@
 		{articleTitleLine2}
 	</a>
 	<!-- Article navigation -->
-	<nav class="relative m-[35%] grid grid-cols-1 grid-rows-2 gap-2">
+	<nav class="relative md:m-1/3 my-4 grid grid-cols-1 grid-rows-2 gap-2">
 		{#if clickUp !== undefined}
 			<button
 				on:click|stopPropagation={clickUp}
@@ -129,11 +129,13 @@
 
 	.up-button {
 		grid-column: 1;
+		font-size: 1vh;
 		grid-row: 1;
 	}
 
 	.down-button {
 		grid-column: 1;
+		font-size: 1vh;
 		grid-row: 2;
 	}
 </style>
