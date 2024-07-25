@@ -27,7 +27,7 @@
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
-	<a href={articleUrl} target="_blank" class="absolute h-full w-full"></a>
+	<a href={articleUrl} target="_blank" class="relative block h-full w-auto link"></a>
 
 	<!-- Spyglass Logo -->
 	<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
@@ -80,6 +80,13 @@
 </div>
 
 <style>
+	.link {
+		grid-column-start: 1;
+		grid-column-end: 4;
+		grid-row-start: 1;
+		grid-row-end: 4;
+	}
+
 	.article-text {
 		font-size: 1.75vh;
 	}
