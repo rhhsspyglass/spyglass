@@ -48,10 +48,10 @@
 		{articleTitleLine2}
 	</a>
 	<!-- Article navigation -->
-	<nav class="relative z-10 m-[35%] grid grid-cols-1 grid-rows-2 gap-2">
+	<nav class="relative m-[35%] grid grid-cols-1 grid-rows-2 gap-2">
 		{#if clickUp !== undefined}
 			<button
-				on:click={clickUp}
+				on:click|stopPropagation={clickUp}
 				class="up-button h-full w-full"
 				on:mouseenter={() => (upHovered = true)}
 				on:mouseleave={() => (upHovered = false)}
@@ -63,7 +63,7 @@
 		{/if}
 		{#if clickDown !== undefined}
 			<button
-				on:click={clickDown}
+				on:click|stopPropagation={clickDown}
 				class="down-button h-full w-full"
 				on:mouseenter={() => (downHovered = true)}
 				on:mouseleave={() => (downHovered = false)}
