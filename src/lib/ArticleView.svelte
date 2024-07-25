@@ -48,7 +48,7 @@
 		{articleTitleLine2}
 	</a>
 	<!-- Article navigation -->
-	<nav class="relative md:m-1/3 my-4 grid grid-cols-1 grid-rows-2 gap-2">
+	<nav class="relative md:m-[35%] my-4 grid grid-cols-1 grid-rows-2 gap-2">
 		{#if clickUp !== undefined}
 			<button
 				on:click|stopPropagation={clickUp}
