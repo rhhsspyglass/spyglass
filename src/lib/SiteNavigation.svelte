@@ -6,11 +6,11 @@
 </script>
 
 <nav class="pointer-events-none fixed z-50 flex w-full items-center justify-between p-10">
-	<span class="ponter-events-auto relative">
+	<span class="pointer-events-auto relative">
 		<DarkModeToggle />
 	</span>
 	{#if showHome}
-		<a class="ponter-events-auto relative font-serif text-lg hover:font-bold" href="{base}/">home</a
+		<a class="pointer-events-auto relative font-serif text-lg hover:font-bold" href="{base}/">home</a
 		>
 	{/if}
 </nav>
