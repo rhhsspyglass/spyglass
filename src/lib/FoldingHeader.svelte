@@ -9,7 +9,7 @@
 <div class="w-full">
 	<button
 		on:click={() => (expanded = !expanded)}
-		class="header block w-full text-end"
+		class="header block w-full md:text-end text-center"
 		class:font-bold={expanded}>{title}</button
 	>
 	{#if expanded}

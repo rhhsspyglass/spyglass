@@ -14,6 +14,7 @@ npm run deploy
 ## todo
 - featured articles on main page
 - finish article view
+- make the team page adapt to mobile layout
 
 ## tailwind class order
 Just autoformat with prettier-plugin-tailwindcss
