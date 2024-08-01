@@ -58,9 +58,10 @@
 				<Header href="{base}/team" title="team" />
 				<FoldingHeader title="contact">
 					<div class="flex flex-col items-end gap-1">
-						<a target="_blank" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>
+						<a target="_blank" rel="noopener noreferrer" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>
 						<a
 							target="_blank"
+							rel="noopener noreferrer"
 							class="article-header"
 							href="https://www.instagram.com/rhhspyglass"
 							referrerpolicy="no-referrer">instagram</a
@@ -86,14 +87,15 @@
 					<button on:click|stopPropagation={() => {}}>
 						<FoldingHeader title="contact">
 							<div class="flex flex-col items-center gap-1">
-								<a target="_blank" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>
+								<a target="_blank" rel="noopener noreferrer" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>
 								<a
 									target="_blank"
+									rel="noopener noreferrer"
 									class="article-header"
 									href="https://www.instagram.com/rhhspyglass"
 									referrerpolicy="no-referrer">instagram</a
 								>
-								<p>DM for inquires.</p>
+								<p>DM for inquires</p>
 							</div>
 						</FoldingHeader>
 					</button>

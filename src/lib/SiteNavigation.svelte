@@ -5,7 +5,7 @@
 	export let showHome: boolean = false;
 </script>
 
-<nav class="pointer-events-none fixed z-50 flex w-full items-center justify-between p-10">
+<nav class="top pointer-events-none fixed z-50 flex w-full items-center justify-between p-10">
 	<span class="pointer-events-auto relative">
 		<DarkModeToggle />
 	</span>

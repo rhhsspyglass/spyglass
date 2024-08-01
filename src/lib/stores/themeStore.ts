@@ -1,17 +1,15 @@
 import { writable } from "svelte/store";
 import { browser } from "$app/environment";
 
-function getFromLocalStorage(key, initialValue) {
-    if (!browser) return initialValue;
+function getFromLocalStorage<T>(key: string, fallbackValue: T) {
+    if (!browser) return fallbackValue;
 
     const item = localStorage.getItem(key);
-    if (item) {
-        return JSON.parse(item);
-    }
-    return initialValue;
+
+    return (item || fallbackValue) as T;
 }
 
-function setToLocalStorage(key, value) {
+function setToLocalStorage(key: string, value: unknown) {
     localStorage.setItem(key, JSON.stringify(value));
 }
 

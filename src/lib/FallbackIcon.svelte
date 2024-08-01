@@ -22,7 +22,7 @@
 </script>
 
 {#if loaded}
-	<Icon {icon} class={className} />
+	<Icon on:mouseover {icon} class={className} />
 {:else}
 	<slot name="fallback" />
 {/if}

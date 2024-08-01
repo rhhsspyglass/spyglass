@@ -7,6 +7,8 @@ export default interface Article {
     articleUrl: string;
     /** The image source URL. */
     imgUrl: string;
+    /** The thumbnail source URL. */
+    thumbnailUrl: string;
     /** The date the article was published. Format: YYYY-MM-DD */
     date: string;
     archived: boolean;
