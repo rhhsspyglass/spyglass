@@ -1,18 +1,21 @@
 # Spyglass
+
 Richmond Hill High School's Spyglass website.
 
-## How to Build (and deploy)
+## How to Build
 
 ```bash
 npm run build
+```
+
+## How to Deploy
+
+```bash
 npm run deploy
 ```
 
 ## bugs
 - spyglass icon doesn't transition color
-
-## todo
-- finish article view
 
 ## tailwind class order
 Just autoformat with prettier-plugin-tailwindcss

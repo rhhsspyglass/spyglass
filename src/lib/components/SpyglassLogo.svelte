@@ -72,4 +72,10 @@
 	.tube-aspect {
 		aspect-ratio: 40.056744 / 7.1439743;
 	}
+
+	path {
+		@apply motion-reduce:transition-none transition-colors;
+
+		transition-duration: 100ms;
+	}
 </style>

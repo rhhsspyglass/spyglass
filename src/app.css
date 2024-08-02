@@ -87,3 +87,12 @@
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-neutral-400 dark:bg-neutral-600;
 }
+
+/* No view transition if user prefers reduced motion */
+@media (prefers-reduced-motion) {
+	::view-transition-group(*),
+	::view-transition-old(*),
+	::view-transition-new(*) {
+		animation: none !important;
+	}
+}

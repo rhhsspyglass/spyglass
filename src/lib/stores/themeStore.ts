@@ -14,7 +14,7 @@ function setToLocalStorage(key: string, value: string) {
 }
 
 function createThemeStore() {
-    const { subscribe, set, update } = writable<boolean>(getFromLocalStorage('theme', false) === 'true');
+    const { subscribe, set, update } = writable<boolean>(getFromLocalStorage('theme', 'false') === 'true');
 
     return {
         subscribe,

@@ -5,6 +5,12 @@
 	import { onNavigate } from '$app/navigation';
 
 	onMount(() => {
+		if ("matchMedia" in window) {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.getItem("theme") === null) {
+				isDarkMode.set(true);
+			}
+		}
+
 		isDarkMode.subscribe((value) => {
 			document.documentElement.classList[value ? 'add' : 'remove']('dark');
 		});
@@ -24,7 +30,7 @@
 	});
 </script>
 
-<div class="light-theme show dark:dark-theme transition-colors duration-300">
+<div class="light-theme show dark:dark-theme motion-reduce:transition-none transition-colors duration-300">
 	<slot />
 </div>
 
