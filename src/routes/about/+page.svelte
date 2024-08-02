@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
-	import SpyglassLogo from '$lib/LookingTube.svelte';
-	import SiteNavigation from '$lib/SiteNavigation.svelte';
+	import SpyglassLogo from '$lib/components/LookingTube.svelte';
+	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 
 	const TITLE = "The Spyglass | about us";
 	const DESCRIPTION = `The Spyglass is Richmond Hill High School's official school magazine.

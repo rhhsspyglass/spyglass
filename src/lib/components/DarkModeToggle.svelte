@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isDarkMode } from './stores/themeStore';
+	import { isDarkMode } from '../stores/themeStore';
 	import FallbackIcon from './FallbackIcon.svelte';
 	let isHovering = false;
 </script>

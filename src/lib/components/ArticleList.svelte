@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import ArticleView from './ArticleView.svelte';
-	import FallbackIcon from '$lib/FallbackIcon.svelte';
-	import type Article from './models/article.model';
+	import FallbackIcon from '$lib/components/FallbackIcon.svelte';
+	import type Article from '../models/article.model';
 	// import function to register Swiper custom elements
 	import { register, type SwiperContainer } from 'swiper/element/bundle';
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
-	import SiteNavigation from '$lib/SiteNavigation.svelte';
+	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 	import type { PageServerData } from './$types';
 	export let data: PageServerData;
 

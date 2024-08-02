@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import ArticleLink from '$lib/ArticleLink.svelte';
-	import FallbackIcon from '$lib/FallbackIcon.svelte';
-	import FoldingHeader from '$lib/FoldingHeader.svelte';
-	import Header from '$lib/Header.svelte';
-	import SpyglassLogo from '$lib/LookingTube.svelte';
-	import SiteNavigation from '$lib/SiteNavigation.svelte';
+	import ArticleLink from '$lib/components/ArticleLink.svelte';
+	import FallbackIcon from '$lib/components/FallbackIcon.svelte';
+	import FoldingHeader from '$lib/components/FoldingHeader.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import SpyglassLogo from '$lib/components/LookingTube.svelte';
+	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 	import { slide } from 'svelte/transition';
 	import type { PageServerData } from './$types';
 	import { dev } from '$app/environment';

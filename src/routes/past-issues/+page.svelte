@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
-	import ArticleList from '$lib/ArticleList.svelte';
-	import SiteNavigation from '$lib/SiteNavigation.svelte';
+	import ArticleList from '$lib/components/ArticleList.svelte';
+	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 	import type { Picture } from 'vite-imagetools';
 	import type { PageServerData } from './$types';
 	import type Article from '$lib/models/article.model';

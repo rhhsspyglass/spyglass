@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type Article from './models/article.model';
+	import type Article from '../models/article.model';
 	import LookingTube from './LookingTube.svelte';
 	import { base } from '$app/paths';
 	import type { Picture } from 'vite-imagetools';
@@ -7,7 +7,7 @@
 	export let id: string;
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
-		'./thumbnails/*.{jpeg,jpg,png}',
+		'./../thumbnails/*.{jpeg,jpg,png}',
 		{
 			eager: true,
 			query: {
@@ -34,12 +34,12 @@
 	<!-- svelte-ignore a11y-missing-content -->
 	
 	<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="relative block h-full w-auto link">
-		{#if imageModules[`.${article.thumbnailUrl}`]?.default}
-			<enhanced:img src={imageModules[`.${article.thumbnailUrl}`].default} alt="Cover image for {article.title}"/>
+		{#if imageModules[`..${article.thumbnailUrl}`]?.default}
+			<enhanced:img src={imageModules[`..${article.thumbnailUrl}`].default} alt="Cover image for {article.title}"/>
 		{/if}
 	</a>
 	
-	{#if !imageModules[`.${article.thumbnailUrl}`]?.default}
+	{#if !imageModules[`..${article.thumbnailUrl}`]?.default}
 		<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
 			<div>
 				<h2 class="italic">the</h2>
