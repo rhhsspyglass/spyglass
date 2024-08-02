@@ -9,7 +9,7 @@
 </svelte:head>
 <main class="flex h-screen w-screen flex-col items-center justify-center">
 	{#if $page.status === 404}
-		<h1 class="text-center font-serif text-4xl">page not found.</h1>
+		<h1 class="text-center font-serif text-4xl">page not found</h1>
 	{:else}
 		<h1 class="text-center font-serif text-4xl">
 			error {$page.status}
@@ -19,6 +19,6 @@
 	<div class="hover:boop">
 		<SpyglassLogo class="mx-auto my-4 h-8" />
 	</div>
-	<a href="{base}/" class="block text-center font-serif hover:font-bold hover:underline">go home.</a
+	<a href="{base}/" class="block text-center font-serif hover:font-bold hover:underline">go home</a
 	>
 </main>
