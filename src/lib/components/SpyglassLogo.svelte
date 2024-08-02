@@ -74,8 +74,6 @@
 	}
 
 	path {
-		@apply motion-reduce:transition-none transition-colors;
-
-		transition-duration: 100ms;
+		@apply motion-reduce:transition-none transition-colors duration-[75ms];
 	}
 </style>

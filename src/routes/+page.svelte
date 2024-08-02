@@ -110,7 +110,7 @@
 	{:else}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<nav class="absolute bottom-0 left-0 w-full flex flex-col items-center motion-reduce:transition-none transition-colors bg-neutral-200 dark:bg-neutral-800 py-3 gap-2 hover:cursor-pointer" on:click={() => navExpanded = !navExpanded}>
+		<nav class="absolute bottom-0 left-0 w-full flex flex-col items-center motion-reduce:transition-none transition-colors duration-300 bg-neutral-200 dark:bg-neutral-800 py-3 gap-2 hover:cursor-pointer" on:click={() => navExpanded = !navExpanded}>
 			<FallbackIcon icon="ph:list" class="text-xl text-neutral-700 dark:text-neutral-100 hover:cursor-pointer">
 				<svelte:fragment slot="fallback">menu</svelte:fragment>
 			</FallbackIcon>
