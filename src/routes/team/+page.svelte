@@ -1,11 +1,22 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
 	import type { PageServerData } from './$types';
 	export let data: PageServerData;
+
+	const TITLE = "The Spyglass | team";
+	const DESCRIPTION = "Meet our amazing team for 2024-2025!";
 </script>
 
 <svelte:head>
-	<title>The Spyglass | team</title>
+	<title>{TITLE}</title>
+	<meta name="description" content={DESCRIPTION}>
+	<meta property="og:title" content={TITLE}>
+	<meta property="og:description" content={DESCRIPTION}>
+	<meta property="og:type" content="website">
+	{#if !dev}
+		<meta property="og:url" content="https://rhhspyglass.com">
+	{/if}
 </svelte:head>
 <SiteNavigation showHome={true} />
 <main

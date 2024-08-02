@@ -1,7 +1,26 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import SpyglassLogo from '$lib/LookingTube.svelte';
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
+
+	const TITLE = "The Spyglass | about us";
+	const DESCRIPTION = `The Spyglass is Richmond Hill High School's official school magazine.
+		We are proud to be completely student-owned,
+		providing our readers with quality journalism,
+		breathtaking photography and professional layouts.
+		Every seasonal issue is an expression of student voice and tells the story of our vibrant school community.`;
 </script>
+
+<svelte:head>
+	<title>{TITLE}</title>
+	<meta name="description" content={DESCRIPTION}>
+	<meta property="og:title" content={TITLE}>
+	<meta property="og:description" content={DESCRIPTION}>
+	<meta property="og:type" content="website">
+	{#if !dev}
+		<meta property="og:url" content="https://rhhspyglass.com">
+	{/if}
+</svelte:head>
 
 <SiteNavigation showHome={true} />
 <div class="flex h-screen w-screen flex-col items-center justify-center font-serif">

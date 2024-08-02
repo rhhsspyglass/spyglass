@@ -34,9 +34,6 @@
 		});
 	})
 
-
-
-
 	export let articles: Article[];
 	
 	let upHovered = false;

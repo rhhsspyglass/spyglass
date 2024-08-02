@@ -8,15 +8,26 @@
 	import SiteNavigation from '$lib/SiteNavigation.svelte';
 	import { slide } from 'svelte/transition';
 	import type { PageServerData } from './$types';
+	import { dev } from '$app/environment';
 
 	export let data: PageServerData;
 	let navExpanded = false;
 	$: viewportWidth = 0;
+
+	const TITLE = "The Spyglass";
+	const DESCRIPTION = "The Spyglass is Richmond Hill High School's official school magazine.";
 </script>
 
 <svelte:window bind:innerWidth={viewportWidth} />
 <svelte:head>
-	<title>The Spyglass</title>
+	<title>{TITLE}</title>
+	<meta name="description" content={DESCRIPTION}>
+	<meta property="og:title" content={TITLE}>
+	<meta property="og:description" content={DESCRIPTION}>
+	<meta property="og:type" content="website">
+	{#if !dev}
+		<meta property="og:url" content="https://rhhspyglass.com">
+	{/if}
 </svelte:head>
 <SiteNavigation />
 <main
