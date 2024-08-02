@@ -101,23 +101,6 @@
 		line-height: 1.3;
 	}
 
-	nav {
-		grid-column: 3;
-		grid-row: 3;
-	}
-
-	.up-button {
-		grid-column: 1;
-		font-size: 1vh;
-		grid-row: 1;
-	}
-
-	.down-button {
-		grid-column: 1;
-		font-size: 1vh;
-		grid-row: 2;
-	}
-
 	picture {
 		display: block;
 		height: 100%;
@@ -128,9 +111,5 @@
 		display: block;
 		height: 100%;
 		object-fit: cover;
-	}
-
-	.article-nav {
-		transform: translateX(calc(100% - 2rem));
 	}
 </style>
