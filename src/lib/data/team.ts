@@ -1,7 +1,7 @@
 import type Team from '$lib/models/team.model';
 
 const TEAM: Team = {
-    editorsInChiefNames: "Max Skidelsky and Rianna Zhu",
+    editorsInChiefNames: "Rianna Zhu and Max Skidelsky",
     units: [
         {
             positionName: "Copy Editor",
