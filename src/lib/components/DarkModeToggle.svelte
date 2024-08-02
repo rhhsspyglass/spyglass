@@ -13,6 +13,7 @@
 >
 	<FallbackIcon
 		icon="{$isDarkMode ? 'ph:sun' : 'ph:moon'}{isHovering ? '-fill' : ''}"
+		preload={['ph:sun-fill', 'ph:moon-fill']}
 		class="h-full w-full"
 	>
 		<div

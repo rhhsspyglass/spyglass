@@ -1,28 +1,31 @@
 <script lang="ts">
-	import Icon, { iconExists, loadIcon } from '@iconify/svelte';
+	import Icon, { iconExists, loadIcon, loadIcons, type IconifyIcon } from '@iconify/svelte';
+	import { onMount } from 'svelte';
 
 	export let icon: string;
 	export let loaded = false;
+	export let preload: string[] = [];
 
 	let className: string = '';
 	export { className as class };
 
-	let update = 0;
+	let loadIconTask: Promise<Required<IconifyIcon>>;
 
-	$: {
-		update;
-
+	onMount(() => {
 		loaded = iconExists(icon);
+		
+		loadIcons(preload)
+
 		if (!loaded) {
-			loadIcon(icon)
-				.then(() => update++)
-				.catch(() => {});
+			loadIconTask = loadIcon(icon)
 		}
-	}
+	})
 </script>
 
-{#if loaded}
-	<Icon on:mouseover {icon} class={className} />
-{:else}
+{#await loadIconTask}
 	<slot name="fallback" />
-{/if}
+{:then}
+	<Icon on:mouseover {icon} class={className} />
+{:catch}
+	<slot name="fallback" />
+{/await}
