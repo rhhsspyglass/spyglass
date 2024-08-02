@@ -8,13 +8,11 @@ const config = {
     ],
     kit: {
         adapter: adapter({
-            pages: 'build',
-            assets: 'build',
             fallback: null,
             precompress: false
         }),
         paths: {
-            base: process.env.NODE_ENV === 'production' ? '/sveltekit-github-pages' : ''
+            base: process.env.NODE_ENV === 'production' ? '' : ''
         }
     }
 };
