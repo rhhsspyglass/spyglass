@@ -78,7 +78,7 @@
 		>
 			<FallbackIcon
 				icon={downHovered ? 'ph:arrow-down-bold' : 'ph:arrow-down'}
-				preload={['ph:arrow-down-bold']}
+				preload={['ph:arrow-up-bold']}
 				class="h-full w-full"
 			>
 				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">down</div>
