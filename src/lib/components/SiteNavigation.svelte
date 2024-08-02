@@ -16,8 +16,9 @@
 		<DarkModeToggle />
 	</span>
 	{#if showHome}
-		<a class="pointer-events-auto relative font-serif text-lg hover:font-bold" href="{base}/"
-			>home</a
+		<a
+			class="pointer-events-auto relative font-serif text-lg hover:font-bold"
+			href="{base}/">home</a
 		>
 	{/if}
 </nav>

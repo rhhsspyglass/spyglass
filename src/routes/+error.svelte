@@ -5,7 +5,9 @@
 </script>
 
 <svelte:head>
-	<title>The Spyglass | {$page.status === 404 ? "page not found" : "error"}</title>
+	<title
+		>The Spyglass | {$page.status === 404 ? "page not found" : "error"}</title
+	>
 </svelte:head>
 <main class="flex h-screen w-screen flex-col items-center justify-center">
 	{#if $page.status === 404}
@@ -19,5 +21,9 @@
 	<div class="hover:boop">
 		<SpyglassLogo class="mx-auto my-4 h-8" />
 	</div>
-	<a href="{base}/" class="block text-center font-serif hover:font-bold hover:underline">go home</a>
+	<a
+		href="{base}/"
+		class="block text-center font-serif hover:font-bold hover:underline"
+		>go home</a
+	>
 </main>

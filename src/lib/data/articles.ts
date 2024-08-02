@@ -110,7 +110,8 @@ const ARTICLES: Article[] = [
 	{
 		title: "winter issue twenty twenty-two",
 		shortTitle: "winter 2022",
-		articleUrl: "https://issuu.com/rhhspyglass2022/docs/winter_issue_final-compressed",
+		articleUrl:
+			"https://issuu.com/rhhspyglass2022/docs/winter_issue_final-compressed",
 		imgUrl: "/images/2022-winter.jpg",
 		date: "2022-01-24",
 		archived: true
@@ -118,7 +119,8 @@ const ARTICLES: Article[] = [
 	{
 		title: "spring issue twenty twenty-two",
 		shortTitle: "spring 2022",
-		articleUrl: "https://issuu.com/rhhsspyglass2022/docs/spring_issue_2022_final",
+		articleUrl:
+			"https://issuu.com/rhhsspyglass2022/docs/spring_issue_2022_final",
 		imgUrl: "/images/2022-spring.jpg",
 		date: "2022-03-28",
 		archived: true

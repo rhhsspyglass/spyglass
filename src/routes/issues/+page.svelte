@@ -17,7 +17,11 @@
 		}
 	);
 
-	const mostRecentArticle = getMostRecentArticle(data.articles, imageModules, "../../lib");
+	const mostRecentArticle = getMostRecentArticle(
+		data.articles,
+		imageModules,
+		"../../lib"
+	);
 
 	const TITLE = "The Spyglass | issues";
 	const DESCRIPTION = "Read our issues from this year.";

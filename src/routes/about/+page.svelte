@@ -23,16 +23,19 @@
 </svelte:head>
 
 <SiteNavigation showHome={true} />
-<div class="flex h-screen w-screen flex-col items-center justify-center font-serif">
+<div
+	class="flex h-screen w-screen flex-col items-center justify-center font-serif"
+>
 	<main class="w-[60%] max-w-[480px]">
 		<h1 class="mb-3 text-center text-3xl">about</h1>
 		<p class="mb-1 text-justify">
 			The Spyglass is Richmond Hill High School's official school magazine.
 		</p>
 		<p class="mb-4 text-justify">
-			We are proud to be completely student-owned, providing our readers with quality journalism,
-			breathtaking photography and professional layouts. Every seasonal issue is an expression of
-			student voice and tells the story of our vibrant school community.
+			We are proud to be completely student-owned, providing our readers with
+			quality journalism, breathtaking photography and professional layouts.
+			Every seasonal issue is an expression of student voice and tells the story
+			of our vibrant school community.
 		</p>
 
 		<SpyglassLogo class="hover:boop mx-auto h-4" />

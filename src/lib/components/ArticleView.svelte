@@ -48,7 +48,9 @@
 	</a>
 
 	{#if !imageModules[`..${article.thumbnailUrl}`]?.default}
-		<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
+		<header
+			class="logo flex cursor-pointer flex-col items-center self-center justify-self-center"
+		>
 			<div>
 				<h2 class="italic">the</h2>
 				<h1>spyglass</h1>

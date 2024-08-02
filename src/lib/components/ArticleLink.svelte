@@ -10,6 +10,9 @@
 	}
 </script>
 
-<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="article-header"
-	>{article.shortTitle}</a
+<a
+	href={articleUrl}
+	target="_blank"
+	rel="noopener noreferrer"
+	class="article-header">{article.shortTitle}</a
 >

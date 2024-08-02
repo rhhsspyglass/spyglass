@@ -13,7 +13,9 @@ function getMostRecentArticle(
 
 		while (i <= articles.length) {
 			if (articles[articles.length - i].thumbnailUrl) {
-				return imageModules[`${pathPrefix}${articles[articles.length - i].thumbnailUrl}`]?.default;
+				return imageModules[
+					`${pathPrefix}${articles[articles.length - i].thumbnailUrl}`
+				]?.default;
 			}
 
 			i++;

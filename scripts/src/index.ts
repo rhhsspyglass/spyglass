@@ -22,7 +22,10 @@ async function processPdf(pdf: string) {
 		preserveAspectRatio: true
 	};
 
-	const convert = fromPath(path.join(__dirname, "../../static/issues", pdf), options);
+	const convert = fromPath(
+		path.join(__dirname, "../../static/issues", pdf),
+		options
+	);
 
 	await convert(1, { responseType: "image" });
 }

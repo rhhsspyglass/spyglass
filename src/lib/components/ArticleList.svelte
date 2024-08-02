@@ -12,7 +12,9 @@
 	let currentIndex = 0;
 
 	onMount(() => {
-		const swiperEl = <SwiperContainer>(<unknown>document.querySelector("swiper-container"));
+		const swiperEl = <SwiperContainer>(
+			(<unknown>document.querySelector("swiper-container"))
+		);
 
 		const params = {
 			navigation: {
@@ -74,7 +76,9 @@
 				preload={["ph:arrow-up-bold"]}
 				class="h-full w-full"
 			>
-				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">up</div>
+				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">
+					up
+				</div>
 			</FallbackIcon>
 		</button>
 		<button
@@ -88,7 +92,9 @@
 				preload={["ph:arrow-up-bold"]}
 				class="h-full w-full"
 			>
-				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">down</div>
+				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">
+					down
+				</div>
 			</FallbackIcon>
 		</button>
 	</nav>

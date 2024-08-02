@@ -10,7 +10,12 @@
 	class="{className} tube-aspect fill-neutral-800 dark:fill-neutral-200"
 >
 	<defs id="defs2" />
-	<sodipodi:namedview id="base" bordercolor="#666666" borderopacity="1.0" showgrid="false" />
+	<sodipodi:namedview
+		id="base"
+		bordercolor="#666666"
+		borderopacity="1.0"
+		showgrid="false"
+	/>
 	<g id="layer1" transform="translate(-54.458646,-74.167097)">
 		<g
 			id="g943"

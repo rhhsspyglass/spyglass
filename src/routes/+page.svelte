@@ -26,10 +26,15 @@
 		}
 	);
 
-	const mostRecentArticle = getMostRecentArticle(data.articles, imageModules, "../lib");
+	const mostRecentArticle = getMostRecentArticle(
+		data.articles,
+		imageModules,
+		"../lib"
+	);
 
 	const TITLE = "The Spyglass";
-	const DESCRIPTION = "The Spyglass is Richmond Hill High School's official school magazine.";
+	const DESCRIPTION =
+		"The Spyglass is Richmond Hill High School's official school magazine.";
 </script>
 
 <svelte:window bind:innerWidth={viewportWidth} />
@@ -62,7 +67,9 @@
 	</header>
 	{#if viewportWidth > 768}
 		<nav class="absolute bottom-0 right-0 w-fit p-10">
-			<div class="flex max-h-screen w-full flex-col items-end gap-2 overflow-y-auto">
+			<div
+				class="flex max-h-screen w-full flex-col items-end gap-2 overflow-y-auto"
+			>
 				<Header href="{base}/about" title="about" />
 				<FoldingHeader title="recent issues">
 					<div class="flex flex-col items-end gap-1">
@@ -71,7 +78,9 @@
 								<ArticleLink {article} />
 							{/if}
 						{/each}
-						<a href="{base}/issues" class="article-header hover:font-bold">view all</a>
+						<a href="{base}/issues" class="article-header hover:font-bold"
+							>view all</a
+						>
 					</div>
 				</FoldingHeader>
 				<FoldingHeader title="past issues">
@@ -81,7 +90,9 @@
 								<ArticleLink {article} />
 							{/if}
 						{/each}
-						<a href="{base}/past-issues" class="article-header hover:font-bold">view all</a>
+						<a href="{base}/past-issues" class="article-header hover:font-bold"
+							>view all</a
+						>
 					</div>
 				</FoldingHeader>
 				<Header href="{base}/team" title="team" />

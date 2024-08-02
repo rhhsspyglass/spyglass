@@ -1,5 +1,10 @@
 <script lang="ts">
-	import Icon, { iconExists, loadIcon, loadIcons, type IconifyIcon } from "@iconify/svelte";
+	import Icon, {
+		iconExists,
+		loadIcon,
+		loadIcons,
+		type IconifyIcon
+	} from "@iconify/svelte";
 	import { onMount } from "svelte";
 
 	export let icon: string;
