@@ -38,5 +38,5 @@
 	{/if}
 </svelte:head>
 
-<SiteNavigation showHome={true} overlayXl={true}/>
+<SiteNavigation showHome={true} overlayLg={true}/>
 <ArticleList articles={data.articles}/>

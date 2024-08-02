@@ -58,7 +58,7 @@
 		</swiper-slide>
 	{/each}
 	</swiper-container>
-	<nav class="absolute flex-col w-20 right-0 bottom-0 m-6 z-10 hidden xl:flex">
+	<nav class="absolute flex-col w-20 right-0 bottom-0 m-6 z-10 hidden lg:flex">
 		<button
 			id="backward"
 			class="{currentIndex === 0 ? 'invisible' : '' }"
