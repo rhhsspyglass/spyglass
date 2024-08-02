@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { isDarkMode } from '$lib/stores/themeStore';
 	import DarkModeToggle from './DarkModeToggle.svelte';
 
 	export let showHome: boolean = false;
 	export let overlayLg: boolean = false;
 </script>
 
-<nav class="top pointer-events-none fixed z-50 flex w-full items-center justify-between px-6 py-4 xl:p-10 {overlayLg ? 'overlay' : ""}">
+<nav class="top pointer-events-none fixed z-50 flex w-full items-center justify-between px-6 py-4 xl:p-10 {overlayLg ? 'overlay' : ''} {$isDarkMode ? 'dark-mode' : 'light-mode'}">
 	<span class="pointer-events-auto relative">
 		<DarkModeToggle />
 	</span>
@@ -22,8 +23,12 @@
 	}
 
 	@media (max-width: 1024px) {
-		nav.overlay {
+		nav.overlay.dark-mode {
 			background-color: rgba(0, 0, 0, 0.25);
+		}
+
+		nav.overlay.light-mode {
+			background-color: rgba(255, 255, 255, 0.75);
 		}
 	}
 </style>
