@@ -1,1 +1,0 @@
-import{w as n}from"./paths.BsGvQtaT.js";function a(o,t){return localStorage.getItem(o)||t}function s(o,t){localStorage.setItem(o,JSON.stringify(t))}function c(){const{subscribe:o,set:t,update:r}=n(a("theme",!1));return{subscribe:o,toggle:()=>{r(e=>(t(!e),s("theme",!e),!e))},set:e=>{t(e),s("theme",e)}}}const m=c();export{m as i};
