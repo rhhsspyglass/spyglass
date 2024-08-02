@@ -1,4 +1,4 @@
-import type Article from "$lib/models/article.model";
+import type Article from '$lib/models/article.model';
 
 const ARTICLES: Article[] = [
     {

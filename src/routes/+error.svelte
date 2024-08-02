@@ -14,7 +14,7 @@
 		<h1 class="text-center font-serif text-4xl">
 			error {$page.status}
 		</h1>
-		<h2 class="text-center font-serif text-lg">{$page.error.message}</h2>
+		<h2 class="text-center font-serif text-lg">{$page?.error?.message}</h2>
 	{/if}
 	<div class="hover:boop">
 		<SpyglassLogo class="mx-auto my-4 h-8" />

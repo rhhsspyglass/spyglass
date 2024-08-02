@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-	import ArticleView from "./ArticleView.svelte";
-	import FallbackIcon from "$lib/FallbackIcon.svelte";
-	import type Article from "./models/article.model";
+	import { onMount } from 'svelte';
+	import ArticleView from './ArticleView.svelte';
+	import FallbackIcon from '$lib/FallbackIcon.svelte';
+	import type Article from './models/article.model';
 	// import function to register Swiper custom elements
-	import { register, type SwiperContainer } from "swiper/element/bundle";
-	import type Swiper from "swiper";
+	import { register, type SwiperContainer } from 'swiper/element/bundle';
 
 	// register Swiper custom elements
 	register();
@@ -73,13 +72,11 @@
 			<ArticleView
 				{article}
 				id={articleToId(article)}
-				clickUp={clickUp(i)}
-				clickDown={clickDown(i)}
 			/>
 		</swiper-slide>
 	{/each}
 	</swiper-container>
-	<nav class="absolute flex-col w-20 right-0 bottom-0 m-6 z-10 hidden lg:flex">
+	<nav class="absolute flex-col w-20 right-0 bottom-0 m-6 z-10 hidden xl:flex">
 		<button
 			id="backward"
 			class="{currentIndex === 0 ? 'invisible' : '' }"

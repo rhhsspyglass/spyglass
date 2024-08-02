@@ -1,4 +1,4 @@
-import type Team from "$lib/models/team.model";
+import type Team from '$lib/models/team.model';
 
 const TEAM: Team = {
     editorsInChiefNames: "Max Skidelsky and Rianna Zhu",

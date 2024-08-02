@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import { fileURLToPath } from 'url';
-import * as path from "path";
-import { fromPath } from "pdf2pic";
+import * as path from 'path';
+import { fromPath } from 'pdf2pic';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

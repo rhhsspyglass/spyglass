@@ -2,13 +2,11 @@
 	import type Article from './models/article.model';
 	import LookingTube from './LookingTube.svelte';
 	import { base } from '$app/paths';
-	import FallbackIcon from './FallbackIcon.svelte';
+	import type { Picture } from 'vite-imagetools';
 	export let article: Article;
 	export let id: string;
-	export let clickUp: VoidFunction | undefined;
-	export let clickDown: VoidFunction | undefined;
 
-	const imageModules: Record<string, { default: unknown }> = import.meta.glob(
+	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		'./thumbnails/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
 		{
 			eager: true,
@@ -28,9 +26,6 @@
 	if (articleUrl.startsWith('/')) {
 		articleUrl = base + articleUrl;
 	}
-
-	let upHovered = false;
-	let downHovered = false;
 </script>
 
 <div

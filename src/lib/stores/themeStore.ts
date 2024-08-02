@@ -1,5 +1,5 @@
-import { writable } from "svelte/store";
-import { browser } from "$app/environment";
+import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 
 function getFromLocalStorage<T>(key: string, fallbackValue: T) {
     if (!browser) return fallbackValue;
