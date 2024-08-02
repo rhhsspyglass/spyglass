@@ -2,10 +2,24 @@
 	import '../app.css';
 	import { isDarkMode } from '$lib/stores/themeStore';
 	import { onMount } from 'svelte';
+	import { onNavigate } from '$app/navigation';
 
 	onMount(() => {
 		isDarkMode.subscribe((value) => {
 			document.documentElement.classList[value ? 'add' : 'remove']('dark');
+		});
+	});
+
+	onNavigate((navigation) => {
+		// @ts-ignore
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			// @ts-ignore
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
 		});
 	});
 </script>
