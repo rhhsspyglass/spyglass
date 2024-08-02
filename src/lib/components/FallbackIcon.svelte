@@ -1,25 +1,25 @@
 <script lang="ts">
-	import Icon, { iconExists, loadIcon, loadIcons, type IconifyIcon } from '@iconify/svelte';
-	import { onMount } from 'svelte';
+	import Icon, { iconExists, loadIcon, loadIcons, type IconifyIcon } from "@iconify/svelte";
+	import { onMount } from "svelte";
 
 	export let icon: string;
 	export let loaded = false;
 	export let preload: string[] = [];
 
-	let className: string = '';
+	let className: string = "";
 	export { className as class };
 
 	let loadIconTask: Promise<Required<IconifyIcon>>;
 
 	onMount(() => {
 		loaded = iconExists(icon);
-		
-		loadIcons(preload)
+
+		loadIcons(preload);
 
 		if (!loaded) {
-			loadIconTask = loadIcon(icon)
+			loadIconTask = loadIcon(icon);
 		}
-	})
+	});
 </script>
 
 {#await loadIconTask}

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { isDarkMode } from '../stores/themeStore';
-	import FallbackIcon from './FallbackIcon.svelte';
+	import { isDarkMode } from "../stores/themeStore";
+	import FallbackIcon from "./FallbackIcon.svelte";
 	let isHovering = false;
 </script>
 
@@ -13,7 +13,7 @@
 >
 	<FallbackIcon
 		icon="{$isDarkMode ? 'ph:sun' : 'ph:moon'}{isHovering ? '-fill' : ''}"
-		preload={['ph:sun-fill', 'ph:moon-fill']}
+		preload={["ph:sun-fill", "ph:moon-fill"]}
 		class="h-full w-full"
 	>
 		<div

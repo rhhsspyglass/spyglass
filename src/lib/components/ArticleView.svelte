@@ -1,44 +1,52 @@
 <script lang="ts">
-	import type Article from '../models/article.model';
-	import LookingTube from './SpyglassLogo.svelte';
-	import { base } from '$app/paths';
-	import type { Picture } from 'vite-imagetools';
+	import type Article from "../models/article.model";
+	import LookingTube from "./SpyglassLogo.svelte";
+	import { base } from "$app/paths";
+	import type { Picture } from "vite-imagetools";
 	export let article: Article;
 	export let id: string;
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
-		'./../thumbnails/*.{jpeg,jpg,png}',
+		"./../thumbnails/*.{jpeg,jpg,png}",
 		{
 			eager: true,
 			query: {
-				enhanced: true,
+				enhanced: true
 			}
 		}
 	);
 
-	const articleTitleParts = article.title.split(' '); // summer issue twenty twenty-three
-	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(' '); // summer issue
-	const articleTitleLine2 = articleTitleParts.slice(2).join(' '); // twenty twenty-three
+	const articleTitleParts = article.title.split(" "); // summer issue twenty twenty-three
+	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(" "); // summer issue
+	const articleTitleLine2 = articleTitleParts.slice(2).join(" "); // twenty twenty-three
 
 	let articleUrl = article.articleUrl;
 
-	if (articleUrl.startsWith('/')) {
+	if (articleUrl.startsWith("/")) {
 		articleUrl = base + articleUrl;
 	}
 </script>
 
 <div
-	class="max-w-screen article-layout article-text grid min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800 h-dvh"
+	class="max-w-screen article-layout article-text grid h-dvh min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
-	
-	<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="relative block h-full w-auto link article-link">
+
+	<a
+		href={articleUrl}
+		target="_blank"
+		rel="noopener noreferrer"
+		class="link article-link relative block h-full w-auto"
+	>
 		{#if imageModules[`..${article.thumbnailUrl}`]?.default}
-			<enhanced:img src={imageModules[`..${article.thumbnailUrl}`].default} alt="Cover image for {article.title}"/>
+			<enhanced:img
+				src={imageModules[`..${article.thumbnailUrl}`].default}
+				alt="Cover image for {article.title}"
+			/>
 		{/if}
 	</a>
-	
+
 	{#if !imageModules[`..${article.thumbnailUrl}`]?.default}
 		<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
 			<div>
@@ -106,15 +114,16 @@
 		object-fit: cover;
 		object-position: center bottom;
 
-		width: auto; 
+		width: auto;
 	}
-	
-	picture, img {
+
+	picture,
+	img {
 		display: block;
 		height: 100%;
 		object-fit: cover;
 		object-position: center bottom;
 
-		width: auto; 
+		width: auto;
 	}
 </style>

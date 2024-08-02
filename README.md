@@ -14,8 +14,6 @@ npm run build
 npm run deploy
 ```
 
-## bugs
-- spyglass icon doesn't transition color
-
 ## tailwind class order
+
 Just autoformat with prettier-plugin-tailwindcss

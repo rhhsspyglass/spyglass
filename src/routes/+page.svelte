@@ -1,27 +1,27 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import ArticleLink from '$lib/components/ArticleLink.svelte';
-	import FallbackIcon from '$lib/components/FallbackIcon.svelte';
-	import FoldingHeader from '$lib/components/FoldingHeader.svelte';
-	import Header from '$lib/components/Header.svelte';
-	import SpyglassLogo from '$lib/components/SpyglassLogo.svelte';
-	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
-	import { slide } from 'svelte/transition';
-	import type { PageServerData } from './$types';
-	import { dev } from '$app/environment';
-	import type { Picture } from 'vite-imagetools';
-	import getMostRecentArticle from '$lib/util/getMostRecentArticle';
+	import { base } from "$app/paths";
+	import ArticleLink from "$lib/components/ArticleLink.svelte";
+	import FallbackIcon from "$lib/components/FallbackIcon.svelte";
+	import FoldingHeader from "$lib/components/FoldingHeader.svelte";
+	import Header from "$lib/components/Header.svelte";
+	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
+	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
+	import { slide } from "svelte/transition";
+	import type { PageServerData } from "./$types";
+	import { dev } from "$app/environment";
+	import type { Picture } from "vite-imagetools";
+	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
 
 	export let data: PageServerData;
 	let navExpanded = false;
 	$: viewportWidth = 0;
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
-		`./../lib/thumbnails/*.{jpeg,jpg,png}`,
+		"./../lib/thumbnails/*.{jpeg,jpg,png}",
 		{
 			eager: true,
 			query: {
-				enhanced: true,
+				enhanced: true
 			}
 		}
 	);
@@ -35,16 +35,16 @@
 <svelte:window bind:innerWidth={viewportWidth} />
 <svelte:head>
 	<title>{TITLE}</title>
-	<meta name="description" content={DESCRIPTION}>
-	<meta property="og:title" content={TITLE}>
-	<meta property="og:description" content={DESCRIPTION}>
-	<meta property="og:type" content="website">
+	<meta name="description" content={DESCRIPTION} />
+	<meta property="og:title" content={TITLE} />
+	<meta property="og:description" content={DESCRIPTION} />
+	<meta property="og:type" content="website" />
 	{#if mostRecentArticle}
-		<meta property="og:image" content={mostRecentArticle.img.src}>
-		<meta property="thumbnail" content={mostRecentArticle.img.src}/>
+		<meta property="og:image" content={mostRecentArticle.img.src} />
+		<meta property="thumbnail" content={mostRecentArticle.img.src} />
 	{/if}
 	{#if !dev}
-		<meta property="og:url" content="https://rhhspyglass.com">
+		<meta property="og:url" content="https://rhhspyglass.com" />
 	{/if}
 </svelte:head>
 <SiteNavigation />
@@ -91,7 +91,8 @@
 							target="_blank"
 							rel="noopener noreferrer"
 							class="article-header"
-							href="mailto:rhhsspyglass@gmail.com">
+							href="mailto:rhhsspyglass@gmail.com"
+						>
 							email
 						</a>
 						<a
@@ -99,7 +100,8 @@
 							rel="noopener noreferrer"
 							class="article-header"
 							href="https://www.instagram.com/rhhspyglass"
-							referrerpolicy="no-referrer">
+							referrerpolicy="no-referrer"
+						>
 							instagram
 						</a>
 						<p>DM for inquiries</p>
@@ -110,8 +112,14 @@
 	{:else}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<nav class="absolute bottom-0 left-0 w-full flex flex-col items-center motion-reduce:transition-none transition-colors duration-300 bg-neutral-200 dark:bg-neutral-800 py-3 gap-2 hover:cursor-pointer" on:click={() => navExpanded = !navExpanded}>
-			<FallbackIcon icon="ph:list" class="text-xl text-neutral-700 dark:text-neutral-100 hover:cursor-pointer">
+		<nav
+			class="absolute bottom-0 left-0 flex w-full flex-col items-center gap-2 bg-neutral-200 py-3 transition-colors duration-300 hover:cursor-pointer motion-reduce:transition-none dark:bg-neutral-800"
+			on:click={() => (navExpanded = !navExpanded)}
+		>
+			<FallbackIcon
+				icon="ph:list"
+				class="text-xl text-neutral-700 hover:cursor-pointer dark:text-neutral-100"
+			>
 				<svelte:fragment slot="fallback">menu</svelte:fragment>
 			</FallbackIcon>
 			{#if navExpanded}
@@ -123,7 +131,12 @@
 					<button on:click|stopPropagation={() => {}}>
 						<FoldingHeader title="contact">
 							<div class="flex flex-col items-center gap-1">
-								<a target="_blank" rel="noopener noreferrer" class="article-header" href="mailto:rhhsspyglass@gmail.com">email</a>
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									class="article-header"
+									href="mailto:rhhsspyglass@gmail.com">email</a
+								>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"

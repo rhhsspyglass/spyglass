@@ -1,5 +1,5 @@
-import ARTICLES from '$lib/data/articles';
-import type { PageServerLoad } from './$types';
+import ARTICLES from "$lib/data/articles";
+import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = () => {
 	return {

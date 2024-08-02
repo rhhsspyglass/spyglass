@@ -1,5 +1,5 @@
 <script lang="ts">
-	let className: string = '';
+	let className: string = "";
 	export { className as class };
 </script>
 
@@ -74,6 +74,6 @@
 	}
 
 	path {
-		@apply motion-reduce:transition-none transition-colors duration-[75ms];
+		@apply transition-colors duration-[75ms] motion-reduce:transition-none;
 	}
 </style>
