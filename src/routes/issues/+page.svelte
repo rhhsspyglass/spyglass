@@ -4,6 +4,7 @@
 	import type { Picture } from 'vite-imagetools';
 	import type { PageServerData } from './$types';
 	import { dev } from '$app/environment';
+	import getMostRecentArticle from '$lib/util/getMostRecentArticle';
 	export let data: PageServerData;
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
@@ -16,7 +17,7 @@
 		}
 	);
 
-	const firstArticle = imageModules[`../../lib${data.articles[0].thumbnailUrl}`]?.default;
+	const mostRecentArticle = getMostRecentArticle(data.articles, imageModules, "../../lib");
 
 	const TITLE = "The Spyglass | issues";
 	const DESCRIPTION = "Read our issues from this year.";
@@ -28,8 +29,10 @@
 	<meta property="og:title" content={TITLE}>
 	<meta property="og:description" content={DESCRIPTION}>
 	<meta property="og:type" content="website">
-	<meta property="og:image" content={firstArticle.img.src}>
-	<meta property="thumbnail" content={firstArticle.img.src}/>
+	{#if mostRecentArticle}
+		<meta property="og:image" content={mostRecentArticle.img.src}>
+		<meta property="thumbnail" content={mostRecentArticle.img.src}/>
+	{/if}
 	{#if !dev}
 		<meta property="og:url" content="https://rhhspyglass.com">
 	{/if}

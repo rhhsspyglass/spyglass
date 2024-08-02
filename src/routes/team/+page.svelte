@@ -26,7 +26,7 @@
 		<h2 class="underline">Editors in Chief</h2>
 		<p>{data.team.editorsInChiefNames}</p>
 	</hgroup>
-	<div class="flex md:max-h-[70vh] md:w-fit w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4">
+	<div class="flex md:max-h-[72vh] md:w-fit w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4">
 		{#each data.team.units as teamUnit}
 			<hgroup>
 				<h2 class="underline">

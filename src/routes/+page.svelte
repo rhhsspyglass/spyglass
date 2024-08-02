@@ -9,10 +9,24 @@
 	import { slide } from 'svelte/transition';
 	import type { PageServerData } from './$types';
 	import { dev } from '$app/environment';
+	import type { Picture } from 'vite-imagetools';
+	import getMostRecentArticle from '$lib/util/getMostRecentArticle';
 
 	export let data: PageServerData;
 	let navExpanded = false;
 	$: viewportWidth = 0;
+
+	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
+		`./../lib/thumbnails/*.{jpeg,jpg,png}`,
+		{
+			eager: true,
+			query: {
+				enhanced: true,
+			}
+		}
+	);
+
+	const mostRecentArticle = getMostRecentArticle(data.articles, imageModules, "../lib");
 
 	const TITLE = "The Spyglass";
 	const DESCRIPTION = "The Spyglass is Richmond Hill High School's official school magazine.";
@@ -25,6 +39,10 @@
 	<meta property="og:title" content={TITLE}>
 	<meta property="og:description" content={DESCRIPTION}>
 	<meta property="og:type" content="website">
+	{#if mostRecentArticle}
+		<meta property="og:image" content={mostRecentArticle.img.src}>
+		<meta property="thumbnail" content={mostRecentArticle.img.src}/>
+	{/if}
 	{#if !dev}
 		<meta property="og:url" content="https://rhhspyglass.com">
 	{/if}

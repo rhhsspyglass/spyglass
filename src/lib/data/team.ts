@@ -62,6 +62,12 @@ const TEAM: Team = {
                 "Phoebe Su",
                 "Vivian Wu"
             ],
+        },
+        {
+            positionName: "Webmaster",
+            memberNames: [
+                "Andrew Chu",
+            ],
         }
     ]
 };
