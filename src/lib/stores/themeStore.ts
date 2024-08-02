@@ -33,5 +33,3 @@ function createThemeStore() {
 }
 
 export const isDarkMode = createThemeStore();
-
-isDarkMode.subscribe(console.log)

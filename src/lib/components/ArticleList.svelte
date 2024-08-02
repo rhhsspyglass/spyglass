@@ -45,12 +45,13 @@
 	const articleToId = (article: Article) => {
 		return article.shortTitle.replaceAll(' ', '-');
 	};
+
 </script>
 
 <main class="m-auto w-fit overflow-visible relative">
-	<swiper-container class="h-screen swiper-container article-aspect" init="false" direction="vertical" freeMode="true" nextEl="#forward" prevEl="#backward">
+	<swiper-container class="swiper-container h-dvh article-aspect" init="false" direction="vertical" freeMode="true" nextEl="#forward" prevEl="#backward">
 	{#each articles as article}
-		<swiper-slide class="overflow-visible">
+		<swiper-slide class="overflow-visible h-dvh">
 			<ArticleView
 				{article}
 				id={articleToId(article)}
@@ -103,6 +104,10 @@
 		cursor: pointer;
 	}
 
+	/* swiper-slide {
+		height: 100svh !important;
+	} */
+
 	.article-aspect {
 		aspect-ratio: 8.5 / 11;
 	}
@@ -110,6 +115,12 @@
 	@media (max-width: 768px) {
 		.article-aspect {
 			aspect-ratio: auto;
+		}
+	}
+
+	@media (max-width: 1024px) and (min-height: 1024px) {
+		nav {
+			display: none;
 		}
 	}
 </style>

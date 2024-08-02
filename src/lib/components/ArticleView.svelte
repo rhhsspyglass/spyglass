@@ -28,12 +28,12 @@
 </script>
 
 <div
-	class="max-w-screen article-layout article-text grid h-screen min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
+	class="max-w-screen article-layout article-text grid min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800 h-dvh"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
 	
-	<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="relative block h-full w-auto link">
+	<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="relative block h-full w-auto link article-link">
 		{#if imageModules[`..${article.thumbnailUrl}`]?.default}
 			<enhanced:img src={imageModules[`..${article.thumbnailUrl}`].default} alt="Cover image for {article.title}"/>
 		{/if}
@@ -78,10 +78,6 @@
 		grid-template-columns: 1fr 2fr 1fr;
 	}
 
-	.article-aspect {
-		aspect-ratio: 8.5 / 11;
-	}
-
 	.logo {
 		grid-column: 2;
 		grid-row: 2;
@@ -104,17 +100,21 @@
 		line-height: 1.3;
 	}
 
-	picture {
+	.article-link {
 		display: block;
 		height: 100%;
 		object-fit: cover;
 		object-position: center bottom;
-	}
 
-	img {
+		width: auto; 
+	}
+	
+	picture, img {
 		display: block;
 		height: 100%;
 		object-fit: cover;
 		object-position: center bottom;
+
+		width: auto; 
 	}
 </style>

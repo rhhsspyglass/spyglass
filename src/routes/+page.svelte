@@ -131,7 +131,7 @@
 									href="https://www.instagram.com/rhhspyglass"
 									referrerpolicy="no-referrer">instagram</a
 								>
-								<p>DM for inquires</p>
+								<p>DM for inquiries</p>
 							</div>
 						</FoldingHeader>
 					</button>
