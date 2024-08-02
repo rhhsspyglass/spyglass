@@ -4,7 +4,7 @@
 	import FallbackIcon from '$lib/components/FallbackIcon.svelte';
 	import FoldingHeader from '$lib/components/FoldingHeader.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import SpyglassLogo from '$lib/components/LookingTube.svelte';
+	import SpyglassLogo from '$lib/components/SpyglassLogo.svelte';
 	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 	import { slide } from 'svelte/transition';
 	import type { PageServerData } from './$types';

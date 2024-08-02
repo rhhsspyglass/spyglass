@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
-	import SpyglassLogo from '$lib/components/LookingTube.svelte';
+	import SpyglassLogo from '$lib/components/SpyglassLogo.svelte';
 	import SiteNavigation from '$lib/components/SiteNavigation.svelte';
 
 	const TITLE = "The Spyglass | about us";

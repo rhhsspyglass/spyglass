@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type Article from '../models/article.model';
-	import LookingTube from './LookingTube.svelte';
+	import LookingTube from './SpyglassLogo.svelte';
 	import { base } from '$app/paths';
 	import type { Picture } from 'vite-imagetools';
 	export let article: Article;

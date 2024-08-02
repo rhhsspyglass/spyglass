@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
-	import SpyglassLogo from '$lib/components/LookingTube.svelte';
+	import SpyglassLogo from '$lib/components/SpyglassLogo.svelte';
 </script>
 
 <svelte:head>
