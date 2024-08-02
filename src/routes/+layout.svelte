@@ -5,9 +5,11 @@
 	import { onNavigate } from '$app/navigation';
 
 	onMount(() => {
-		if ("matchMedia" in window) {
-			if (window.matchMedia("(prefers-color-scheme: dark)").matches && localStorage.getItem("theme") === null) {
+		if ("matchMedia" in window && localStorage.getItem("theme") === null) {
+			if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 				isDarkMode.set(true);
+			} else {
+				isDarkMode.set(false);
 			}
 		}
 
