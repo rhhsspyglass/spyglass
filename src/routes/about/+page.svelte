@@ -24,7 +24,7 @@
 
 <SiteNavigation showHome={true} />
 <div class="flex h-screen w-screen flex-col items-center justify-center font-serif">
-	<main class="w-2/5 max-w-[480px]">
+	<main class="w-[60%] max-w-[480px]">
 		<h1 class="mb-3 text-center text-3xl">about</h1>
 		<p class="mb-1 text-justify">
 			The Spyglass is Richmond Hill High School's official school magazine.

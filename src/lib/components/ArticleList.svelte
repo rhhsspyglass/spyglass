@@ -18,6 +18,9 @@
 			navigation: {
 				nextEl: "#forward",
 				prevEl: "#backward",
+			},
+			mousewheel: {
+				enabled: true,
 			}
 		};
 
@@ -45,8 +48,8 @@
 </script>
 
 <main class="m-auto w-fit overflow-visible relative">
-	<swiper-container class="h-screen swiper-container" init="false" direction="vertical" freeMode="true" mousewheel="true" nextEl="#forward" prevEl="#backward">
-	{#each articles as article, i}
+	<swiper-container class="h-screen swiper-container article-aspect" init="false" direction="vertical" freeMode="true" nextEl="#forward" prevEl="#backward">
+	{#each articles as article}
 		<swiper-slide class="overflow-visible">
 			<ArticleView
 				{article}
@@ -88,12 +91,6 @@
 </main>
 
 <style>
-	@media (max-width: 1280px) {
-		:global(nav.top) {
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-	}
-
 	:global(.swiper-backface-hidden) {
 		overflow: visible !important;
 	}
@@ -104,5 +101,15 @@
 
 	nav button:hover {
 		cursor: pointer;
+	}
+
+	.article-aspect {
+		aspect-ratio: 8.5 / 11;
+	}
+
+	@media (max-width: 768px) {
+		.article-aspect {
+			aspect-ratio: auto;
+		}
 	}
 </style>

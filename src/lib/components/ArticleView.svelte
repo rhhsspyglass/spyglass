@@ -28,7 +28,7 @@
 </script>
 
 <div
-	class="max-w-screen md:article-aspect article-layout article-text grid h-screen min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
+	class="max-w-screen article-layout article-text grid h-screen min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
 	<!-- svelte-ignore a11y-missing-content -->
@@ -78,6 +78,10 @@
 		grid-template-columns: 1fr 2fr 1fr;
 	}
 
+	.article-aspect {
+		aspect-ratio: 8.5 / 11;
+	}
+
 	.logo {
 		grid-column: 2;
 		grid-row: 2;
@@ -104,11 +108,13 @@
 		display: block;
 		height: 100%;
 		object-fit: cover;
+		object-position: center bottom;
 	}
 
 	img {
 		display: block;
 		height: 100%;
 		object-fit: cover;
+		object-position: center bottom;
 	}
 </style>

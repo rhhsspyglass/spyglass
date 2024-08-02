@@ -3,9 +3,10 @@
 	import DarkModeToggle from './DarkModeToggle.svelte';
 
 	export let showHome: boolean = false;
+	export let overlayXl: boolean = false;
 </script>
 
-<nav class="top pointer-events-none fixed z-50 flex w-full items-center justify-between px-10 py-6 xl:p-10">
+<nav class="top pointer-events-none fixed z-50 flex w-full items-center justify-between px-6 py-4 xl:p-10 {overlayXl ? 'overlay' : ""}">
 	<span class="pointer-events-auto relative">
 		<DarkModeToggle />
 	</span>
@@ -14,3 +15,15 @@
 		>
 	{/if}
 </nav>
+
+<style>
+	nav.overlay {
+		background-color: initial;
+	}
+
+	@media (max-width: 1280px) {
+		nav.overlay {
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+	}
+</style>
