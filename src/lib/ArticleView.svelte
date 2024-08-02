@@ -35,12 +35,12 @@
 	<!-- svelte-ignore a11y-missing-content -->
 	
 	<a href={articleUrl} target="_blank" rel="noopener noreferrer" class="relative block h-full w-auto link">
-		{#if article.thumbnailUrl}
+		{#if imageModules[article.thumbnailUrl]?.default}
 			<enhanced:img src={imageModules[article.thumbnailUrl].default} alt="Cover image for {article.title}"/>
 		{/if}
 	</a>
 	
-	{#if !article.thumbnailUrl}
+	{#if !imageModules[article.thumbnailUrl]?.default}
 		<header class="logo flex cursor-pointer flex-col items-center self-center justify-self-center">
 			<div>
 				<h2 class="italic">the</h2>

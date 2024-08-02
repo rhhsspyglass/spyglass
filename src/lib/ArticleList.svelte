@@ -45,24 +45,6 @@
 	const articleToId = (article: Article) => {
 		return article.shortTitle.replaceAll(' ', '-');
 	};
-
-	const clickUp = (curIndex: number) => {
-		if (curIndex <= 0) return undefined;
-
-		return () => {
-			const prevArticle = document.getElementById(articleToId(articles[curIndex - 1]));
-			prevArticle?.scrollIntoView({ behavior: 'smooth' });
-		};
-	};
-
-	const clickDown = (curIndex: number) => {
-		if (curIndex >= articles.length - 1) return undefined;
-
-		return () => {
-			const prevArticle = document.getElementById(articleToId(articles[curIndex + 1]));
-			prevArticle?.scrollIntoView({ behavior: 'smooth' });
-		};
-	};
 </script>
 
 <main class="m-auto w-fit overflow-visible relative">
