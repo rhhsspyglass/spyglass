@@ -5,6 +5,7 @@
 	import type Article from "../models/article.model";
 	// import function to register Swiper custom elements
 	import { register, type SwiperContainer } from "swiper/element/bundle";
+	import { browser } from "$app/environment";
 
 	// register Swiper custom elements
 	register();
@@ -112,10 +113,6 @@
 	nav button:hover {
 		cursor: pointer;
 	}
-
-	/* swiper-slide {
-		height: 100svh !important;
-	} */
 
 	.article-aspect {
 		aspect-ratio: 8.5 / 11;

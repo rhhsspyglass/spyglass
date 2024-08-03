@@ -6,10 +6,17 @@ export default interface Article {
 	/** The URL to read the article. */
 	articleUrl: string;
 	/** The image source URL. */
-	imgUrl: string;
+	imgUrl?: string;
 	/** The thumbnail source URL. */
-	thumbnailUrl?: string;
+	thumbnail?: Thumbnail;
 	/** The date the article was published. Format: YYYY-MM-DD */
 	date: string;
 	archived: boolean;
+}
+
+export interface Thumbnail {
+	/** The thumbnail source URL. */
+	url: string;
+	/** The "average" color of the thumbnail image. */
+	color: string;
 }

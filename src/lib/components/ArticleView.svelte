@@ -39,15 +39,15 @@
 		rel="noopener noreferrer"
 		class="link article-link relative block h-full w-auto"
 	>
-		{#if imageModules[`..${article.thumbnailUrl}`]?.default}
+		{#if article.thumbnail && imageModules[`..${article.thumbnail.url}`]?.default}
 			<enhanced:img
-				src={imageModules[`..${article.thumbnailUrl}`].default}
+				src={imageModules[`..${article.thumbnail.url}`].default}
 				alt="Cover image for {article.title}"
 			/>
 		{/if}
 	</a>
 
-	{#if !imageModules[`..${article.thumbnailUrl}`]?.default}
+	{#if !(article.thumbnail && imageModules[`..${article.thumbnail.url}`]?.default)}
 		<header
 			class="logo flex cursor-pointer flex-col items-center self-center justify-self-center"
 		>

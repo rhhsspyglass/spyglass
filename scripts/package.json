@@ -4,7 +4,8 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"exec": "tsc && node dist/index.js"
+		"getCoverImages": "tsc && node dist/getCoverImages.js",
+		"getAverageColors": "tsc && node dist/getAverageColors.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -13,6 +14,7 @@
 	"description": "",
 	"dependencies": {
 		"@types/node": "^20.10.0",
+		"fast-average-color-node": "^3.0.0",
 		"path": "^0.12.7",
 		"pdf2pic": "^3.1.1",
 		"pdfjs-dist": "^4.5.136"
