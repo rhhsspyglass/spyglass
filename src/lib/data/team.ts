@@ -13,7 +13,7 @@ const TEAM: Team = {
 		},
 		{
 			positionName: "Design Editor",
-			memberNames: ["Katrina Lam", "Lynne He"]
+			memberNames: ["Katrina Lam", "Lynn He"]
 		},
 		{
 			positionName: "Associate Editor",
@@ -22,50 +22,50 @@ const TEAM: Team = {
 		{
 			positionName: "Copywriter",
 			memberNames: [
-				"Amanda Xi",
-				"Amrita Dudaka",
-				"Anna Pan",
-				"Eowyn Wong-Au",
-				"Elaine Wang",
-				"Jilian Ouyang",
-				"Kate Shahidi",
-				"Max Skidelsky",
 				"Rianna Zhu",
-				"Yasmin Hadizad"
+				"Max Skidelsky",
+				"Kate Shahidi",
+				"Jillian Ouyang",
+				"Amrita Dudaka",
+				"Claire Chen",
+				"Alex Yang",
+				"Joy Kim",
+				"Antonia Zubiri",
+				"Isabel Ye",
+				"October Hua",
 			]
 		},
 		{
 			positionName: "Photographer",
 			memberNames: [
-				"Audrey Lai",
-				"Daniel Yang",
-				"Emma Fodor",
-				"Emily Meng",
-				"Iris You",
-				"Jack Kang",
 				"Jolly Yan",
-				"Marina Huang",
-				"Sam Abdi"
+				"Iris You",
+				"Emily Meng",
+				"Ethan Oh",
+				"Daniel Yang",
+				"Andrea Tsui",
+				"Cynthia Mu",
+				"Emma Fodor",
 			]
 		},
 		{
 			positionName: "Designer",
 			memberNames: [
 				"Allyson Mack",
-				"Andrew Chu",
-				"Elina Lai",
 				"Erin Chen",
 				"Katrina Lam",
 				"Lynn He",
-				"Maggie Li",
 				"Melinda Li",
+				"Vivian Wu",
 				"Phoebe Su",
-				"Vivian Wu"
-			]
+				"Angie Xu",
+				"Maggie Li",
+				"Dora Duan",
+			],
 		},
 		{
 			positionName: "Webmaster",
-			memberNames: ["Andrew Chu"]
+			memberNames: ["Harry Xu"]
 		}
 	]
 };
