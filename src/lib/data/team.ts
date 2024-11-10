@@ -32,7 +32,7 @@ const TEAM: Team = {
 				"Joy Kim",
 				"Antonia Zubiri",
 				"Isabel Ye",
-				"October Hua",
+				"October Hua"
 			]
 		},
 		{
@@ -45,7 +45,7 @@ const TEAM: Team = {
 				"Daniel Yang",
 				"Andrea Tsui",
 				"Cynthia Mu",
-				"Emma Fodor",
+				"Emma Fodor"
 			]
 		},
 		{
@@ -60,8 +60,8 @@ const TEAM: Team = {
 				"Phoebe Su",
 				"Angie Xu",
 				"Maggie Li",
-				"Dora Duan",
-			],
+				"Dora Duan"
+			]
 		},
 		{
 			positionName: "Webmaster",

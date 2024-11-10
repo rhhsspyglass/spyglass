@@ -4,9 +4,13 @@
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import type { Picture } from "vite-imagetools";
 	import type { PageServerData } from "./$types";
-	import type Article from "$lib/models/article.model";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
-	export let data: PageServerData;
+
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		`./../../lib/thumbnails/*.{jpeg,jpg,png}`,

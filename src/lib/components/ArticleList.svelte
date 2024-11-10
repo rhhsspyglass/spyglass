@@ -1,21 +1,23 @@
 <script lang="ts">
-	import { onMount } from "svelte";
 	import ArticleView from "./ArticleView.svelte";
-	import FallbackIcon from "$lib/components/FallbackIcon.svelte";
 	import type Article from "../models/article.model";
 	// import function to register Swiper custom elements
 	import { register, type SwiperContainer } from "swiper/element/bundle";
-	import { browser } from "$app/environment";
+	import reducedMotion from "$lib/state/reducedMotion.svelte";
 
 	// register Swiper custom elements
 	register();
 
-	let currentIndex = 0;
+	interface Props {
+		articles: Article[];
+	}
 
-	onMount(() => {
-		const swiperEl = <SwiperContainer>(
-			(<unknown>document.querySelector("swiper-container"))
-		);
+	let { articles }: Props = $props();
+
+	$effect(() => {
+		const swiperEl = document.querySelector(
+			"swiper-container"
+		) as unknown as SwiperContainer;
 
 		const params = {
 			navigation: {
@@ -27,10 +29,8 @@
 			}
 		};
 
-		// @ts-ignore
 		Object.assign(swiperEl, params);
 
-		// @ts-ignore
 		swiperEl.initialize();
 
 		const swiper = swiperEl.swiper;
@@ -40,10 +40,9 @@
 		});
 	});
 
-	export let articles: Article[];
-
-	let upHovered = false;
-	let downHovered = false;
+	let currentIndex = $state(0);
+	let upHovered = $state(false);
+	let downHovered = $state(false);
 
 	const articleToId = (article: Article) => {
 		return article.shortTitle.replaceAll(" ", "-");
@@ -58,6 +57,7 @@
 		freeMode="true"
 		nextEl="#forward"
 		prevEl="#backward"
+		speed={reducedMotion.value ? 0 : 300}
 	>
 		{#each articles as article}
 			<swiper-slide class="h-dvh overflow-visible">
@@ -65,38 +65,24 @@
 			</swiper-slide>
 		{/each}
 	</swiper-container>
-	<nav class="absolute bottom-0 right-0 z-10 m-6 hidden w-20 flex-col lg:flex">
+	<nav class="absolute bottom-0 right-0 z-10 m-2 hidden w-10 flex-col lg:flex">
 		<button
 			id="backward"
 			class={currentIndex === 0 ? "invisible" : ""}
-			on:mouseenter={() => (upHovered = true)}
-			on:mouseleave={() => (upHovered = false)}
+			onmouseenter={() => (upHovered = true)}
+			onmouseleave={() => (upHovered = false)}
+			aria-label="move to the above article"
 		>
-			<FallbackIcon
-				icon={upHovered ? "ph:arrow-up-bold" : "ph:arrow-up"}
-				preload={["ph:arrow-up-bold"]}
-				class="h-full w-full"
-			>
-				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">
-					up
-				</div>
-			</FallbackIcon>
+			<i class="ri-arrow-up-circle-{upHovered ? 'fill' : 'line'}"> </i>
 		</button>
 		<button
 			id="forward"
 			class={currentIndex === articles.length - 1 ? "invisible" : ""}
-			on:mouseenter={() => (downHovered = true)}
-			on:mouseleave={() => (downHovered = false)}
+			onmouseenter={() => (downHovered = true)}
+			onmouseleave={() => (downHovered = false)}
+			aria-label="move to the below article"
 		>
-			<FallbackIcon
-				icon={downHovered ? "ph:arrow-down-bold" : "ph:arrow-down"}
-				preload={["ph:arrow-up-bold"]}
-				class="h-full w-full"
-			>
-				<div slot="fallback" class="h-full w-full text-xl hover:font-bold">
-					down
-				</div>
-			</FallbackIcon>
+			<i class="ri-arrow-down-circle-{downHovered ? 'fill' : 'line'}"> </i>
 		</button>
 	</nav>
 </main>
@@ -107,7 +93,7 @@
 	}
 
 	nav {
-		transform: translateX(calc(100% + 3rem));
+		transform: translateX(calc(100% + 2rem));
 	}
 
 	nav button:hover {
@@ -116,6 +102,10 @@
 
 	.article-aspect {
 		aspect-ratio: 8.5 / 11;
+	}
+
+	button i {
+		font-size: 3.5rem;
 	}
 
 	@media (max-width: 768px) {
