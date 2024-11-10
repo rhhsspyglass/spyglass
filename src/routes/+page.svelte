@@ -169,6 +169,6 @@
 
 <style>
 	nav i {
-		font-size: 1.5rem;
+		font-size: 1.6rem;
 	}
 </style>
