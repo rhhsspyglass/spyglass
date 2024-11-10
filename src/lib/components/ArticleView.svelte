@@ -3,8 +3,13 @@
 	import LookingTube from "./SpyglassLogo.svelte";
 	import { base } from "$app/paths";
 	import type { Picture } from "vite-imagetools";
-	export let article: Article;
-	export let id: string;
+
+	interface Props {
+		article: Article;
+		id: string;
+	}
+
+	let { article, id }: Props = $props();
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		"./../thumbnails/*.{jpeg,jpg,png}",
@@ -20,21 +25,25 @@
 	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(" "); // summer issue
 	const articleTitleLine2 = articleTitleParts.slice(2).join(" "); // twenty twenty-three
 
-	let articleUrl = article.articleUrl;
+	let articleUrl = $state(article.articleUrl);
 
-	if (articleUrl.startsWith("/")) {
-		articleUrl = base + articleUrl;
-	}
+	let articleUrlPrefixed = $derived.by(() => {
+		if (articleUrl.startsWith("/")) {
+			return base + articleUrl;
+		}
+
+		return articleUrl;
+	});
 </script>
 
 <div
 	class="max-w-screen article-layout article-text grid h-dvh min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
-	<!-- svelte-ignore a11y-missing-content -->
+	<!-- svelte-ignore a11y_missing_content -->
 
 	<a
-		href={articleUrl}
+		href={articleUrlPrefixed}
 		target="_blank"
 		rel="noopener noreferrer"
 		class="link article-link relative block h-full w-auto"
@@ -59,7 +68,7 @@
 		</header>
 		<!-- Article title -->
 		<a
-			href={articleUrl}
+			href={articleUrlPrefixed}
 			target="_blank"
 			rel="noopener noreferrer"
 			class="title self-center justify-self-center text-center hover:font-bold"

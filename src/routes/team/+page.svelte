@@ -2,7 +2,12 @@
 	import { dev } from "$app/environment";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import type { PageServerData } from "./$types";
-	export let data: PageServerData;
+
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 
 	const TITLE = "The Spyglass | team";
 	const DESCRIPTION = "Meet our amazing team for 2024-2025!";
@@ -27,7 +32,7 @@
 		<p>{data.team.editorsInChiefNames}</p>
 	</hgroup>
 	<div
-		class="flex w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4 md:max-h-[72vh] md:w-fit"
+		class="flex w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4 md:w-fit lg:max-h-[72vh]"
 	>
 		{#each data.team.units as teamUnit}
 			<hgroup>

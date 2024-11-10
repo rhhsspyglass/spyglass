@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import ArticleLink from "$lib/components/ArticleLink.svelte";
-	import FallbackIcon from "$lib/components/FallbackIcon.svelte";
 	import FoldingHeader from "$lib/components/FoldingHeader.svelte";
 	import Header from "$lib/components/Header.svelte";
 	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
@@ -11,10 +10,15 @@
 	import { dev } from "$app/environment";
 	import type { Picture } from "vite-imagetools";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
+	import reducedMotion from "$lib/state/reducedMotion.svelte";
 
-	export let data: PageServerData;
-	let navExpanded = false;
-	$: viewportWidth = 0;
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
+	let navExpanded = $state(false);
+	let viewportWidth = $state(0);
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		"./../lib/thumbnails/*.{jpeg,jpg,png}",
@@ -121,25 +125,23 @@
 			</div>
 		</nav>
 	{:else}
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 		<nav
-			class="absolute bottom-0 left-0 flex w-full flex-col items-center gap-2 bg-neutral-200 py-3 transition-colors duration-300 hover:cursor-pointer motion-reduce:transition-none dark:bg-neutral-800"
-			on:click={() => (navExpanded = !navExpanded)}
+			class="absolute bottom-0 left-0 flex w-full flex-col items-center gap-2 bg-neutral-200 py-2 transition-colors duration-300 hover:cursor-pointer motion-reduce:transition-none dark:bg-neutral-800"
+			onclick={() => (navExpanded = !navExpanded)}
 		>
-			<FallbackIcon
-				icon="ph:list"
-				class="text-xl text-neutral-700 hover:cursor-pointer dark:text-neutral-100"
-			>
-				<svelte:fragment slot="fallback">menu</svelte:fragment>
-			</FallbackIcon>
+			<i class="ri-menu-line"></i>
 			{#if navExpanded}
-				<div transition:slide class="flex flex-col items-center gap-1">
+				<div
+					transition:slide={{ duration: reducedMotion.value ? 0 : undefined }}
+					class="flex flex-col items-center gap-1"
+				>
 					<Header href="{base}/about" title="about" />
 					<Header href="{base}/issues" title="recent issues" />
 					<Header href="{base}/past-issues" title="past issues" />
 					<Header href="{base}/team" title="team" />
-					<button on:click|stopPropagation={() => {}}>
+					<button onclick={(e) => e.stopPropagation()}>
 						<FoldingHeader title="contact">
 							<div class="flex flex-col items-center gap-1">
 								<a
@@ -164,3 +166,9 @@
 		</nav>
 	{/if}
 </main>
+
+<style>
+	nav i {
+		font-size: 1.5rem;
+	}
+</style>

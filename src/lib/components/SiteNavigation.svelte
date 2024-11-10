@@ -1,16 +1,20 @@
 <script lang="ts">
 	import { base } from "$app/paths";
-	import { isDarkMode } from "$lib/stores/themeStore";
+	import { theme } from "$lib/state/theme.svelte";
 	import DarkModeToggle from "./DarkModeToggle.svelte";
 
-	export let showHome: boolean = false;
-	export let overlayLg: boolean = false;
+	interface Props {
+		showHome?: boolean;
+		overlayLg?: boolean;
+	}
+
+	let { showHome = false, overlayLg = false }: Props = $props();
 </script>
 
 <nav
-	class="top pointer-events-none fixed z-50 flex w-full items-center justify-between px-6 py-4 xl:p-10 {overlayLg
-		? 'overlay'
-		: ''} {$isDarkMode ? 'dark-mode' : 'light-mode'}"
+	class={`top pointer-events-none fixed z-50 flex w-full items-center justify-between px-6 py-4 xl:p-10 ${
+		overlayLg ? "overlay" : ""
+	} ${theme.value === "light" ? "light-mode" : "dark-mode"}`}
 >
 	<span class="pointer-events-auto relative">
 		<DarkModeToggle />
@@ -18,8 +22,9 @@
 	{#if showHome}
 		<a
 			class="pointer-events-auto relative font-serif text-lg hover:font-bold"
-			href="{base}/">home</a
-		>
+			href="{base}/"
+			>home
+		</a>
 	{/if}
 </nav>
 

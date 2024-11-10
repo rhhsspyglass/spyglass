@@ -5,7 +5,12 @@
 	import type { PageServerData } from "./$types";
 	import { dev } from "$app/environment";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
-	export let data: PageServerData;
+
+	interface Props {
+		data: PageServerData;
+	}
+
+	let { data }: Props = $props();
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		`./../../lib/thumbnails/*.{jpeg,jpg,png}`,

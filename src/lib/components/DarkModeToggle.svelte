@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { isDarkMode } from "../stores/themeStore";
-	import FallbackIcon from "./FallbackIcon.svelte";
-	let isHovering = false;
+	import { theme } from "$lib/state/theme.svelte";
+	let isHovering = $state(false);
 </script>
 
 <button
 	class="aspect-square w-9 rounded-full p-1"
-	on:click={isDarkMode.toggle}
-	on:mouseenter={() => (isHovering = true)}
-	on:mouseleave={() => (isHovering = false)}
+	onclick={() => theme.toggle()}
+	onmouseenter={() => (isHovering = true)}
+	onmouseleave={() => (isHovering = false)}
 	aria-label="Toggle Dark Mode"
 >
-	<FallbackIcon
-		icon="{$isDarkMode ? 'ph:sun' : 'ph:moon'}{isHovering ? '-fill' : ''}"
-		preload={["ph:sun-fill", "ph:moon-fill"]}
-		class="h-full w-full"
-	>
-		<div
-			slot="fallback"
-			class="h-full w-full rounded-full border-2 border-neutral-800 hover:bg-neutral-800 dark:border-neutral-200 dark:hover:bg-neutral-200"
-		/>
-	</FallbackIcon>
+	<i
+		class="ri-{theme.value === 'light' ? 'moon' : 'sun'}-{isHovering
+			? 'fill'
+			: 'line'}"
+	></i>
 </button>
+
+<style>
+	button i {
+		font-size: 1.5rem;
+	}
+</style>

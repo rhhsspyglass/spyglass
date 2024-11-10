@@ -1,17 +1,26 @@
 <script lang="ts">
 	import { base } from "$app/paths";
 	import type Article from "$lib/models/article.model";
-	export let article: Article;
 
-	let articleUrl = article.articleUrl;
-
-	if (articleUrl.startsWith("/")) {
-		articleUrl = base + articleUrl;
+	interface Props {
+		article: Article;
 	}
+
+	let { article }: Props = $props();
+
+	let articleUrl = $state(article.articleUrl);
+
+	let articleUrlPrefixed = $derived.by(() => {
+		if (articleUrl.startsWith("/")) {
+			return base + articleUrl;
+		}
+
+		return articleUrl;
+	});
 </script>
 
 <a
-	href={articleUrl}
+	href={articleUrlPrefixed}
 	target="_blank"
 	rel="noopener noreferrer"
 	class="article-header">{article.shortTitle}</a

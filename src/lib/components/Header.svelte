@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let href: string = "";
-	export let title: string;
+	interface Props {
+		href?: string;
+		title: string;
+	}
+
+	let { href = "", title }: Props = $props();
 </script>
 
 <a {href} class="header">{title}</a>

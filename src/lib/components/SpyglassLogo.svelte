@@ -1,6 +1,9 @@
 <script lang="ts">
-	let className: string = "";
-	export { className as class };
+	interface Props {
+		class?: string;
+	}
+
+	let { class: className = "" }: Props = $props();
 </script>
 
 <svg
@@ -15,7 +18,7 @@
 		bordercolor="#666666"
 		borderopacity="1.0"
 		showgrid="false"
-	/>
+	></sodipodi:namedview>
 	<g id="layer1" transform="translate(-54.458646,-74.167097)">
 		<g
 			id="g943"
