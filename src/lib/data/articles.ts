@@ -225,7 +225,7 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2023-fall.jpg",
 		date: "2023-11-15",
-		archived: false
+		archived: true
 	},
 	{
 		title: "winter issue twenty twenty-four",
@@ -237,7 +237,7 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2024-winter.jpg",
 		date: "2024-02-05",
-		archived: false
+		archived: true
 	},
 	{
 		title: "spring issue twenty twenty-four",
@@ -249,7 +249,7 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2024-spring.jpg",
 		date: "2024-04-10",
-		archived: false
+		archived: true
 	},
 	{
 		title: "summer issue twenty twenty-four",
@@ -261,6 +261,18 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2024-summer.jpg",
 		date: "2024-06-10",
+		archived: true
+	},
+    {
+		title: "fall issue twenty twenty-four",
+		shortTitle: "fall 2024",
+		articleUrl: "/issues/fall_2024.pdf",
+		thumbnail: {
+			url: "/thumbnails/fall_2024.pdf.1.png",
+			color: "#d1d4c7"
+		},
+		imgUrl: "/images/2024-fall.jpg",
+		date: "2024-11-10",
 		archived: false
 	}
 ];

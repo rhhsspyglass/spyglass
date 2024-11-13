@@ -16,9 +16,15 @@
 		data: PageServerData;
 	}
 
+    /** Maximum number of articles to show in the past issues navigation preview */
+    const MAX_PAST_ARTICLES = 16;
+
 	let { data }: Props = $props();
 	let navExpanded = $state(false);
 	let viewportWidth = $state(0);
+
+    let recentArticles = $derived(data.articles.filter(article => article.archived === false));
+    let pastArticles = $derived(data.articles.filter(article => article.archived === true || article.archived === undefined));
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		"./../lib/thumbnails/*.{jpeg,jpg,png}",
@@ -77,10 +83,8 @@
 				<Header href="{base}/about" title="about" />
 				<FoldingHeader title="recent issues">
 					<div class="flex flex-col items-end gap-1">
-						{#each data.articles as article}
-							{#if article.archived === false}
-								<ArticleLink {article} />
-							{/if}
+						{#each recentArticles as article}
+                            <ArticleLink {article} />
 						{/each}
 						<a href="{base}/issues" class="article-header hover:font-bold"
 							>view all</a
@@ -89,10 +93,8 @@
 				</FoldingHeader>
 				<FoldingHeader title="past issues">
 					<div class="flex flex-col items-end gap-1">
-						{#each data.articles as article}
-							{#if article.archived === true || article.archived === undefined}
-								<ArticleLink {article} />
-							{/if}
+						{#each pastArticles.slice(0, MAX_PAST_ARTICLES) as article}
+                            <ArticleLink {article} />
 						{/each}
 						<a href="{base}/past-issues" class="article-header hover:font-bold"
 							>view all</a
@@ -131,7 +133,7 @@
 			class="absolute bottom-0 left-0 flex w-full flex-col items-center gap-2 bg-neutral-200 py-2 transition-colors duration-300 hover:cursor-pointer motion-reduce:transition-none dark:bg-neutral-800"
 			onclick={() => (navExpanded = !navExpanded)}
 		>
-			<i class="ri-menu-line"></i>
+			<i class="ri-menu-line text-[1.6rem]"></i>
 			{#if navExpanded}
 				<div
 					transition:slide={{ duration: reducedMotion.value ? 0 : undefined }}
@@ -167,8 +169,3 @@
 	{/if}
 </main>
 
-<style>
-	nav i {
-		font-size: 1.6rem;
-	}
-</style>

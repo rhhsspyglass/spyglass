@@ -23,7 +23,9 @@
 		<meta property="og:url" content="https://rhhspyglass.com" />
 	{/if}
 </svelte:head>
+
 <SiteNavigation showHome={true} />
+
 <main
 	class="flex min-h-[100vh] w-screen flex-col items-center justify-center p-4 pt-16 text-center font-serif text-xl"
 >
@@ -32,7 +34,7 @@
 		<p>{data.team.editorsInChiefNames}</p>
 	</hgroup>
 	<div
-		class="flex w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4 md:w-fit lg:max-h-[72vh]"
+		class="flex w-auto flex-col flex-wrap items-center justify-center gap-x-20 gap-y-4 md:max-h-[120vh] lg:max-h-[72vh]"
 	>
 		{#each data.team.units as teamUnit}
 			<hgroup>

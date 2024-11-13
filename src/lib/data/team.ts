@@ -35,20 +35,7 @@ const TEAM: Team = {
 				"October Hua"
 			]
 		},
-		{
-			positionName: "Photographer",
-			memberNames: [
-				"Jolly Yan",
-				"Iris You",
-				"Emily Meng",
-				"Ethan Oh",
-				"Daniel Yang",
-				"Andrea Tsui",
-				"Cynthia Mu",
-				"Emma Fodor"
-			]
-		},
-		{
+        {
 			positionName: "Designer",
 			memberNames: [
 				"Allyson Mack",
@@ -61,6 +48,19 @@ const TEAM: Team = {
 				"Angie Xu",
 				"Maggie Li",
 				"Dora Duan"
+			]
+		},
+		{
+			positionName: "Photographer",
+			memberNames: [
+				"Jolly Yan",
+				"Iris You",
+				"Emily Meng",
+				"Ethan Oh",
+				"Daniel Yang",
+				"Andrea Tsui",
+				"Cynthia Mu",
+				"Emma Fodor"
 			]
 		},
 		{
