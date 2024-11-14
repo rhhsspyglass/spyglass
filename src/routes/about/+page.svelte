@@ -33,7 +33,7 @@
 		</p>
 		<p class="mb-4 text-justify">
 			We are proud to be completely student-owned, providing our readers with
-			quality journalism, breathtaking photography and professional layouts.
+			quality journalism, breathtaking photography, and professional layouts.
 			Every seasonal issue is an expression of student voice and tells the story
 			of our vibrant school community.
 		</p>
