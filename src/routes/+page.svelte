@@ -1,23 +1,23 @@
 <script lang="ts">
+	import { dev } from "$app/environment";
 	import { base } from "$app/paths";
 	import ArticleLink from "$lib/components/ArticleLink.svelte";
 	import FoldingHeader from "$lib/components/FoldingHeader.svelte";
 	import Header from "$lib/components/Header.svelte";
-	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
-	import { slide } from "svelte/transition";
-	import type { PageServerData } from "./$types";
-	import { dev } from "$app/environment";
-	import type { Picture } from "vite-imagetools";
-	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
+	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
 	import reducedMotion from "$lib/state/reducedMotion.svelte";
+	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
+	import { slide } from "svelte/transition";
+	import type { Picture } from "vite-imagetools";
+	import type { PageServerData } from "./$types";
 
 	interface Props {
 		data: PageServerData;
 	}
 
     /** Maximum number of articles to show in the past issues navigation preview */
-    const MAX_PAST_ARTICLES = 16;
+    const MAX_PAST_ARTICLES = 12;
 
 	let { data }: Props = $props();
 	let navExpanded = $state(false);
