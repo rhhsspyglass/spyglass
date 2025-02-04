@@ -11,6 +11,8 @@
 	import { slide } from "svelte/transition";
 	import type { Picture } from "vite-imagetools";
 	import type { PageServerData } from "./$types";
+	import PAST_TEAMS from "$lib/data/teams";
+	import Meta from "$lib/components/Meta.svelte";
 
 	interface Props {
 		data: PageServerData;
@@ -48,20 +50,13 @@
 </script>
 
 <svelte:window bind:innerWidth={viewportWidth} />
-<svelte:head>
-	<title>{TITLE}</title>
-	<meta name="description" content={DESCRIPTION} />
-	<meta property="og:title" content={TITLE} />
-	<meta property="og:description" content={DESCRIPTION} />
-	<meta property="og:type" content="website" />
-	{#if mostRecentArticle}
-		<meta property="og:image" content={mostRecentArticle.img.src} />
-		<meta property="thumbnail" content={mostRecentArticle.img.src} />
-	{/if}
-	{#if !dev}
-		<meta property="og:url" content="https://rhhspyglass.com" />
-	{/if}
-</svelte:head>
+<Meta
+    title={TITLE}
+    description={DESCRIPTION}
+    url="https://rhhspyglass.com"
+    {mostRecentArticle}
+/>
+
 <SiteNavigation />
 <main
 	class="large:h-screen flex h-svh w-screen select-none items-center justify-center overflow-hidden font-serif"
@@ -102,6 +97,15 @@
 					</div>
 				</FoldingHeader>
 				<Header href="{base}/team" title="team" />
+                <FoldingHeader title="past teams">
+					<div class="flex flex-col items-end gap-1">
+						{#each Object.keys(PAST_TEAMS) as team}
+                        <a href="{base}/past-teams/{team}" class="article-header hover:font-bold"
+                            >{team}</a
+                        >
+						{/each}
+					</div>
+				</FoldingHeader>
 				<FoldingHeader title="contact">
 					<div class="flex flex-col items-end gap-1">
 						<a

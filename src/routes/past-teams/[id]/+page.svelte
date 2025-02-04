@@ -11,15 +11,16 @@
 
 	let { data }: Props = $props();
 
-	const TITLE = "The Spyglass | team";
-	const DESCRIPTION = "Meet our amazing team for 2024-2025!";
+	const TITLE = "The Spyglass | past teams";
+	const DESCRIPTION = "Meet our past Spyglass teams";
 </script>
 
 <Meta
     title={TITLE}
     description={DESCRIPTION}
-    url="https://rhhspyglass.com/team"
+    url="https://rhhspyglass.com/past-teams/{data.id}"
 />
+
 
 <SiteNavigation showHome={true} />
 

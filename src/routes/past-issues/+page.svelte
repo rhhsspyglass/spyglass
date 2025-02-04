@@ -5,6 +5,7 @@
 	import type { Picture } from "vite-imagetools";
 	import type { PageServerData } from "./$types";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
+	import Meta from "$lib/components/Meta.svelte";
 
 	interface Props {
 		data: PageServerData;
@@ -32,20 +33,13 @@
 	const DESCRIPTION = "Read our past issues.";
 </script>
 
-<svelte:head>
-	<title>{TITLE}</title>
-	<meta name="description" content={DESCRIPTION} />
-	<meta property="og:title" content={TITLE} />
-	<meta property="og:description" content={DESCRIPTION} />
-	<meta property="og:type" content="website" />
-	{#if mostRecentArticle}
-		<meta property="og:image" content={mostRecentArticle.img.src} />
-		<meta property="thumbnail" content={mostRecentArticle.img.src} />
-	{/if}
-	{#if !dev}
-		<meta property="og:url" content="https://rhhspyglass.com" />
-	{/if}
-</svelte:head>
+<Meta
+    title={TITLE}
+    description={DESCRIPTION}
+    url="https://rhhspyglass.com/past-issues"
+    {mostRecentArticle}
+/>
+
 
 <SiteNavigation showHome={true} overlayLg={true} />
 <ArticleList articles={data.articles} />
