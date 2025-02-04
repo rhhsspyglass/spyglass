@@ -13,9 +13,9 @@
 </script>
 
 <Meta
-    title={TITLE}
-    description={DESCRIPTION}
-    url="https://rhhspyglass.com/about"
+	title={TITLE}
+	description={DESCRIPTION}
+	url="https://rhhspyglass.com/about"
 />
 
 <SiteNavigation showHome={true} />

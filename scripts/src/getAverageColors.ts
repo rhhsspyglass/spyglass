@@ -8,7 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const issuesPath = path.join(__dirname, "../../src/lib/thumbnails");
 
 async function getAverageColors() {
-	const coverImages = (await fs.readdir(issuesPath)).filter(p => path.extname(p) === ".png");
+	const coverImages = (await fs.readdir(issuesPath)).filter(
+		(p) => path.extname(p) === ".png"
+	);
 
 	const colors = await Promise.all(coverImages.map(processImage));
 

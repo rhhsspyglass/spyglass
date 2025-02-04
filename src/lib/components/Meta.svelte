@@ -1,20 +1,15 @@
 <script lang="ts">
 	import { dev } from "$app/environment";
-    import type { Picture } from "vite-imagetools";
+	import type { Picture } from "vite-imagetools";
 
-    interface Props {
-        title: string;
-        description: string;
-        url: string;
-        mostRecentArticle?: Picture | null;
-    }
+	interface Props {
+		title: string;
+		description: string;
+		url: string;
+		mostRecentArticle?: Picture | null;
+	}
 
-    const {
-        title,
-        description,
-        url,
-        mostRecentArticle,
-    }: Props = $props();
+	const { title, description, url, mostRecentArticle }: Props = $props();
 </script>
 
 <svelte:head>

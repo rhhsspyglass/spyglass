@@ -34,10 +34,10 @@
 </script>
 
 <Meta
-    title={TITLE}
-    description={DESCRIPTION}
-    url="https://rhhspyglass.com/issues"
-    {mostRecentArticle}
+	title={TITLE}
+	description={DESCRIPTION}
+	url="https://rhhspyglass.com/issues"
+	{mostRecentArticle}
 />
 
 <SiteNavigation showHome={true} overlayLg={true} />

@@ -35,7 +35,7 @@ const TEAM: Team = {
 				"October Hua"
 			]
 		},
-        {
+		{
 			positionName: "Designer",
 			memberNames: [
 				"Allyson Mack",

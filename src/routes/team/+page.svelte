@@ -16,11 +16,11 @@
 </script>
 
 <Meta
-    title={TITLE}
-    description={DESCRIPTION}
-    url="https://rhhspyglass.com/team"
+	title={TITLE}
+	description={DESCRIPTION}
+	url="https://rhhspyglass.com/team"
 />
 
 <SiteNavigation showHome={true} />
 
-<TeamDisplay team={data.team}/>
+<TeamDisplay team={data.team} />

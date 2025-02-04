@@ -11,8 +11,8 @@
 	aria-label="Toggle Dark Mode"
 >
 	<i
-		class="hover:cursor-pointer text-[1.4rem] ri-{theme.value === 'light' ? 'moon' : 'sun'}-{isHovering
-			? 'fill'
-			: 'line'}"
+		class="text-[1.4rem] hover:cursor-pointer ri-{theme.value === 'light'
+			? 'moon'
+			: 'sun'}-{isHovering ? 'fill' : 'line'}"
 	></i>
 </button>

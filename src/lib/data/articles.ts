@@ -263,7 +263,7 @@ const ARTICLES: Article[] = [
 		date: "2024-06-10",
 		archived: true
 	},
-    {
+	{
 		title: "fall issue twenty twenty-four",
 		shortTitle: "fall 2024",
 		articleUrl: "/issues/fall_2024.pdf",

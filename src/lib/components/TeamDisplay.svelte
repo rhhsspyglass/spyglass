@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type Team from "$lib/models/team.model";
 
-    interface Props {
-        team: Team;
-    }
+	interface Props {
+		team: Team;
+	}
 
-    const { team }: Props = $props();
+	const { team }: Props = $props();
 </script>
 
 <main

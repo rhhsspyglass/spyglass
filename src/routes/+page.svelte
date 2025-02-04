@@ -18,15 +18,21 @@
 		data: PageServerData;
 	}
 
-    /** Maximum number of articles to show in the past issues navigation preview */
-    const MAX_PAST_ARTICLES = 12;
+	/** Maximum number of articles to show in the past issues navigation preview */
+	const MAX_PAST_ARTICLES = 12;
 
 	let { data }: Props = $props();
 	let navExpanded = $state(false);
 	let viewportWidth = $state(0);
 
-    let recentArticles = $derived(data.articles.filter(article => article.archived === false));
-    let pastArticles = $derived(data.articles.filter(article => article.archived === true || article.archived === undefined));
+	let recentArticles = $derived(
+		data.articles.filter((article) => article.archived === false)
+	);
+	let pastArticles = $derived(
+		data.articles.filter(
+			(article) => article.archived === true || article.archived === undefined
+		)
+	);
 
 	const imageModules: Record<string, { default: Picture }> = import.meta.glob(
 		"./../lib/thumbnails/*.{jpeg,jpg,png}",
@@ -51,10 +57,10 @@
 
 <svelte:window bind:innerWidth={viewportWidth} />
 <Meta
-    title={TITLE}
-    description={DESCRIPTION}
-    url="https://rhhspyglass.com"
-    {mostRecentArticle}
+	title={TITLE}
+	description={DESCRIPTION}
+	url="https://rhhspyglass.com"
+	{mostRecentArticle}
 />
 
 <SiteNavigation />
@@ -79,7 +85,7 @@
 				<FoldingHeader title="recent issues">
 					<div class="flex flex-col items-end gap-1">
 						{#each recentArticles as article}
-                            <ArticleLink {article} />
+							<ArticleLink {article} />
 						{/each}
 						<a href="{base}/issues" class="article-header hover:font-bold"
 							>view all</a
@@ -89,7 +95,7 @@
 				<FoldingHeader title="past issues">
 					<div class="flex flex-col items-end gap-1">
 						{#each pastArticles.slice(0, MAX_PAST_ARTICLES) as article}
-                            <ArticleLink {article} />
+							<ArticleLink {article} />
 						{/each}
 						<a href="{base}/past-issues" class="article-header hover:font-bold"
 							>view all</a
@@ -97,12 +103,13 @@
 					</div>
 				</FoldingHeader>
 				<Header href="{base}/team" title="team" />
-                <FoldingHeader title="past teams">
+				<FoldingHeader title="past teams">
 					<div class="flex flex-col items-end gap-1">
 						{#each Object.keys(PAST_TEAMS) as team}
-                        <a href="{base}/past-teams/{team}" class="article-header hover:font-bold"
-                            >{team}</a
-                        >
+							<a
+								href="{base}/past-teams/{team}"
+								class="article-header hover:font-bold">{team}</a
+							>
 						{/each}
 					</div>
 				</FoldingHeader>
@@ -172,4 +179,3 @@
 		</nav>
 	{/if}
 </main>
-

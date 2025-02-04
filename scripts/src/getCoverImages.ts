@@ -8,7 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const issuesPath = path.join(__dirname, "../../static/issues");
 
 async function convertPdfs() {
-	const pdfs = (await fs.readdir(issuesPath)).filter(p => path.extname(p) === ".pdf");
+	const pdfs = (await fs.readdir(issuesPath)).filter(
+		(p) => path.extname(p) === ".pdf"
+	);
 
 	await Promise.all(pdfs.map(processPdf));
 }
@@ -27,12 +29,12 @@ async function processPdf(pdf: string) {
 		options
 	);
 
-    try {
-        await convert(1, { responseType: "image" });
-    } catch (e) {
-        console.log(`An error occured when processing ${pdf}`);
-        console.error(e);
-    }
+	try {
+		await convert(1, { responseType: "image" });
+	} catch (e) {
+		console.log(`An error occured when processing ${pdf}`);
+		console.error(e);
+	}
 }
 
 convertPdfs();

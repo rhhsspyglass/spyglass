@@ -73,7 +73,12 @@
 			onmouseleave={() => (upHovered = false)}
 			aria-label="move to the above article"
 		>
-			<i class="text-[3.5rem] hover:cursor-pointer ri-arrow-up-circle-{upHovered ? 'fill' : 'line'}"> </i>
+			<i
+				class="text-[3.5rem] hover:cursor-pointer ri-arrow-up-circle-{upHovered
+					? 'fill'
+					: 'line'}"
+			>
+			</i>
 		</button>
 		<button
 			id="forward"
@@ -82,7 +87,12 @@
 			onmouseleave={() => (downHovered = false)}
 			aria-label="move to the below article"
 		>
-			<i class="text-[3.5rem] hover:cursor-pointer ri-arrow-down-circle-{downHovered ? 'fill' : 'line'}"> </i>
+			<i
+				class="text-[3.5rem] hover:cursor-pointer ri-arrow-down-circle-{downHovered
+					? 'fill'
+					: 'line'}"
+			>
+			</i>
 		</button>
 	</nav>
 </main>
