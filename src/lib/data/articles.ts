@@ -257,7 +257,7 @@ const ARTICLES: Article[] = [
 		articleUrl: "/issues/summer_2024.pdf",
 		thumbnail: {
 			url: "/thumbnails/summer_2024.pdf.1.png",
-			color: "#d1d4c7"
+			color: "#8c7565"
 		},
 		imgUrl: "/images/2024-summer.jpg",
 		date: "2024-06-10",
@@ -269,10 +269,22 @@ const ARTICLES: Article[] = [
 		articleUrl: "/issues/fall_2024.pdf",
 		thumbnail: {
 			url: "/thumbnails/fall_2024.pdf.1.png",
-			color: "#d1d4c7"
+			color: "#98a1a0"
 		},
 		imgUrl: "/images/2024-fall.jpg",
 		date: "2024-11-10",
+		archived: false
+	},
+	{
+		title: "winter issue twenty twenty-five",
+		shortTitle: "winter 2025",
+		articleUrl: "/issues/winter_2025.pdf",
+		thumbnail: {
+			url: "/thumbnails/winter_2025.pdf.1.png",
+			color: "#97a5b8"
+		},
+		imgUrl: "/images/2025-winter.jpg",
+		date: "2025-02-04",
 		archived: false
 	}
 ];
