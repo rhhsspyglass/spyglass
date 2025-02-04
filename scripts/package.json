@@ -17,6 +17,7 @@
 		"fast-average-color-node": "^3.0.0",
 		"path": "^0.12.7",
 		"pdf2pic": "^3.1.1",
+        "cross-spawn": ">=6.0.6",
 		"pdfjs-dist": "^4.5.136"
 	}
 }
