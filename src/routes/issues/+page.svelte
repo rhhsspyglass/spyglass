@@ -23,7 +23,7 @@
 	);
 
 	const mostRecentArticle = getMostRecentArticle(
-		data.articles,
+		data.articles.toReversed(),
 		imageModules,
 		"../../lib"
 	);
