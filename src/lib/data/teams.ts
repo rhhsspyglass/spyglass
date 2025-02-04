@@ -1,5 +1,4 @@
 import type Team from '$lib/models/team.model';
-import TEAM from './team';
 
 const TEAM_2023_2024: Team = {
     editorsInChiefNames: "Elaine Wang and Elina Lai",
