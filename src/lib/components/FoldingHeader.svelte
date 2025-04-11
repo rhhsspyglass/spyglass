@@ -1,6 +1,6 @@
 <script lang="ts">
-	import reducedMotion from "$lib/state/reducedMotion.svelte";
 	import type { Snippet } from "svelte";
+	import { prefersReducedMotion } from "svelte/motion";
 	import { slide } from "svelte/transition";
 
 	interface Props {
@@ -21,7 +21,7 @@
 	>
 	{#if expanded}
 		<div
-			transition:slide={{ duration: reducedMotion.value ? 0 : undefined }}
+			transition:slide={{ duration: prefersReducedMotion.current ? 0 : undefined }}
 			class="mt-1"
 		>
 			{@render children?.()}

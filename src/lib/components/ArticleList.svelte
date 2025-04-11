@@ -3,7 +3,8 @@
 	import type Article from "../models/article.model";
 	// import function to register Swiper custom elements
 	import { register, type SwiperContainer } from "swiper/element/bundle";
-	import reducedMotion from "$lib/state/reducedMotion.svelte";
+	import { prefersReducedMotion } from "svelte/motion";
+
 
 	// register Swiper custom elements
 	register();
@@ -57,7 +58,7 @@
 		freeMode="true"
 		nextEl="#forward"
 		prevEl="#backward"
-		speed={reducedMotion.value ? 0 : 300}
+		speed={prefersReducedMotion.current ? 0 : 300}
 	>
 		{#each articles as article}
 			<swiper-slide class="h-dvh overflow-visible">

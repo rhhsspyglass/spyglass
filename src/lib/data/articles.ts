@@ -286,6 +286,18 @@ const ARTICLES: Article[] = [
 		imgUrl: "/images/2025-winter.jpg",
 		date: "2025-02-04",
 		archived: false
+	},
+    {
+		title: "spring issue twenty twenty-five",
+		shortTitle: "spring 2025",
+		articleUrl: "/issues/spring_2025.pdf",
+		thumbnail: {
+			url: "/thumbnails/spring_2025.pdf.1.png",
+			color: "#876b6d"
+		},
+		imgUrl: "/images/2025-spring.jpg",
+		date: "2025-04-11",
+		archived: false
 	}
 ];
 

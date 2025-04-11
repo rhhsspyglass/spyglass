@@ -1,18 +1,17 @@
 <script lang="ts">
-	import { dev } from "$app/environment";
 	import { base } from "$app/paths";
 	import ArticleLink from "$lib/components/ArticleLink.svelte";
 	import FoldingHeader from "$lib/components/FoldingHeader.svelte";
 	import Header from "$lib/components/Header.svelte";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
-	import reducedMotion from "$lib/state/reducedMotion.svelte";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
 	import { slide } from "svelte/transition";
 	import type { Picture } from "vite-imagetools";
 	import type { PageServerData } from "./$types";
 	import PAST_TEAMS from "$lib/data/teams";
 	import Meta from "$lib/components/Meta.svelte";
+	import { prefersReducedMotion } from "svelte/motion";
 
 	interface Props {
 		data: PageServerData;
@@ -147,7 +146,7 @@
 			<i class="ri-menu-line text-[1.6rem]"></i>
 			{#if navExpanded}
 				<div
-					transition:slide={{ duration: reducedMotion.value ? 0 : undefined }}
+					transition:slide={{ duration: prefersReducedMotion.current ? 0 : undefined }}
 					class="flex flex-col items-center gap-1"
 				>
 					<Header href="{base}/about" title="about" />

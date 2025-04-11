@@ -4,7 +4,6 @@
 	import type { Snippet } from "svelte";
 	import "../app.css";
 	import "remixicon/fonts/remixicon.css";
-	import reducedMotion from "$lib/state/reducedMotion.svelte";
 
 	interface Props {
 		children?: Snippet;
@@ -18,10 +17,6 @@
 
 	$effect(() => {
 		theme.mountEffects();
-	});
-
-	$effect(() => {
-		return reducedMotion.mount();
 	});
 
 	onNavigate((navigation) => {
