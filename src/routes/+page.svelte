@@ -146,7 +146,9 @@
 			<i class="ri-menu-line text-[1.6rem]"></i>
 			{#if navExpanded}
 				<div
-					transition:slide={{ duration: prefersReducedMotion.current ? 0 : undefined }}
+					transition:slide={{
+						duration: prefersReducedMotion.current ? 0 : undefined
+					}}
 					class="flex flex-col items-center gap-1"
 				>
 					<Header href="{base}/about" title="about" />

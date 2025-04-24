@@ -3,7 +3,6 @@
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import type { Picture } from "vite-imagetools";
 	import type { PageServerData } from "./$types";
-	import { dev } from "$app/environment";
 	import getMostRecentArticle from "$lib/util/getMostRecentArticle";
 	import Meta from "$lib/components/Meta.svelte";
 

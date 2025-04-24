@@ -21,7 +21,9 @@
 	>
 	{#if expanded}
 		<div
-			transition:slide={{ duration: prefersReducedMotion.current ? 0 : undefined }}
+			transition:slide={{
+				duration: prefersReducedMotion.current ? 0 : undefined
+			}}
 			class="mt-1"
 		>
 			{@render children?.()}

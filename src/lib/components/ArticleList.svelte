@@ -5,7 +5,6 @@
 	import { register, type SwiperContainer } from "swiper/element/bundle";
 	import { prefersReducedMotion } from "svelte/motion";
 
-
 	// register Swiper custom elements
 	register();
 

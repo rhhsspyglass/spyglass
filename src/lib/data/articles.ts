@@ -287,7 +287,7 @@ const ARTICLES: Article[] = [
 		date: "2025-02-04",
 		archived: false
 	},
-    {
+	{
 		title: "spring issue twenty twenty-five",
 		shortTitle: "spring 2025",
 		articleUrl: "/issues/spring_2025.pdf",
