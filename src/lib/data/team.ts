@@ -1,19 +1,19 @@
 import type Team from "$lib/models/team.model";
 
 const TEAM: Team = {
-	editorsInChiefNames: "Rianna Zhu and Max Skidelsky",
+	editorsInChiefNames: "Katrina Lam and Kate Shahidi",
 	units: [
 		{
 			positionName: "Copy Editor",
-			memberNames: ["Kate Shahidi"]
+			memberNames: ["Alex Yang"]
 		},
 		{
 			positionName: "Photography Editor",
-			memberNames: ["Jolly Yan"]
+			memberNames: ["Daniel Shamov"]
 		},
 		{
 			positionName: "Design Editor",
-			memberNames: ["Katrina Lam", "Lynn He"]
+			memberNames: ["Dora Duan"]
 		},
 		{
 			positionName: "Associate Editor",
@@ -22,50 +22,39 @@ const TEAM: Team = {
 		{
 			positionName: "Copywriter",
 			memberNames: [
-				"Rianna Zhu",
-				"Max Skidelsky",
-				"Kate Shahidi",
-				"Jillian Ouyang",
-				"Amrita Dudaka",
-				"Claire Chen",
-				"Alex Yang",
 				"Joy Kim",
-				"Antonia Zubiri",
-				"Isabel Ye",
-				"October Hua"
+				"Alez Yang",
+				"Kate Shahidi",
+				"Reita Liu",
+				"Adrian Teng",
+				"Jonah Heath"
 			]
 		},
 		{
 			positionName: "Designer",
 			memberNames: [
-				"Allyson Mack",
-				"Erin Chen",
 				"Katrina Lam",
-				"Lynn He",
-				"Melinda Li",
-				"Vivian Wu",
-				"Phoebe Su",
+				"Dora Duan",
 				"Angie Xu",
 				"Maggie Li",
-				"Dora Duan"
+				"Erin Chen",
+				"Sylvia Ding"
 			]
 		},
 		{
 			positionName: "Photographer",
 			memberNames: [
-				"Jolly Yan",
-				"Iris You",
+				"Daniel Shamov",
 				"Emily Meng",
+				"Elena Shan",
 				"Ethan Oh",
-				"Daniel Yang",
-				"Andrea Tsui",
-				"Cynthia Mu",
-				"Emma Fodor"
+				"Emma Zhu",
+				"Andrea Tsui"
 			]
 		},
 		{
 			positionName: "Webmaster",
-			memberNames: ["Harry Xu"]
+			memberNames: ["Mithulan Nanthakumar"]
 		}
 	]
 };
