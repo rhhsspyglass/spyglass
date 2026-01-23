@@ -1,5 +1,75 @@
 import type Team from "$lib/models/team.model";
 
+const TEAM_2024_2025: Team = {
+	editorsInChiefNames: "Rianna Zhu and Max Skidelsky",
+	units: [
+		{
+			positionName: "Copy Editor",
+			memberNames: ["Kate Shahidi"]
+		},
+		{
+			positionName: "Photography Editor",
+			memberNames: ["Jolly Yan"]
+		},
+		{
+			positionName: "Design Editor",
+			memberNames: ["Katrina Lam", "Lynn He"]
+		},
+		{
+			positionName: "Associate Editor",
+			memberNames: ["Erin Chen"]
+		},
+		{
+			positionName: "Copywriter",
+			memberNames: [
+				"Rianna Zhu",
+				"Max Skidelsky",
+				"Kate Shahidi",
+				"Jillian Ouyang",
+				"Amrita Dudaka",
+				"Claire Chen",
+				"Alex Yang",
+				"Joy Kim",
+				"Antonia Zubiri",
+				"Isabel Ye",
+				"October Hua"
+			]
+		},
+		{
+			positionName: "Designer",
+			memberNames: [
+				"Allyson Mack",
+				"Erin Chen",
+				"Katrina Lam",
+				"Lynn He",
+				"Melinda Li",
+				"Vivian Wu",
+				"Phoebe Su",
+				"Angie Xu",
+				"Maggie Li",
+				"Dora Duan"
+			]
+		},
+		{
+			positionName: "Photographer",
+			memberNames: [
+				"Jolly Yan",
+				"Iris You",
+				"Emily Meng",
+				"Ethan Oh",
+				"Daniel Yang",
+				"Andrea Tsui",
+				"Cynthia Mu",
+				"Emma Fodor"
+			]
+		},
+		{
+			positionName: "Webmaster",
+			memberNames: ["Harry Xu"]
+		}
+	]
+};
+
 const TEAM_2023_2024: Team = {
 	editorsInChiefNames: "Elaine Wang and Elina Lai",
 	units: [
@@ -139,6 +209,7 @@ const TEAM_2022_2023: Team = {
 };
 
 const PAST_TEAMS: Record<string, Team> = {
+	"2024-2025": TEAM_2024_2025,
 	"2023-2024": TEAM_2023_2024,
 	"2022-2023": TEAM_2022_2023
 };

@@ -273,7 +273,7 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2024-fall.jpg",
 		date: "2024-11-10",
-		archived: false
+		archived: true
 	},
 	{
 		title: "winter issue twenty twenty-five",
@@ -285,7 +285,7 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2025-winter.jpg",
 		date: "2025-02-04",
-		archived: false
+		archived: true
 	},
 	{
 		title: "spring issue twenty twenty-five",
@@ -297,6 +297,30 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2025-spring.jpg",
 		date: "2025-04-11",
+		archived: true
+	},
+	{
+		title: "summer issue twenty twenty-five",
+		shortTitle: "summer 2025",
+		articleUrl: "/issues/summer_2025.pdf",
+		thumbnail: {
+			url: "/thumbnails/summer_2025.pdf.1.png",
+			color: "#5E787A"
+		},
+		imgUrl: "/images/2025-summer.jpg",
+		date: "2025-12-04",
+		archived: true
+	},
+	{
+		title: "fall issue twenty twenty-five",
+		shortTitle: "fall 2025",
+		articleUrl: "/issues/fall_2025.pdf",
+		thumbnail: {
+			url: "/thumbnails/fall_2025.pdf.1.png",
+			color: "#53483A"
+		},
+		imgUrl: "/images/2025-fall.jpg",
+		date: "2025-12-04",
 		archived: false
 	}
 ];
