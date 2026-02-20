@@ -40,6 +40,6 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.2",
 		"remixicon": "^4.5.0",
-		"swiper": "^11.1.9"
+		"swiper": "^12.1.2"
 	}
 }
