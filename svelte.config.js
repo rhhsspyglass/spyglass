@@ -9,6 +9,9 @@ const config = {
 			fallback: null,
 			precompress: false
 		}),
+		prerender: {
+			handleHttpError: "warn"
+		},
 		paths: {
 			base: process.env.NODE_ENV === "production" ? "" : ""
 		}
