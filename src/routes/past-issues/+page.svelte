@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { dev } from "$app/environment";
 	import ArticleList from "$lib/components/ArticleList.svelte";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import type { Picture } from "vite-imagetools";
@@ -23,10 +22,8 @@
 		}
 	);
 
-	const mostRecentArticle = getMostRecentArticle(
-		data.articles,
-		imageModules,
-		"../../lib"
+	const mostRecentArticle = $derived(
+		getMostRecentArticle(data.articles, imageModules, "../../lib")
 	);
 
 	const TITLE = "The Spyglass | past issues";

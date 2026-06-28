@@ -21,18 +21,16 @@
 		}
 	);
 
-	const articleTitleParts = article.title.split(" "); // summer issue twenty twenty-three
-	const articleTitleLine1 = articleTitleParts.slice(0, 2).join(" "); // summer issue
-	const articleTitleLine2 = articleTitleParts.slice(2).join(" "); // twenty twenty-three
-
-	let articleUrl = $state(article.articleUrl);
+	const articleTitleParts = $derived(article.title.split(" ")); // summer issue twenty twenty-three
+	const articleTitleLine1 = $derived(articleTitleParts.slice(0, 2).join(" ")); // summer issue
+	const articleTitleLine2 = $derived(articleTitleParts.slice(2).join(" ")); // twenty twenty-three
 
 	let articleUrlPrefixed = $derived.by(() => {
-		if (articleUrl.startsWith("/")) {
-			return base + articleUrl;
+		if (article.articleUrl.startsWith("/")) {
+			return base + article.articleUrl;
 		}
 
-		return articleUrl;
+		return article.articleUrl;
 	});
 </script>
 
@@ -40,8 +38,6 @@
 	class="max-w-screen article-layout article-text grid h-dvh min-h-fit border-[1px] border-neutral-600 bg-neutral-200 font-serif dark:border-neutral-700 dark:bg-neutral-800"
 	{id}
 >
-	<!-- svelte-ignore a11y_missing_content -->
-
 	<a
 		href={articleUrlPrefixed}
 		target="_blank"
@@ -120,16 +116,6 @@
 	}
 
 	.article-link {
-		display: block;
-		height: 100%;
-		object-fit: cover;
-		object-position: center bottom;
-
-		width: auto;
-	}
-
-	picture,
-	img {
 		display: block;
 		height: 100%;
 		object-fit: cover;

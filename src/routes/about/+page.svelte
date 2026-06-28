@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { dev } from "$app/environment";
 	import SpyglassLogo from "$lib/components/SpyglassLogo.svelte";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import Meta from "$lib/components/Meta.svelte";

@@ -22,10 +22,8 @@
 		}
 	);
 
-	const mostRecentArticle = getMostRecentArticle(
-		data.articles.toReversed(),
-		imageModules,
-		"../../lib"
+	const mostRecentArticle = $derived(
+		getMostRecentArticle(data.articles.toReversed(), imageModules, "../../lib")
 	);
 
 	const TITLE = "The Spyglass | issues";

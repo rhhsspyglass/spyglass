@@ -82,6 +82,14 @@
 	}
 
 	path {
-		@apply transition-colors duration-[75ms] motion-reduce:transition-none;
+		transition-property: color, background-color, border-color,
+			text-decoration-color, fill, stroke;
+		transition-duration: 75ms;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		path {
+			transition: none;
+		}
 	}
 </style>

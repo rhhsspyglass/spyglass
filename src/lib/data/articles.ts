@@ -321,6 +321,42 @@ const ARTICLES: Article[] = [
 		},
 		imgUrl: "/images/2025-fall.jpg",
 		date: "2025-12-04",
+		archived: true
+	},
+	{
+		title: "winter issue twenty twenty-six",
+		shortTitle: "winter 2026",
+		articleUrl: "/issues/winter_2026.pdf",
+		thumbnail: {
+			url: "/thumbnails/winter_2026.pdf.1.png",
+			color: "#678dbb"
+		},
+		imgUrl: "n/a",
+		date: "2026-02-15",
+		archived: false
+	},
+	{
+		title: "spring issue twenty twenty-six",
+		shortTitle: "spring 2026",
+		articleUrl: "/issues/spring_2026.pdf",
+		thumbnail: {
+			url: "/thumbnails/spring_2026.pdf.1.png",
+			color: "#98a59d"
+		},
+		imgUrl: "n/a",
+		date: "2026-04-15",
+		archived: false
+	},
+	{
+		title: "summer issue twenty twenty-six",
+		shortTitle: "summer 2026",
+		articleUrl: "/issues/summer_2026.pdf",
+		thumbnail: {
+			url: "/thumbnails/summer_2026.pdf.1.png",
+			color: "#9d9d8a"
+		},
+		imgUrl: "n/a",
+		date: "2026-06-15",
 		archived: false
 	}
 ];

@@ -43,10 +43,8 @@
 		}
 	);
 
-	const mostRecentArticle = getMostRecentArticle(
-		data.articles,
-		imageModules,
-		"../lib"
+	const mostRecentArticle = $derived(
+		getMostRecentArticle(data.articles, imageModules, "../lib")
 	);
 
 	const TITLE = "The Spyglass";

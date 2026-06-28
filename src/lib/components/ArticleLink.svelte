@@ -8,14 +8,12 @@
 
 	let { article }: Props = $props();
 
-	let articleUrl = $state(article.articleUrl);
-
 	let articleUrlPrefixed = $derived.by(() => {
-		if (articleUrl.startsWith("/")) {
-			return base + articleUrl;
+		if (article.articleUrl.startsWith("/")) {
+			return base + article.articleUrl;
 		}
 
-		return articleUrl;
+		return article.articleUrl;
 	});
 </script>
 

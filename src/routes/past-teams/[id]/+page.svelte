@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { dev } from "$app/environment";
 	import Meta from "$lib/components/Meta.svelte";
 	import SiteNavigation from "$lib/components/SiteNavigation.svelte";
 	import TeamDisplay from "$lib/components/TeamDisplay.svelte";

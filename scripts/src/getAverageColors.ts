@@ -9,7 +9,7 @@ const issuesPath = path.join(__dirname, "../../src/lib/thumbnails");
 
 async function getAverageColors() {
 	const coverImages = (await fs.readdir(issuesPath)).filter(
-		(p) => path.extname(p) === ".png"
+		(p: string) => path.extname(p) === ".png"
 	);
 
 	const colors = await Promise.all(coverImages.map(processImage));

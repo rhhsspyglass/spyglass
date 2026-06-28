@@ -35,7 +35,7 @@
 
 		const swiper = swiperEl.swiper;
 
-		swiper.on("slideChange", (e) => {
+		swiper.on("slideChange", () => {
 			currentIndex = swiper.activeIndex;
 		});
 	});
