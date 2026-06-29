@@ -5,8 +5,6 @@ export default interface Article {
 	shortTitle: string;
 	/** The URL to read the article. */
 	articleUrl: string;
-	/** The image source URL. */
-	imgUrl?: string;
 	/** The thumbnail source URL. */
 	thumbnail?: Thumbnail;
 	/** The date the article was published. Format: YYYY-MM-DD */

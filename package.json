@@ -15,7 +15,6 @@
 		"getAverageColors": "npm run getAverageColors --prefix scripts"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/enhanced-img": "^0.4.1",
 		"@sveltejs/kit": "^2.49.5",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
@@ -33,7 +32,6 @@
 		"svelte": "^5.25.12",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.4",
-		"tslib": "^2.4.1",
 		"typescript": "^5.5.0",
 		"typescript-eslint": "^8.0.0-alpha.20",
 		"vite": "^5.4.21"
