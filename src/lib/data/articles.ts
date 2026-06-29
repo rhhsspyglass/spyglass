@@ -6,7 +6,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2017",
 		articleUrl: "/issues/winter_2017.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2017.pdf.1.png",
+			url: "/thumbnails/winter_2017.png",
 			color: "#35414e"
 		},
 		date: "n/a",
@@ -17,7 +17,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2018",
 		articleUrl: "/issues/summer_2018.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2018.pdf.1.png",
+			url: "/thumbnails/summer_2018.png",
 			color: "#546c84"
 		},
 		date: "n/a",
@@ -28,7 +28,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2018",
 		articleUrl: "/issues/fall_2018.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2018.pdf.1.png",
+			url: "/thumbnails/fall_2018.png",
 			color: "#212b25"
 		},
 		date: "n/a",
@@ -39,7 +39,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2019",
 		articleUrl: "/issues/summer_2019.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2019.pdf.1.png",
+			url: "/thumbnails/summer_2019.png",
 			color: "#d5c1b2"
 		},
 		date: "2019-11-06",
@@ -50,7 +50,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2019",
 		articleUrl: "/issues/fall_2019.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2019.pdf.1.png",
+			url: "/thumbnails/fall_2019.png",
 			color: "#8b9793"
 		},
 		date: "2019-12-10",
@@ -61,7 +61,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2020",
 		articleUrl: "/issues/winter_2020.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2020.pdf.1.png",
+			url: "/thumbnails/winter_2020.png",
 			color: "#8999ae"
 		},
 		date: "2020-03-02",
@@ -72,7 +72,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2020",
 		articleUrl: "/issues/spring_2020.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2020.pdf.1.png",
+			url: "/thumbnails/spring_2020.png",
 			color: "#959d96"
 		},
 		date: "2020-05-03",
@@ -83,7 +83,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2020",
 		articleUrl: "/issues/summer_2020.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2020.pdf.1.png",
+			url: "/thumbnails/summer_2020.png",
 			color: "#595353"
 		},
 		date: "2020-06-15",
@@ -94,7 +94,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2020",
 		articleUrl: "/issues/fall_2020.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2020.pdf.1.png",
+			url: "/thumbnails/fall_2020.png",
 			color: "#746e6d"
 		},
 		date: "2020-11-29",
@@ -105,7 +105,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2021",
 		articleUrl: "/issues/winter_2021.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2021.pdf.1.png",
+			url: "/thumbnails/winter_2021.png",
 			color: "#76747b"
 		},
 		date: "2021-02-08",
@@ -116,7 +116,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2021",
 		articleUrl: "/issues/spring_2021.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2021.pdf.1.png",
+			url: "/thumbnails/spring_2021.png",
 			color: "#595748"
 		},
 		date: "2021-04-30",
@@ -164,7 +164,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2022",
 		articleUrl: "/issues/fall_2022.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2022.pdf.1.png",
+			url: "/thumbnails/fall_2022.png",
 			color: "#869397"
 		},
 		date: "2022-11-10",
@@ -175,7 +175,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2023",
 		articleUrl: "/issues/winter_2023.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2023.pdf.1.png",
+			url: "/thumbnails/winter_2023.png",
 			color: "#acafb6"
 		},
 		date: "2023-02-15",
@@ -186,7 +186,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2023",
 		articleUrl: "/issues/spring_2023.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2023.pdf.1.png",
+			url: "/thumbnails/spring_2023.png",
 			color: "#8f948d"
 		},
 		date: "2023-04-17",
@@ -211,7 +211,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2023",
 		articleUrl: "/issues/fall_2023.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2023.pdf.1.png",
+			url: "/thumbnails/fall_2023.png",
 			color: "#b29c89"
 		},
 		date: "2023-11-15",
@@ -222,7 +222,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2024",
 		articleUrl: "/issues/winter_2024.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2024.pdf.1.png",
+			url: "/thumbnails/winter_2024.png",
 			color: "#60708c"
 		},
 		date: "2024-02-05",
@@ -233,7 +233,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2024",
 		articleUrl: "/issues/spring_2024.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2024.pdf.1.png",
+			url: "/thumbnails/spring_2024.png",
 			color: "#d1d4c7"
 		},
 		date: "2024-04-10",
@@ -244,7 +244,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2024",
 		articleUrl: "/issues/summer_2024.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2024.pdf.1.png",
+			url: "/thumbnails/summer_2024.png",
 			color: "#8c7565"
 		},
 		date: "2024-06-10",
@@ -255,7 +255,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2024",
 		articleUrl: "/issues/fall_2024.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2024.pdf.1.png",
+			url: "/thumbnails/fall_2024.png",
 			color: "#98a1a0"
 		},
 		date: "2024-11-10",
@@ -266,7 +266,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2025",
 		articleUrl: "/issues/winter_2025.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2025.pdf.1.png",
+			url: "/thumbnails/winter_2025.png",
 			color: "#97a5b8"
 		},
 		date: "2025-02-04",
@@ -277,7 +277,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2025",
 		articleUrl: "/issues/spring_2025.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2025.pdf.1.png",
+			url: "/thumbnails/spring_2025.png",
 			color: "#876b6d"
 		},
 		date: "2025-04-11",
@@ -288,7 +288,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2025",
 		articleUrl: "/issues/summer_2025.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2025.pdf.1.png",
+			url: "/thumbnails/summer_2025.png",
 			color: "#5E787A"
 		},
 		date: "2025-12-04",
@@ -299,7 +299,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "fall 2025",
 		articleUrl: "/issues/fall_2025.pdf",
 		thumbnail: {
-			url: "/thumbnails/fall_2025.pdf.1.png",
+			url: "/thumbnails/fall_2025.png",
 			color: "#53483A"
 		},
 		date: "2025-12-04",
@@ -310,7 +310,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "winter 2026",
 		articleUrl: "/issues/winter_2026.pdf",
 		thumbnail: {
-			url: "/thumbnails/winter_2026.pdf.1.png",
+			url: "/thumbnails/winter_2026.png",
 			color: "#678dbb"
 		},
 		date: "2026-02-15",
@@ -321,7 +321,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "spring 2026",
 		articleUrl: "/issues/spring_2026.pdf",
 		thumbnail: {
-			url: "/thumbnails/spring_2026.pdf.1.png",
+			url: "/thumbnails/spring_2026.png",
 			color: "#98a59d"
 		},
 		date: "2026-04-15",
@@ -332,7 +332,7 @@ const ARTICLES: Article[] = [
 		shortTitle: "summer 2026",
 		articleUrl: "/issues/summer_2026.pdf",
 		thumbnail: {
-			url: "/thumbnails/summer_2026.pdf.1.png",
+			url: "/thumbnails/summer_2026.png",
 			color: "#9d9d8a"
 		},
 		date: "2026-06-15",

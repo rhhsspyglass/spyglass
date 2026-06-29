@@ -43,7 +43,7 @@ async function convertPdfs() {
 
 async function processPdf(pdf: string, pdfjsLib: any) {
 	const pdfPath = path.join(issuesPath, pdf);
-	const outputName = `${pdf}.1.png`;
+	const outputName = `${pdf.replace('.pdf', '')}.png`;
 	const outputPath = path.join(
 		__dirname,
 		"../../src/lib/thumbnails",
